@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<!--<head th:replace="fragments/header :: head"></head>-->
+
+<!-- Mirrored from mauweb.monamedia.net/fptshop/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Jan 2022 16:25:09 GMT -->
+<!-- Added by HTTrack -->
+<meta content="text/html;charset=UTF-8" http-equiv="content-type"/><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+
+    <title>fptshop &#8211; Một trang web mới sử dụng WordPress</title>
+    <!--    <script type="text/javascript">-->
+    <!--			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/mauweb.monamedia.net\/fptshop\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.15"}};-->
+    <!--			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);-->
+
+    <!--    </script>-->
+    <style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+
+    </style>
+    <link href="wp-includes/css/dashicons.minca80.css?ver=4.9.15" id='dashicons-css' media='all' rel='stylesheet'
+          type='text/css'/>
+    <link href='wp-content/plugins/ot-flatsome-vertical-menu/libs/menu-icons/css/extra.mincf86.css?ver=0.10.2' id='menu-icons-extra-css'
+          media='all'
+          rel='stylesheet' type='text/css'/>
+    <link href='wp-content/plugins/call-now-icon-animate/css.css' id='hrw-css' media='' rel='stylesheet'
+          type='text/css'/>
+    <link href='wp-content/plugins/contact-form-7/includes/css/styles20fd.css?ver=4.9.2' id='contact-form-7-css'
+          media='all' rel='stylesheet' type='text/css'/>
+    <link href='wp-content/plugins/menu-image/menu-image4963.css?ver=1.1' id='menu-image-css' media='all'
+          rel='stylesheet' type='text/css'/>
+    <link href='wp-content/plugins/ot-flatsome-vertical-menu/assets/css/ot-vertical-menuf488.css?ver=1.1.0' id='ot-vertical-menu-css'
+          media='all'
+          rel='stylesheet' type='text/css'/>
+    <link href='wp-content/themes/flatsome/assets/css/fl-icons6de8.css?ver=3.3' id='flatsome-icons-css' media='all'
+          rel='stylesheet' type='text/css'/>
+    <link href='wp-content/plugins/easy-social-share-buttons3/assets/css/default-retina/easy-social-share-buttons1ac1.css?ver=3.7.3' id='easy-social-share-buttons-css'
+          media='all'
+          rel='stylesheet' type='text/css'/>
+    <link href='wp-content/plugins/easy-social-share-buttons3/lib/modules/click-to-tweet/assets/css/styles1ac1.css?ver=3.7.3' id='essb-cct-style-css'
+          media='all'
+          rel='stylesheet' type='text/css'/>
+    <link href='wp-content/plugins/woocommerce-view/assets/css/woo_viewca80.css?ver=4.9.15' id='grid-list-layout-css'
+          media='all' rel='stylesheet'
+          type='text/css'/>
+    <link href='wp-content/themes/flatsome/assets/css/flatsomeccfb.css?ver=3.4.2' id='flatsome-main-css'
+          media='all' rel='stylesheet' type='text/css'/>
+    <link href='wp-content/themes/flatsome/assets/css/flatsome-shopccfb.css?ver=3.4.2' id='flatsome-shop-css'
+          media='all' rel='stylesheet' type='text/css'/>
+    <link href='wp-content/themes/flatsome-child/styleccfb.css?ver=3.4.2' id='flatsome-style-css' media='all'
+          rel='stylesheet' type='text/css'/>
+    <script src='wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4' type='text/javascript'></script>
+    <script src='wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1' type='text/javascript'></script>
+
+    <noscript>
+        <style>.woocommerce-product-gallery{ opacity: 1 !important; }</style>
+    </noscript>
+    <style type="text/css">
+        .essb_links_list li.essb_totalcount_item .essb_t_l_big .essb_t_nb:after, .essb_links_list li.essb_totalcount_item .essb_t_r_big .essb_t_nb:after { color: #777777;content: "shares";display: block;font-size: 11px;font-weight: normal;text-align: center;text-transform: uppercase;margin-top: -5px; } .essb_links_list li.essb_totalcount_item .essb_t_l_big, .essb_links_list li.essb_totalcount_item .essb_t_r_big { text-align: center; }.essb_displayed_sidebar .essb_links_list li.essb_totalcount_item .essb_t_l_big .essb_t_nb:after, .essb_displayed_sidebar .essb_links_list li.essb_totalcount_item .essb_t_r_big .essb_t_nb:after { margin-top: 0px; } .essb_displayed_sidebar_right .essb_links_list li.essb_totalcount_item .essb_t_l_big .essb_t_nb:after, .essb_displayed_sidebar_right .essb_links_list li.essb_totalcount_item .essb_t_r_big .essb_t_nb:after { margin-top: 0px; } .essb_totalcount_item_before, .essb_totalcount_item_after { display: block !important; }.essb_totalcount_item_before .essb_totalcount, .essb_totalcount_item_after .essb_totalcount { border: 0px !important; }.essb_counter_insidebeforename { margin-right: 5px; font-weight: bold; }.essb_width_columns_1 li { width: 100%; }.essb_width_columns_1 li a { width: 92%; }.essb_width_columns_2 li { width: 49%; }.essb_width_columns_2 li a { width: 86%; }.essb_width_columns_3 li { width: 32%; }.essb_width_columns_3 li a { width: 80%; }.essb_width_columns_4 li { width: 24%; }.essb_width_columns_4 li a { width: 70%; }.essb_width_columns_5 li { width: 19.5%; }.essb_width_columns_5 li a { width: 60%; }.essb_width_columns_6 li { width: 16%; }.essb_width_columns_6 li a { width: 55%; }.essb_links li.essb_totalcount_item_before, .essb_width_columns_1 li.essb_totalcount_item_after { width: 100%; text-align: left; }.essb_network_align_center a { text-align: center; }.essb_network_align_right .essb_network_name { float: right;}
+    </style>
+    <script type="text/javascript">
+        var essb_settings = {"ajax_url":"http:\/\/mauweb.monamedia.net\/fptshop\/wp-admin\/admin-ajax.php","essb3_nonce":"2bd95cef46","essb3_plugin_url":"http:\/\/mauweb.monamedia.net\/fptshop\/wp-content\/plugins\/easy-social-share-buttons3","essb3_facebook_total":true,"essb3_admin_ajax":false,"essb3_internal_counter":false,"essb3_stats":false,"essb3_ga":false,"essb3_ga_mode":"simple","essb3_counter_button_min":0,"essb3_counter_total_min":0,"blog_url":"http:\/\/mauweb.monamedia.net\/fptshop\/","ajax_type":"wp","essb3_postfloat_stay":false,"essb3_no_counter_mailprint":false,"essb3_single_ajax":false,"twitter_counter":"self","post_id":16};
+    </script>
+    <style id="custom-css" type="text/css">
+        :root {--primary-color: #446084;}/* Site Width */.full-width .ubermenu-nav, .container, .row{max-width: 1200px}.row.row-collapse{max-width: 1170px}.row.row-small{max-width: 1192.5px}.row.row-large{max-width: 1230px}body.framed, body.framed header, body.framed .header-wrapper, body.boxed, body.boxed header, body.boxed .header-wrapper, body.boxed .is-sticky-section{ max-width: 1230px}.header-main{height: 58px}#logo img{max-height: 58px}#logo{width:151px;}.header-bottom{min-height: 41px}.header-top{min-height: 30px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 108px;}.header.show-on-scroll,.stuck .header-main{height:70px!important}.stuck #logo img{max-height: 70px!important}.search-form{ width: 80%;}.header-bg-color, .header-wrapper {background-color: rgba(0,0,0,0.9)}.header-bottom {background-color: #ffffff}.header-main .nav > li > a{line-height: 16px }.header-bottom-nav > li > a{line-height: 16px }@media (max-width: 549px) {.header-main{height: 70px}#logo img{max-height: 70px}}/* Background Color */[data-icon-label]:after, .secondary.is-underline:hover,.secondary.is-outline:hover,.icon-label,.button.secondary:not(.is-outline),.button.alt:not(.is-outline), .badge-inner.on-sale, .button.checkout, .single_add_to_cart_button{ background-color:#d70909; }/* Color */.secondary.is-underline,.secondary.is-link, .secondary.is-outline,.stars a.active, .star-rating:before, .woocommerce-page .star-rating:before,.star-rating span:before, .color-secondary{color: #d70909}/* Color !important */[data-text-color="secondary"]{color: #d70909!important;}/* Border */.secondary.is-outline:hover{border-color:#d70909}body{font-family:"Roboto", sans-serif}body{font-weight: 0}body{color: #1c1c1c}.nav > li > a {font-family:"Roboto", sans-serif;}.nav > li > a {font-weight: 0;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: "Roboto", sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2{font-weight: 0;}h1,h2,h3,h4,h5,h6,.heading-font{color: #1c1c1c;}.alt-font{font-family: "Roboto", sans-serif;}.alt-font{font-weight: 0!important;}.header:not(.transparent) .header-nav.nav > li > a {color: #ffffff;}.header:not(.transparent) .header-bottom-nav.nav > li > a{color: #000000;}.header:not(.transparent) .header-bottom-nav.nav > li > a:hover,.header:not(.transparent) .header-bottom-nav.nav > li.active > a,.header:not(.transparent) .header-bottom-nav.nav > li.current > a,.header:not(.transparent) .header-bottom-nav.nav > li > a.active,.header:not(.transparent) .header-bottom-nav.nav > li > a.current{color: #3399d2;}.header-bottom-nav.nav-line-bottom > li > a:before,.header-bottom-nav.nav-line-grow > li > a:before,.header-bottom-nav.nav-line > li > a:before,.header-bottom-nav.nav-box > li > a:hover,.header-bottom-nav.nav-box > li.active > a,.header-bottom-nav.nav-pills > li > a:hover,.header-bottom-nav.nav-pills > li.active > a{color:#FFF!important;background-color: #3399d2;}a{color: #000000;}a:hover{color: #3399d2;}.tagcloud a:hover{border-color: #3399d2;background-color: #3399d2;}@media screen and (min-width: 550px){.products .box-vertical .box-image{min-width: 300px!important;width: 300px!important;}}.absolute-footer, html{background-color: #f2f2f2}.label-new.menu-item > a:after{content:"New";}.label-hot.menu-item > a:after{content:"Hot";}.label-sale.menu-item > a:after{content:"Sale";}.label-popular.menu-item > a:after{content:"Popular";}
+    </style>
+    <style id="wp-custom-css" type="text/css">
+			/*
+Bạn có thể thêm CSS ở đây.
+
+Nhấp chuột vào biểu tượng trợ giúp phía trên để tìm hiểu thêm.
+*/
+
+/*-------------global-------------*/
+body, p {
+    line-height: 160%!important;
+}
+/*-----------end global-----------*/
+
+
+/*-------------header-------------*/
+/*Active category menu*/
+a.menu-image-title-after.menu-image-not-hovered.nav-top-link {
+    font-weight: normal;
+}
+.current-menu-item span.menu-image-title {
+    color: #3399d2;
+}
+
+/*style search form*/
+.header-main button.ux-search-submit.submit-button.secondary.button.icon.mb-0 {
+    width: 50px;
+    height: 39px;
+}
+.header-main input.search-field.mb-0 {
+    height: 38px;
+}
+
+/*style topbar menu*/
+a.menu-image-title-below.menu-image-not-hovered.nav-top-link {
+    display: block;
+    line-height: 5px;
+    padding: 0px;
+}
+
+/*style list danh sách giỏ hàng*/
+.header-main ul.product_list_widget li a:not(.remove) {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+    font-size: 12px;
+}
+
+/*style header bottom*/
+.header-bottom {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+/*-----------end header-----------*/
+
+
+/*-------------content-------------*/
+/*căn đều chiều cao các sản phẩm đều nhau*/
+.has-shadow>.col>.col-inner {
+    background-color: #FFF;
+    height: 100%;
+}
+
+/*căn đều sản phẩm trong slider*/
+.sec_mobile .flickity-viewport .col-inner,
+.sec_laptop .flickity-viewport .col-inner,
+.sec_tablet .flickity-viewport .col-inner,
+.sec_phu_kien .flickity-viewport .col-inner {
+    height: 402px !important;
+    background-color: #fff;
+}
+.sec_mobile .flickity-viewport .col-inner:hover,
+.sec_laptop .flickity-viewport .col-inner:hover,
+.sec_tablet .flickity-viewport .col-inner:hover,
+.sec_phu_kien .flickity-viewport .col-inner:hover{
+    -webkit-box-shadow: 1px 2px 7px 0 rgba(0,0,0,.21);
+    -moz-box-shadow: 1px 2px 7px 0 rgba(0,0,0,.21);
+    box-shadow: 1px 2px 7px 0 rgba(0,0,0,.21);
+    border: 1px solid #eee;
+}
+
+.sec_mobile .flickity-viewport,
+.sec_laptop .flickity-viewport,
+.sec_tablet .flickity-viewport,
+.sec_phu_kien .flickity-viewport{
+    height: 404px !important;
+    background-color: #fff;
+}
+
+/*style ẩn trích dãn*/
+.shop-container .box-text ul,
+.sec_mobile .box-text ul,
+.sec_laptop .box-text ul,
+.sec_tablet .box-text ul,
+.sec_phu_kien .box-text ul,
+.row_khuyen_mai .box-text ul{
+    display: none;
+}
+.shop-container .box-text table,
+.sec_tablet .box-text table,
+.row_khuyen_mai .box-text table{
+    display: none;
+}
+.shop-container p.box-excerpt.is-small,
+.sec_phu_kien p.box-excerpt.is-small,
+.row_khuyen_mai p.box-excerpt.is-small {
+    display: none;
+}
+/*ẩn đánh giá*/
+.shop-container .star-rating,
+.sec_mobile .star-rating,
+.sec_laptop .star-rating,
+.sec_tablet .star-rating,
+.sec_phu_kien .star-rating,
+.row_khuyen_mai .star-rating{
+    display: none;
+}
+
+/*style vị trí nhãn Sale*/
+.callout.badge.badge-circle {
+    height: 1.8em;}
+
+.badge-inner.secondary.on-sale {
+    border-radius: 0px;
+    font-weight:  normal;
+    padding: 0px 8px;
+		background-color: #ff2842;
+		border: solid 1px #ff677a;
+		border-radius: 3px;
+}
+.badge-container.absolute.left.top.z-1 {
+    float:right;
+    margin: 15px 0 0 0;
+    position: absolute;
+    right: 15px !important;
+    left: auto;
+}
+
+/*style sidebar widget*/
+.widget_nav_menu li{
+    padding: 0px 10px;
+    border-radius: 5px;
+	border: 1px solid #eee;
+}
+ul.product_list_widget {
+    padding: 0px 10px;
+    border-radius: 5px;
+	border: 1px solid #eee;
+}
+.flatsome_recent_posts > ul{
+    padding: 0px 10px;
+    border-radius: 5px;
+	border: 1px solid #eee;
+}
+
+/*style giá sản phẩm tại widget sidebar*/
+.product_list_widget span.woocommerce-Price-amount.amount {
+    font-size: 12px;
+}
+
+/*style product price*/
+span.woocommerce-Price-amount.amount {
+    color: #d0021b;
+}
+.price del {
+    display: none;
+}
+.product-summary .price del {
+    display: inline-block;
+}
+
+/*style span title widget sidebar*/
+/*span.widget-title.shop-sidebar {
+    padding: 15px;
+    color: #fff;
+}
+.is-divider.small {
+    background-color: #f17024;
+    max-width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: -33px;
+}*/
+
+/*style box news*/
+.box_news .box-text .is-divider {
+    display: none
+}
+.box_news .box-image {
+        padding: 5px 8px;
+}
+.box_news h5.post-title.is-small {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #1f1f1f;
+}
+
+/*style sec recent product*/
+.sec_recent_product .box-text.box-text-products {
+    display: none;
+}
+
+/*style mũi tên trong slider*/
+.slider-nav-reveal .flickity-prev-next-button:hover, .slider-nav-reveal .flickity-prev-next-button {
+    display: none;
+}
+
+/*style trang tablet*/
+.page_tablet_list .badge-container.absolute.left.top.z-1 {
+    float: right;
+    margin: 15px 0 0 0;
+    position: absolute;
+    left: 150px !important;
+    right: auto;
+}
+.page_tablet_list span.woocommerce-Price-amount.amount {
+    position: absolute;
+    right: 15px !important;
+    top: 15px !important;
+    left: auto;
+    font-size: 20px;
+}
+.page_tablet_list .box-text.text-left {
+    vertical-align: top;
+}
+
+.page_tablet_list .title-wrapper a{
+    font-size: 18px;
+    font-weight: bold;
+    color: #337ab7;
+    width: 75%;
+}
+
+/*bỏ grid / list woo, xóa plugin nhưng vẫn không hết*/
+.wc_woo_view_wrapper #wc_woo_view_tabs {
+    float: right;
+    line-height: normal;
+    margin: 0;
+    overflow: hidden;
+    display: none;
+}
+/*-----------end content-----------*/
+
+
+/*-------------footer-------------*/
+
+/*-----------end footer-----------*/
+    </style>
+</head>
+
+<body class="home page-template page-template-page-blank page-template-page-blank-php page page-id-16 lightbox nav-dropdown-has-arrow">
+
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+<div id="wrapper">
+
+
+    <header class="header has-sticky sticky-jump" id="header">
+        <div class="header-wrapper">
+            <div class="header-main nav-dark" id="masthead">
+                <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+
+                    <!-- Logo -->
+                    <div class="flex-col logo" id="logo">
+                        <!-- Header logo -->
+                        <a href="index.html" rel="home" title="fptshop - Một trang web mới sử dụng WordPress">
+                            <img alt="fptshop" class="header_logo header-logo" height="58"
+                                 src="wp-content/uploads/2018/01/logo-mona-fpt.png" width="151"/><img alt="fptshop" class="header-logo-dark"
+                                                                                                      height="58"
+                                                                                                      src="wp-content/uploads/2018/01/logo-mona-fpt.png"
+                                                                                                      width="151"/></a>
+                    </div>
+
+                    <!-- Mobile Left Elements -->
+                    <div class="flex-col show-for-medium flex-left">
+                        <ul class="mobile-nav nav nav-left ">
+                            <li class="nav-icon has-icon">
+                                <a aria-controls="main-menu" aria-expanded="false" class="is-small" data-bg="main-menu-overlay"
+                                   data-color="" data-open="#main-menu" data-pos="left" href="#">
+
+                                    <i class="icon-menu"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Left Elements -->
+                    <div class="flex-col hide-for-medium flex-left
+            flex-grow">
+                        <ul class="header-nav header-nav-main nav nav-left ">
+                            <li class="header-search-form search-form html relative has-icon">
+                                <div class="header-search-form-wrapper">
+                                    <div class="searchform-wrapper ux-search-box relative form- is-normal">
+                                        <form action="http://mauweb.monamedia.net/fptshop/" class="searchform"
+                                              method="get" role="search">
+                                            <div class="flex-row relative">
+                                                <div class="flex-col flex-grow">
+                                                    <input class="search-field mb-0" name="s" placeholder="Nhập tên điện thoại, máy tính, phụ kiện ... cần tìm" type="search"
+                                                           value=""/>
+                                                    <input name="post_type" type="hidden" value="product"/>
+                                                </div><!-- .flex-col -->
+                                                <div class="flex-col">
+                                                    <button class="ux-search-submit submit-button secondary button icon mb-0"
+                                                            type="submit">
+                                                        <i class="icon-search"></i></button>
+                                                </div><!-- .flex-col -->
+                                            </div><!-- .flex-row -->
+                                            <div class="live-search-results text-left z-top"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Elements -->
+                    <div class="flex-col hide-for-medium flex-right">
+                        <ul class="header-nav header-nav-main nav nav-right ">
+                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category  menu-item-349"
+                                id="menu-item-349"><a
+                                    class="menu-image-title-below menu-image-not-hovered nav-top-link"
+                                    href="category/tin-tuc/index.html"><img alt=""
+                                                                            class="menu-image menu-image-title-below"
+                                                                            height="24"
+                                                                            src="wp-content/uploads/2017/12/newspaper.png"
+                                                                            width="24"/><span
+                                    class="menu-image-title">Tin hay</span></a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-476"
+                                id="menu-item-476"><a
+                                    class="menu-image-title-below menu-image-not-hovered nav-top-link"
+                                    href="hoi-dap/index.html"><img alt=""
+                                                                   class="menu-image menu-image-title-below"
+                                                                   height="24"
+                                                                   src="wp-content/uploads/2017/12/speech-bubble-with-question-mark.png"
+                                                                   width="24"/><span
+                                    class="menu-image-title">Hỏi đáp</span></a></li>
+                            <li class="cart-item has-icon
+ has-dropdown">
+
+                                <a class="header-cart-link is-small" href="gio-hang/index.html" title="Giỏ hàng">
+
+
+<span class="header-cart-title">
+   Giỏ hàng   /      <span class="cart-price"><span class="woocommerce-Price-amount amount">0&nbsp;<span
+        class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
+  </span>
+
+                                    <span class="cart-icon image-icon">
+    <strong>0</strong>
+  </span>
+                                </a>
+
+                                <ul class="nav-dropdown nav-dropdown-default">
+                                    <li class="html widget_shopping_cart">
+                                        <div class="widget_shopping_cart_content">
+
+
+                                            <p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ
+                                                hàng.</p>
+
+
+                                        </div>
+                                    </li>
+                                </ul><!-- .nav-dropdown -->
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Mobile Right Elements -->
+                    <div class="flex-col show-for-medium flex-right">
+                        <ul class="mobile-nav nav nav-right ">
+                            <li class="cart-item has-icon">
+
+
+                                <a class="header-cart-link off-canvas-toggle nav-top-link is-small"
+                                   data-class="off-canvas-cart"
+                                   data-open="#cart-popup" data-pos="right" href="gio-hang/index.html"
+                                   title="Giỏ hàng">
+
+    <span class="cart-icon image-icon">
+    <strong>0</strong>
+  </span>
+                                </a>
+
+
+                                <!-- Cart Sidebar Popup -->
+                                <div class="mfp-hide widget_shopping_cart" id="cart-popup">
+                                    <div class="cart-popup-inner inner-padding">
+                                        <div class="cart-popup-title text-center">
+                                            <h4 class="uppercase">Giỏ hàng</h4>
+                                            <div class="is-divider"></div>
+                                        </div>
+                                        <div class="widget_shopping_cart_content">
+
+
+                                            <p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ
+                                                hàng.</p>
+
+
+                                        </div>
+                                        <div class="cart-sidebar-content relative"></div>
+                                    </div>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                </div><!-- .header-inner -->
+
+                <!-- Header divider -->
+                <div class="container">
+                    <div class="top-divider full-width"></div>
+                </div>
+            </div><!-- .header-main -->
+            <div class="header-bottom wide-nav flex-has-center hide-for-medium" id="wide-nav">
+                <div class="flex-row container">
+
+
+                    <div class="flex-col hide-for-medium flex-center">
+                        <ul class="nav header-nav header-bottom-nav nav-center  nav-size-medium nav-spacing-xlarge nav-uppercase">
+                            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-446"
+                                id="menu-item-446"><a
+                                    class="menu-image-title-after menu-image-not-hovered nav-top-link"
+                                    href="danh-muc/dien-thoai/index.html"><img alt=""
+                                                                               class="menu-image menu-image-title-after"
+                                                                               height="24"
+                                                                               sizes="(max-width: 24px) 100vw, 24px"
+                                                                               src="wp-content/uploads/2017/12/smartphone-1-24x24.png"
+                                                                               srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/smartphone-1-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/smartphone-1-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/smartphone-1-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/smartphone-1.png 64w"
+                                                                               width="24"/><span
+                                    class="menu-image-title">Điện thoại</span></a></li>
+                            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-449"
+                                id="menu-item-449"><a
+                                    class="menu-image-title-after menu-image-not-hovered nav-top-link"
+                                    href="danh-muc/laptop/index.html"><img alt=""
+                                                                           class="menu-image menu-image-title-after"
+                                                                           height="24"
+                                                                           sizes="(max-width: 24px) 100vw, 24px"
+                                                                           src="wp-content/uploads/2017/12/laptop-2-24x24.png"
+                                                                           srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/laptop-2-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/laptop-2-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/laptop-2-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/laptop-2.png 64w"
+                                                                           width="24"/><span
+                                    class="menu-image-title">Laptop</span></a></li>
+                            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-447"
+                                id="menu-item-447"><a
+                                    class="menu-image-title-after menu-image-not-hovered nav-top-link"
+                                    href="danh-muc/dien-thoai/apple/index.html"><img alt=""
+                                                                                     class="menu-image menu-image-title-after"
+                                                                                     height="24"
+                                                                                     sizes="(max-width: 24px) 100vw, 24px"
+                                                                                     src="wp-content/uploads/2017/12/apple-24x24.png"
+                                                                                     srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/apple-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/apple-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/apple-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/apple.png 64w"
+                                                                                     width="24"/><span
+                                    class="menu-image-title">Apple</span></a></li>
+                            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-448"
+                                id="menu-item-448"><a
+                                    class="menu-image-title-after menu-image-not-hovered nav-top-link"
+                                    href="danh-muc/dien-thoai/samsung/index.html"><img alt=""
+                                                                                       class="menu-image menu-image-title-after"
+                                                                                       height="24"
+                                                                                       sizes="(max-width: 24px) 100vw, 24px"
+                                                                                       src="wp-content/uploads/2017/12/phone-samsung-galaxy-note-popular-model-24x24.png"
+                                                                                       srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/phone-samsung-galaxy-note-popular-model-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/phone-samsung-galaxy-note-popular-model-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/phone-samsung-galaxy-note-popular-model-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/phone-samsung-galaxy-note-popular-model.png 64w"
+                                                                                       width="24"/><span
+                                    class="menu-image-title">Samsung</span></a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-592"
+                                id="menu-item-592"><a
+                                    class="menu-image-title-after menu-image-not-hovered nav-top-link"
+                                    href="tablet/index.html"><img alt=""
+                                                                  class="menu-image menu-image-title-after"
+                                                                  height="24"
+                                                                  sizes="(max-width: 24px) 100vw, 24px"
+                                                                  src="wp-content/uploads/2017/12/tablet-outline-in-horizontal-position-1-24x24.png"
+                                                                  srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/tablet-outline-in-horizontal-position-1-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/tablet-outline-in-horizontal-position-1-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/tablet-outline-in-horizontal-position-1-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/tablet-outline-in-horizontal-position-1.png 64w"
+                                                                  width="24"/><span
+                                    class="menu-image-title">Tablet</span></a></li>
+                            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-450"
+                                id="menu-item-450"><a
+                                    class="menu-image-title-after menu-image-not-hovered nav-top-link"
+                                    href="danh-muc/phu-kien/index.html"><img alt=""
+                                                                             class="menu-image menu-image-title-after"
+                                                                             height="24"
+                                                                             sizes="(max-width: 24px) 100vw, 24px"
+                                                                             src="wp-content/uploads/2017/12/headset-1-24x24.png"
+                                                                             srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/headset-1-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/headset-1-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/headset-1-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/headset-1.png 64w"
+                                                                             width="24"/><span
+                                    class="menu-image-title">Phụ kiện</span></a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-504"
+                                id="menu-item-504"><a
+                                    class="menu-image-title-after menu-image-not-hovered nav-top-link"
+                                    href="khuyen-mai/index.html"><img alt=""
+                                                                      class="menu-image menu-image-title-after"
+                                                                      height="24"
+                                                                      sizes="(max-width: 24px) 100vw, 24px"
+                                                                      src="wp-content/uploads/2017/12/gift-1-24x24.png"
+                                                                      srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/gift-1-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/gift-1-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/gift-1-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/gift-1.png 64w"
+                                                                      width="24"/><span
+                                    class="menu-image-title">Khuyến mãi</span></a></li>
+                        </ul>
+                    </div><!-- flex-col -->
+
+
+                </div><!-- .flex-row -->
+            </div><!-- .header-bottom -->
+
+            <div class="header-bg-container fill">
+                <div class="header-bg-image fill"></div>
+                <div class="header-bg-color fill"></div>
+            </div><!-- .header-bg-container -->   </div><!-- header-wrapper-->
+    </header>
+
+
+    <main class="" id="main" layout:fragment="content">
+
+    </main><!-- #main -->
+
+    <footer class="footer-wrapper" id="footer">
+
+
+        <!-- FOOTER 1 -->
+
+
+        <!-- FOOTER 2 -->
+
+        <section class="section" id="section_49580036">
+            <div class="bg section-bg fill bg-fill  bg-loaded">
+
+
+            </div><!-- .section-bg -->
+
+            <div class="section-content relative">
+
+
+                <div class="gap-element clearfix" style="display:block; height:auto; padding-top:10px"></div>
+
+                <div class="row row-collapse" id="row-1074410657">
+
+                    <div class="col small-12 large-12">
+                        <div class="col-inner">
+
+                            <ul class="sidebar-wrapper ul-reset ">Danh mục sản phẩm
+                                <div class="tagcloud"><a aria-label="Apple (4 mục)"
+                                                         class="tag-cloud-link tag-link-25 tag-link-position-1"
+                                                         href="danh-muc/dien-thoai/apple/index.html"
+                                                         style="font-size: 14.913580246914pt;">Apple</a>
+                                    <a aria-label="Bao da - Ốp lưng - Dán màn hình (2 mục)"
+                                       class="tag-cloud-link tag-link-47 tag-link-position-2"
+                                       href="danh-muc/phu-kien/bao-da-op-lung-dan-man-hinh/index.html"
+                                       style="font-size: 11.111111111111pt;">Bao da - Ốp lưng - Dán màn
+                                        hình</a>
+                                    <a aria-label="BlackBerry (1 mục)"
+                                       class="tag-cloud-link tag-link-28 tag-link-position-3" href="danh-muc/dien-thoai/blackberry/index.html"
+                                       style="font-size: 8pt;">BlackBerry</a>
+                                    <a aria-label="Laptop (10 mục)"
+                                       class="tag-cloud-link tag-link-23 tag-link-position-4"
+                                       href="danh-muc/laptop/index.html" style="font-size: 20.79012345679pt;">Laptop</a>
+                                    <a aria-label="Laptop Asus (2 mục)"
+                                       class="tag-cloud-link tag-link-38 tag-link-position-5"
+                                       href="danh-muc/laptop/laptop-asus/index.html" style="font-size: 11.111111111111pt;">Laptop
+                                        Asus</a>
+                                    <a aria-label="Laptop Dell (2 mục)"
+                                       class="tag-cloud-link tag-link-39 tag-link-position-6"
+                                       href="danh-muc/laptop/laptop-dell/index.html" style="font-size: 11.111111111111pt;">Laptop
+                                        Dell</a>
+                                    <a aria-label="Laptop HP (2 mục)"
+                                       class="tag-cloud-link tag-link-42 tag-link-position-7"
+                                       href="danh-muc/laptop/laptop-hp/index.html" style="font-size: 11.111111111111pt;">Laptop
+                                        HP</a>
+                                    <a aria-label="Laptop Lenovo (2 mục)"
+                                       class="tag-cloud-link tag-link-41 tag-link-position-8"
+                                       href="danh-muc/laptop/laptop-lenovo/index.html" style="font-size: 11.111111111111pt;">Laptop
+                                        Lenovo</a>
+                                    <a aria-label="Loa (2 mục)"
+                                       class="tag-cloud-link tag-link-44 tag-link-position-9"
+                                       href="danh-muc/phu-kien/loa/index.html" style="font-size: 11.111111111111pt;">Loa</a>
+                                    <a aria-label="Macbook (2 mục)"
+                                       class="tag-cloud-link tag-link-40 tag-link-position-10"
+                                       href="danh-muc/laptop/macbook/index.html" style="font-size: 11.111111111111pt;">Macbook</a>
+                                    <a aria-label="Motorola (2 mục)"
+                                       class="tag-cloud-link tag-link-27 tag-link-position-11"
+                                       href="danh-muc/dien-thoai/motorola/index.html" style="font-size: 11.111111111111pt;">Motorola</a>
+                                    <a aria-label="Máy nghe nhạc (2 mục)"
+                                       class="tag-cloud-link tag-link-45 tag-link-position-12"
+                                       href="danh-muc/phu-kien/may-nghe-nhac/index.html" style="font-size: 11.111111111111pt;">Máy nghe
+                                        nhạc</a>
+                                    <a aria-label="Nokia (1 mục)"
+                                       class="tag-cloud-link tag-link-29 tag-link-position-13" href="danh-muc/dien-thoai/nokia/index.html"
+                                       style="font-size: 8pt;">Nokia</a>
+                                    <a aria-label="Phụ kiện (10 mục)"
+                                       class="tag-cloud-link tag-link-24 tag-link-position-14"
+                                       href="danh-muc/phu-kien/index.html" style="font-size: 20.79012345679pt;">Phụ kiện</a>
+                                    <a aria-label="Phụ kiện âm thanh (2 mục)"
+                                       class="tag-cloud-link tag-link-46 tag-link-position-15"
+                                       href="danh-muc/phu-kien/phu-kien-am-thanh/index.html" style="font-size: 11.111111111111pt;">Phụ
+                                        kiện âm thanh</a>
+                                    <a aria-label="Samsung (4 mục)"
+                                       class="tag-cloud-link tag-link-26 tag-link-position-16"
+                                       href="danh-muc/dien-thoai/samsung/index.html" style="font-size: 14.913580246914pt;">Samsung</a>
+                                    <a aria-label="Tablet (10 mục)"
+                                       class="tag-cloud-link tag-link-22 tag-link-position-17"
+                                       href="danh-muc/tablet/index.html" style="font-size: 20.79012345679pt;">Tablet</a>
+                                    <a aria-label="Tablet Beneve (1 mục)"
+                                       class="tag-cloud-link tag-link-37 tag-link-position-18" href="danh-muc/tablet/tablet-beneve/index.html"
+                                       style="font-size: 8pt;">Tablet Beneve</a>
+                                    <a aria-label="Tablet Cutepad (2 mục)"
+                                       class="tag-cloud-link tag-link-31 tag-link-position-19"
+                                       href="danh-muc/tablet/tablet-cutepad/index.html" style="font-size: 11.111111111111pt;">Tablet
+                                        Cutepad</a>
+                                    <a aria-label="Tablet Huawei (1 mục)"
+                                       class="tag-cloud-link tag-link-33 tag-link-position-20" href="danh-muc/tablet/tablet-huawei/index.html"
+                                       style="font-size: 8pt;">Tablet Huawei</a>
+                                    <a aria-label="Tablet Ipad (2 mục)"
+                                       class="tag-cloud-link tag-link-32 tag-link-position-21"
+                                       href="danh-muc/tablet/tablet-ipad/index.html" style="font-size: 11.111111111111pt;">Tablet
+                                        Ipad</a>
+                                    <a aria-label="Tablet Itel (1 mục)"
+                                       class="tag-cloud-link tag-link-35 tag-link-position-22" href="danh-muc/tablet/tablet-itel/index.html"
+                                       style="font-size: 8pt;">Tablet Itel</a>
+                                    <a aria-label="Tablet Kindle (1 mục)"
+                                       class="tag-cloud-link tag-link-30 tag-link-position-23" href="danh-muc/tablet/tablet-kindle/index.html"
+                                       style="font-size: 8pt;">Tablet Kindle</a>
+                                    <a aria-label="Tablet Mobell (1 mục)"
+                                       class="tag-cloud-link tag-link-34 tag-link-position-24" href="danh-muc/tablet/tablet-mobell/index.html"
+                                       style="font-size: 8pt;">Tablet Mobell</a>
+                                    <a aria-label="Tablet Samsung (1 mục)"
+                                       class="tag-cloud-link tag-link-36 tag-link-position-25" href="danh-muc/tablet/tablet-samsung/index.html"
+                                       style="font-size: 8pt;">Tablet Samsung</a>
+                                    <a aria-label="Tai nghe (2 mục)"
+                                       class="tag-cloud-link tag-link-43 tag-link-position-26"
+                                       href="danh-muc/phu-kien/tai-nghe/index.html" style="font-size: 11.111111111111pt;">Tai nghe</a>
+                                    <a aria-label="Điện thoại (12 mục)"
+                                       class="tag-cloud-link tag-link-21 tag-link-position-27" href="danh-muc/dien-thoai/index.html"
+                                       style="font-size: 22pt;">Điện thoại</a></div>
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+
+                    <style scope="scope">
+
+                    </style>
+                </div>
+
+            </div><!-- .section-content -->
+
+
+            <style scope="scope">
+
+#section_49580036 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: rgb(243, 243, 243);
+}
+
+            </style>
+        </section>
+
+        <section class="section sec_footer" id="section_224418128">
+            <div class="bg section-bg fill bg-fill  bg-loaded">
+
+
+            </div><!-- .section-bg -->
+
+            <div class="section-content relative">
+
+
+                <div class="gap-element clearfix" style="display:block; height:auto; padding-top:30px"></div>
+
+                <div class="row row-collapse" id="row-1251774516">
+
+                    <div class="col medium-3 small-6 large-3">
+                        <div class="col-inner">
+
+                            <h3>HOTLINE HỖ TRỢ</h3>
+                            <p>Hỗ trợ mua hàng: <a href="tel:+01269220162">0126 922 0162</a></p>
+                            <p>Hỗ trợ kỹ thuật: <a href="tel:+01269220162">0126 922 0162</a></p>
+                            <p>Hỗ trợ bảo hành: <a href="tel:+01269220162">0126 922 0162</a></p>
+
+                        </div>
+                    </div>
+                    <div class="col medium-4 small-6 large-4">
+                        <div class="col-inner">
+
+                            <h3>MONA MEDIA</h3>
+                            <p>Địa chỉ: 151 Hồ Bá Kiện, P15, Q10, HCM</p>
+                            <p>Điện thoại: <a href="tel:0126 922 0162">0126 922 0162</a></p>
+                            <p>Email: <a
+                                    href="http://mauweb.monamedia.net/cdn-cgi/l/email-protection#83e7e6eeecedebf6edf7e6f1e4c3e4eee2eaefade0ecee"><span
+                                    class="__cf_email__" data-cfemail="d4b0b1b9bbbabca1baa0b1a6b394b3b9b5bdb8fab7bbb9">[email&#160;protected]</span></a>
+                            </p>
+                            <p>
+                                <a href="http://mauweb.monamedia.net/cdn-cgi/l/email-protection#563b3938163b393837783b33323f37"><span
+                                        class="__cf_email__" data-cfemail="bbd6d4d5fbd6d4d5da95d6dedfd2da">[email&#160;protected]</span></a>
+                            </p>
+                            <p>Skype: <a href="skype:demonhunterp?chat">demonhunterp</a></p>
+
+                        </div>
+                    </div>
+                    <div class="col medium-5 small-6 large-5">
+                        <div class="col-inner">
+
+                            <div class="row row-collapse" id="row-1667169008">
+
+                                <div class="col medium-4 small-12 large-4">
+                                    <div class="col-inner">
+
+                                        <p>Hỗ trợ thanh toán</p>
+
+                                    </div>
+                                </div>
+                                <div class="col footer_ho_tro medium-8 small-12 large-8">
+                                    <div class="col-inner">
+
+                                        <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1368894908">
+                                            <div class="img-inner image-cover dark" style="padding-top:27px;">
+                                                <img alt="" class="attachment-original size-original"
+                                                     height="27"
+                                                     sizes="(max-width: 142px) 100vw, 142px" src="wp-content/uploads/2017/12/icon_payment.png"
+                                                     srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/icon_payment.png 142w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/icon_payment-24x5.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/icon_payment-36x7.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/icon_payment-48x9.png 48w"
+                                                     width="142"/>
+                                            </div>
+
+                                            <style scope="scope">
+
+#image_1368894908 {
+  width: 43%;
+}
+
+                                            </style>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+                                <style scope="scope">
+
+                                </style>
+                            </div>
+                            <div class="row row-collapse" id="row-1160486148">
+
+                                <div class="col medium-5 small-12 large-5">
+                                    <div class="col-inner">
+
+                                        <p>Tư vẫn miễn phí (24/7) </br><a href="tel:+01269220162">0126 922 0162</a></p>
+
+                                    </div>
+                                </div>
+                                <div class="col medium-7 small-12 large-7">
+                                    <div class="col-inner">
+
+                                        <p>Góp ý, phản ánh(8h00 - 22h00) </br><a href="tel:+01269220162">0126 922
+                                            0162</a></p>
+
+                                    </div>
+                                </div>
+
+
+                                <style scope="scope">
+
+                                </style>
+                            </div>
+                            <div class="row row-collapse" id="row-1944573054">
+
+                                <div class="col footer_cong_nhan small-12 large-12">
+                                    <div class="col-inner">
+
+                                        <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_703426006">
+                                            <div class="img-inner dark">
+                                                <img alt="" class="attachment-original size-original"
+                                                     height="40"
+                                                     sizes="(max-width: 420px) 100vw, 420px" src="wp-content/uploads/2017/12/icon_cong_nhan.png"
+                                                     srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/icon_cong_nhan.png 420w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/icon_cong_nhan-300x29.png 300w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/icon_cong_nhan-24x2.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/icon_cong_nhan-36x3.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/icon_cong_nhan-48x5.png 48w"
+                                                     width="420"/>
+                                            </div>
+
+                                            <style scope="scope">
+
+#image_703426006 {
+  width: 100%;
+}
+
+                                            </style>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+                                <style scope="scope">
+
+                                </style>
+                            </div>
+                            <div id='fb-root'></div>
+                            <p>
+                                <script data-cfasync="false"
+                                        src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                                <script>
+                                    (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = '../../connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
+                                </script>
+                            </p>
+                            <div attribution="wordpress" class='fb-customerchat' page_id='1342183349141230'>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <style scope="scope">
+
+                    </style>
+                </div>
+
+            </div><!-- .section-content -->
+
+
+            <style scope="scope">
+
+#section_224418128 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+            </style>
+        </section>
+
+
+        <div class="absolute-footer light medium-text-center text-center">
+            <div class="container clearfix">
+
+
+                <div class="footer-primary pull-left">
+                    <div class="copyright-footer">
+                        &copy; All rights reserved.
+                        Thiết kế website <img alt="MonaMedia" src="../../mona.solutions/logo.png"
+                                              style="width:20px;vertical-align:sub;"> <a href="https://mona.media/" title="Mona Media"><strong>Mona
+                        Media</strong></a>
+                    </div>
+                </div><!-- .left -->
+            </div><!-- .container -->
+        </div><!-- .absolute-footer -->
+        <a class="back-to-top button invert plain is-outline hide-for-medium icon circle fixed bottom z-1" href="#top"
+           id="top-link"><i class="icon-angle-up"></i></a>
+
+    </footer><!-- .footer-wrapper -->
+
+</div><!-- #wrapper -->
+
+<!-- Mobile Sidebar -->
+<div class="mobile-sidebar no-scrollbar mfp-hide" id="main-menu">
+    <div class="sidebar-menu no-scrollbar ">
+        <ul class="nav nav-sidebar  nav-vertical nav-uppercase">
+            <li class="header-search-form search-form html relative has-icon">
+                <div class="header-search-form-wrapper">
+                    <div class="searchform-wrapper ux-search-box relative form- is-normal">
+                        <form action="http://mauweb.monamedia.net/fptshop/" class="searchform" method="get"
+                              role="search">
+                            <div class="flex-row relative">
+                                <div class="flex-col flex-grow">
+                                    <input class="search-field mb-0" name="s" placeholder="Nhập tên điện thoại, máy tính, phụ kiện ... cần tìm" type="search"
+                                           value=""/>
+                                    <input name="post_type" type="hidden" value="product"/>
+                                </div><!-- .flex-col -->
+                                <div class="flex-col">
+                                    <button class="ux-search-submit submit-button secondary button icon mb-0"
+                                            type="submit">
+                                        <i class="icon-search"></i></button>
+                                </div><!-- .flex-col -->
+                            </div><!-- .flex-row -->
+                            <div class="live-search-results text-left z-top"></div>
+                        </form>
+                    </div>
+                </div>
+            </li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-446"><a
+                    class="menu-image-title-after menu-image-not-hovered" href="danh-muc/dien-thoai/index.html"><img
+                    alt="" class="menu-image menu-image-title-after" height="24"
+                    sizes="(max-width: 24px) 100vw, 24px" src="wp-content/uploads/2017/12/smartphone-1-24x24.png"
+                    srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/smartphone-1-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/smartphone-1-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/smartphone-1-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/smartphone-1.png 64w"
+                    width="24"/><span class="menu-image-title">Điện thoại</span></a></li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-449"><a
+                    class="menu-image-title-after menu-image-not-hovered" href="danh-muc/laptop/index.html"><img
+                    alt="" class="menu-image menu-image-title-after" height="24"
+                    sizes="(max-width: 24px) 100vw, 24px" src="wp-content/uploads/2017/12/laptop-2-24x24.png"
+                    srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/laptop-2-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/laptop-2-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/laptop-2-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/laptop-2.png 64w"
+                    width="24"/><span class="menu-image-title">Laptop</span></a></li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-447"><a
+                    class="menu-image-title-after menu-image-not-hovered"
+                    href="danh-muc/dien-thoai/apple/index.html"><img alt="" class="menu-image menu-image-title-after"
+                                                                     height="24"
+                                                                     sizes="(max-width: 24px) 100vw, 24px"
+                                                                     src="wp-content/uploads/2017/12/apple-24x24.png"
+                                                                     srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/apple-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/apple-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/apple-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/apple.png 64w"
+                                                                     width="24"/><span
+                    class="menu-image-title">Apple</span></a></li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-448"><a
+                    class="menu-image-title-after menu-image-not-hovered" href="danh-muc/dien-thoai/samsung/index.html"><img
+                    alt="" class="menu-image menu-image-title-after"
+                    height="24"
+                    sizes="(max-width: 24px) 100vw, 24px" src="wp-content/uploads/2017/12/phone-samsung-galaxy-note-popular-model-24x24.png"
+                    srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/phone-samsung-galaxy-note-popular-model-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/phone-samsung-galaxy-note-popular-model-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/phone-samsung-galaxy-note-popular-model-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/phone-samsung-galaxy-note-popular-model.png 64w"
+                    width="24"/><span class="menu-image-title">Samsung</span></a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-592"><a
+                    class="menu-image-title-after menu-image-not-hovered" href="tablet/index.html"><img alt=""
+                                                                                                        class="menu-image menu-image-title-after"
+                                                                                                        height="24"
+                                                                                                        sizes="(max-width: 24px) 100vw, 24px"
+                                                                                                        src="wp-content/uploads/2017/12/tablet-outline-in-horizontal-position-1-24x24.png"
+                                                                                                        srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/tablet-outline-in-horizontal-position-1-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/tablet-outline-in-horizontal-position-1-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/tablet-outline-in-horizontal-position-1-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/tablet-outline-in-horizontal-position-1.png 64w"
+                                                                                                        width="24"/><span
+                    class="menu-image-title">Tablet</span></a></li>
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-450"><a
+                    class="menu-image-title-after menu-image-not-hovered" href="danh-muc/phu-kien/index.html"><img
+                    alt="" class="menu-image menu-image-title-after" height="24"
+                    sizes="(max-width: 24px) 100vw, 24px" src="wp-content/uploads/2017/12/headset-1-24x24.png"
+                    srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/headset-1-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/headset-1-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/headset-1-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/headset-1.png 64w"
+                    width="24"/><span class="menu-image-title">Phụ kiện</span></a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-504"><a
+                    class="menu-image-title-after menu-image-not-hovered" href="khuyen-mai/index.html"><img alt=""
+                                                                                                            class="menu-image menu-image-title-after"
+                                                                                                            height="24"
+                                                                                                            sizes="(max-width: 24px) 100vw, 24px"
+                                                                                                            src="wp-content/uploads/2017/12/gift-1-24x24.png"
+                                                                                                            srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/gift-1-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/gift-1-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/gift-1-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/gift-1.png 64w"
+                                                                                                            width="24"/><span
+                    class="menu-image-title">Khuyến mãi</span></a></li>
+            <li class="account-item has-icon menu-item">
+                <a class="nav-top-link nav-top-not-logged-in"
+                   href="tai-khoan/index.html">
+    <span class="header-account-title">
+    Đăng nhập  </span>
+                </a><!-- .account-login-link -->
+
+            </li>
+            <li class="header-newsletter-item has-icon">
+
+                <a class="tooltip" href="#header-newsletter-signup" title="Sign up for Newsletter">
+
+                    <i class="icon-envelop"></i>
+                    <span class="header-newsletter-title">
+      Newsletter    </span>
+                </a><!-- .newsletter-link -->
+
+            </li>
+            <li class="html header-social-icons ml-0">
+                <div class="social-icons follow-icons "><a class="icon plain facebook tooltip" data-label="Facebook" href="http://url/"
+                                                           rel="nofollow" target="_blank"
+                                                           title="Follow on Facebook"><i
+                        class="icon-facebook"></i></a><a class="icon plain  instagram tooltip" data-label="Instagram" href="http://url/"
+                                                         rel="nofollow" target="_blank"
+                                                         title="Follow on Instagram"><i
+                        class="icon-instagram"></i></a><a class="icon plain  twitter tooltip" data-label="Twitter" href="http://url/"
+                                                          rel="nofollow" target="_blank"
+                                                          title="Follow on Twitter"><i class="icon-twitter"></i></a><a
+                        class="icon plain  email tooltip"
+                        data-label="E-mail" href="http://mauweb.monamedia.net/cdn-cgi/l/email-protection#562f39232416333b373f3a" rel="nofollow" title="Send us an email"><i
+                        class="icon-envelop"></i></a></div>
+            </li>
+        </ul>
+    </div><!-- inner -->
+</div><!-- #mobile-menu -->
+<div id='fb-root'></div>
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = '../../connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+<div attribution="wordpress"
+     class='fb-customerchat'
+     page_id='1342183349141230'
+>
+</div>
+<div class="lightbox-content mfp-hide" id="login-form-popup">
+
+    <div class="my-account-header page-title normal-title
+	">
+
+
+        <div class="page-title-inner flex-row  container">
+            <div class="flex-col flex-grow medium-text-center">
+
+                <div class="text-center social-login">
+
+
+                </div>
+
+            </div><!-- .flex-left -->
+        </div><!-- flex-row -->
+    </div><!-- .page-title -->
+
+
+    <div class="account-container lightbox-inner">
+
+        <div class="account-login-inner">
+
+            <h3 class="uppercase">Đăng nhập</h3>
+
+            <form class="woocommerce-form woocommerce-form-login login" method="post">
+
+
+                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                    <label for="username">Tên tài khoản hoặc địa chỉ email <span class="required">*</span></label>
+                    <input class="woocommerce-Input woocommerce-Input--text input-text" id="username" name="username"
+                           type="text" value=""/>
+                </p>
+                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                    <label for="password">Mật khẩu <span class="required">*</span></label>
+                    <input class="woocommerce-Input woocommerce-Input--text input-text" id="password" name="password"
+                           type="password"/>
+                </p>
+
+
+                <p class="form-row">
+                    <input id="woocommerce-login-nonce" name="woocommerce-login-nonce" type="hidden"
+                           value="29590c97ff"/><input name="_wp_http_referer" type="hidden" value="/fptshop/"/> <input
+                        class="woocommerce-Button button" name="login" type="submit" value="Đăng nhập"/>
+                    <label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
+                        <input class="woocommerce-form__input woocommerce-form__input-checkbox" id="rememberme"
+                               name="rememberme" type="checkbox" value="forever"/> <span>Ghi nhớ mật khẩu</span>
+                    </label>
+                </p>
+                <p class="woocommerce-LostPassword lost_password">
+                    <a href="tai-khoan/lost-password/index.html">Quên mật khẩu?</a>
+                </p>
+
+
+            </form>
+        </div><!-- .login-inner -->
+
+
+    </div><!-- .account-login-container -->
+
+</div>
+<script>
+            jQuery(document).ready(function () {
+                var licnt = 0;
+                jQuery('#woo_view_nav_ul a').click(function () {
+                    var vals = jQuery(this).attr('id');
+                    jQuery('#woo_view_view').attr('value', vals);
+                    jQuery('#woo_view_form').submit();
+                });
+
+                jQuery('ul.products').addClass('list');
+                jQuery('ul.products li').each(function (e, i) {
+                    jQuery(this).addClass('woo_view_map_li');
+                });
+
+
+            });
+
+
+</script>
+
+<script>
+
+        jQuery(document).ready(function () {
+            var container = jQuery('#wc_woo_view_scroller');
+
+
+                    });
+
+
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/mauweb.monamedia.net\/fptshop\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"H\u00e3y x\u00e1c nh\u1eadn r\u1eb1ng b\u1ea1n kh\u00f4ng ph\u1ea3i l\u00e0 robot."}}};
+/* ]]> */
+
+</script>
+<script src='wp-content/plugins/contact-form-7/includes/js/scripts20fd.js?ver=4.9.2' type='text/javascript'></script>
+<script src='wp-content/plugins/ot-flatsome-vertical-menu/assets/js/ot-vertical-menuf488.js?ver=1.1.0'
+        type='text/javascript'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/fptshop\/wp-admin\/admin-ajax.php","wc_ajax_url":"http:\/\/mauweb.monamedia.net\/fptshop\/?wc-ajax=%%endpoint%%","i18n_view_cart":"Xem gi\u1ecf h\u00e0ng","cart_url":"http:\/\/mauweb.monamedia.net\/fptshop\/gio-hang\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+
+</script>
+<script src='wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.minc169.js?ver=3.2.6'
+        type='text/javascript'></script>
+<script src='wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd.js?ver=2.70'
+        type='text/javascript'></script>
+<script src='wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min6b25.js?ver=2.1.4'
+        type='text/javascript'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/fptshop\/wp-admin\/admin-ajax.php","wc_ajax_url":"http:\/\/mauweb.monamedia.net\/fptshop\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+
+</script>
+<script src='wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.minc169.js?ver=3.2.6'
+        type='text/javascript'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/fptshop\/wp-admin\/admin-ajax.php","wc_ajax_url":"http:\/\/mauweb.monamedia.net\/fptshop\/?wc-ajax=%%endpoint%%","fragment_name":"wc_fragments_016b33d5803be188508090e7b9345717"};
+/* ]]> */
+
+</script>
+<script src='wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.minc169.js?ver=3.2.6'
+        type='text/javascript'></script>
+<script src='wp-content/themes/flatsome/inc/extensions/flatsome-live-search/flatsome-live-searchccfb.js?ver=3.4.2'
+        type='text/javascript'></script>
+<script src='wp-includes/js/hoverIntent.minc245.js?ver=1.8.1' type='text/javascript'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var flatsomeVars = {"ajaxurl":"http:\/\/mauweb.monamedia.net\/fptshop\/wp-admin\/admin-ajax.php","rtl":"","sticky_height":"70"};
+/* ]]> */
+
+</script>
+<script src='wp-content/themes/flatsome/assets/js/flatsomeccfb.js?ver=3.4.2' type='text/javascript'></script>
+<script src='wp-content/themes/flatsome/assets/js/woocommerceccfb.js?ver=3.4.2' type='text/javascript'></script>
+<script src='wp-includes/js/wp-embed.minca80.js?ver=4.9.15' type='text/javascript'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _zxcvbnSettings = {"src":"http:\/\/mauweb.monamedia.net\/fptshop\/wp-includes\/js\/zxcvbn.min.js"};
+/* ]]> */
+
+</script>
+<script src='wp-includes/js/zxcvbn-async.min5152.js?ver=1.0' type='text/javascript'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pwsL10n = {"unknown":"M\u1eadt kh\u1ea9u m\u1ea1nh kh\u00f4ng x\u00e1c \u0111\u1ecbnh","short":"R\u1ea5t y\u1ebfu","bad":"Y\u1ebfu","good":"Trung b\u00ecnh","strong":"M\u1ea1nh","mismatch":"M\u1eadt kh\u1ea9u kh\u00f4ng kh\u1edbp"};
+/* ]]> */
+
+</script>
+<script src='wp-admin/js/password-strength-meter.minca80.js?ver=4.9.15' type='text/javascript'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_password_strength_meter_params = {"min_password_strength":"3","i18n_password_error":"Vui l\u00f2ng nh\u1eadp m\u1eadt kh\u1ea9u kh\u00f3 h\u01a1n.","i18n_password_hint":"G\u1ee3i \u00fd: M\u1eadt kh\u1ea9u ph\u1ea3i c\u00f3 \u00edt nh\u1ea5t 12 k\u00fd t\u1ef1. \u0110\u1ec3 n\u00e2ng cao \u0111\u1ed9 b\u1ea3o m\u1eadt, s\u1eed d\u1ee5ng ch\u1eef in hoa, in th\u01b0\u1eddng, ch\u1eef s\u1ed1 v\u00e0 c\u00e1c k\u00fd t\u1ef1 \u0111\u1eb7c bi\u1ec7t nh\u01b0 ! \" ? $ % ^ & )."};
+/* ]]> */
+
+</script>
+<script src='wp-content/plugins/woocommerce/assets/js/frontend/password-strength-meter.minc169.js?ver=3.2.6'
+        type='text/javascript'></script>
+<style type="text/css"></style>
+<script type="text/javascript">
+    var essb_clicked_lovethis = false; var essb_love_you_message_thanks = "Thank you for loving this."; var essb_love_you_message_loved = "You already love this today."; var essb_lovethis = function(oInstance) { if (essb_clicked_lovethis) { alert(essb_love_you_message_loved); return; } var element = jQuery('.essb_'+oInstance); if (!element.length) { return; } var instance_post_id = jQuery(element).attr("data-essb-postid") || ""; var cookie_set = essb_get_lovecookie("essb_love_"+instance_post_id); if (cookie_set) { alert(essb_love_you_message_loved); return; } if (typeof(essb_settings) != "undefined") { jQuery.post(essb_settings.ajax_url, { 'action': 'essb_love_action', 'post_id': instance_post_id, 'service': 'love', 'nonce': essb_settings.essb3_nonce }, function (data) { if (data) { alert(essb_love_you_message_thanks); }},'json'); } essb_tracking_only('', 'love', oInstance, true); }; var essb_get_lovecookie = function(name) { var value = "; " + document.cookie; var parts = value.split("; " + name + "="); if (parts.length == 2) return parts.pop().split(";").shift(); };var essb_window = function(oUrl, oService, oInstance) { var element = jQuery('.essb_'+oInstance); var instance_post_id = jQuery(element).attr("data-essb-postid") || ""; var instance_position = jQuery(element).attr("data-essb-position") || ""; var wnd; var w = 800 ; var h = 500; if (oService == "twitter") { w = 500; h= 300; } var left = (screen.width/2)-(w/2); var top = (screen.height/2)-(h/2); if (oService == "twitter") { wnd = window.open( oUrl, "essb_share_window", "height=300,width=500,resizable=1,scrollbars=yes,top="+top+",left="+left ); } else { wnd = window.open( oUrl, "essb_share_window", "height=500,width=800,resizable=1,scrollbars=yes,top="+top+",left="+left ); } if (typeof(essb_settings) != "undefined") { if (essb_settings.essb3_stats) { if (typeof(essb_handle_stats) != "undefined") { essb_handle_stats(oService, instance_post_id, oInstance); } } if (essb_settings.essb3_ga) { essb_ga_tracking(oService, oUrl, instance_position); } } essb_self_postcount(oService, instance_post_id); var pollTimer = window.setInterval(function() { if (wnd.closed !== false) { window.clearInterval(pollTimer); essb_smart_onclose_events(oService, instance_post_id); } }, 200); }; var essb_self_postcount = function(oService, oCountID) { if (typeof(essb_settings) != "undefined") { oCountID = String(oCountID); jQuery.post(essb_settings.ajax_url, { 'action': 'essb_self_postcount', 'post_id': oCountID, 'service': oService, 'nonce': essb_settings.essb3_nonce }, function (data) { if (data) { }},'json'); } }; var essb_smart_onclose_events = function(oService, oPostID) { if (typeof (essbasc_popup_show) == 'function') { essbasc_popup_show(); } if (typeof essb_acs_code == 'function') { essb_acs_code(oService, oPostID); } }; var essb_tracking_only = function(oUrl, oService, oInstance, oAfterShare) { var element = jQuery('.essb_'+oInstance); if (oUrl == "") { oUrl = document.URL; } var instance_post_id = jQuery(element).attr("data-essb-postid") || ""; var instance_position = jQuery(element).attr("data-essb-position") || ""; if (typeof(essb_settings) != "undefined") { if (essb_settings.essb3_stats) { if (typeof(essb_handle_stats) != "undefined") { essb_handle_stats(oService, instance_post_id, oInstance); } } if (essb_settings.essb3_ga) { essb_ga_tracking(oService, oUrl, instance_position); } } essb_self_postcount(oService, instance_post_id); if (oAfterShare) { essb_smart_onclose_events(oService, instance_post_id); } }; var essb_pinterest_picker = function(oInstance) { essb_tracking_only('', 'pinterest', oInstance); var e=document.createElement('script'); e.setAttribute('type','text/javascript'); e.setAttribute('charset','UTF-8'); e.setAttribute('src','../../assets.pinterest.com/js/pinmarklet2a3b.js?r='+Math.random()*99999999);document.body.appendChild(e); };
+</script>
+</body>
+
+<!-- Mirrored from mauweb.monamedia.net/fptshop/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Jan 2022 16:28:32 GMT -->
+</html>
