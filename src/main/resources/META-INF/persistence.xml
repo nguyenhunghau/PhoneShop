@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.example_PhoneShop_jar_0.0.1-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.PhoneShop.entity.Categorydetail</class>
+    <class>com.PhoneShop.entity.Producer</class>
+    <class>com.PhoneShop.entity.Product</class>
+    <class>com.PhoneShop.entity.Orders</class>
+    <class>com.PhoneShop.entity.News</class>
+    <class>com.PhoneShop.entity.Reviews</class>
+    <class>com.PhoneShop.entity.OrderDetail</class>
+    <class>com.PhoneShop.entity.Productphoto</class>
+    <class>com.PhoneShop.entity.Category</class>
+    <class>com.PhoneShop.entity.Variant</class>
+    <class>com.PhoneShop.entity.User</class>
+    <class>com.PhoneShop.entity.CategorydetailEntity</class>
+    <class>com.PhoneShop.entity.ProducerEntity</class>
+    <class>com.PhoneShop.entity.OrdersEntity</class>
+    <class>com.PhoneShop.entity.ProductphotoEntity</class>
+    <class>com.PhoneShop.entity.OrderDetailEntity</class>
+    <class>com.PhoneShop.entity.ReviewsEntity</class>
+    <class>com.PhoneShop.entity.CategoryEntity</class>
+    <class>com.PhoneShop.entity.NewsEntity</class>
+    <class>com.PhoneShop.entity.FlywaySchemaHistoryEntity</class>
+    <class>com.PhoneShop.entity.UserEntity</class>
+    <class>com.PhoneShop.entity.ProductEntity</class>
+    <class>com.PhoneShop.entity.VariantEntity</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/phoneshop?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="123456"/>
+    </properties>
+  </persistence-unit>
+</persistence>
