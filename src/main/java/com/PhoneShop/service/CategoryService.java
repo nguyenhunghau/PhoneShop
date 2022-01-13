@@ -25,4 +25,10 @@ public class CategoryService {
         CategoryEntity categoryEntity = categoryRepository.findById(id).get();
         return new ModelMapper().map(categoryEntity, Category.class);
     }
+
+    public Category addCategory(Category category) {
+        CategoryEntity categoryEntity = new ModelMapper().map(category, CategoryEntity.class);
+        categoryEntity = categoryRepository.save(categoryEntity);
+        return new ModelMapper().map(categoryEntity, Category.class);
+    }
 }
