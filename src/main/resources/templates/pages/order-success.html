@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="~{layouts/layout}"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Order success</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <div id="content" class="content-area page-wrapper" role="main">
+        <div class="row row-main">
+            <div class="large-12 col">
+                <div class="col-inner">
+
+                    <div class="woocommerce">
+                        <div class="row">
+
+
+                            <div class="large-7 col">
+
+                                <section class="woocommerce-order-details">
+                                    <h2 class="woocommerce-order-details__title">Chi tiết đơn hàng</h2>
+
+                                    <table class="woocommerce-table woocommerce-table--order-details shop_table order_details">
+
+                                        <thead>
+                                        <tr>
+                                            <th class="woocommerce-table__product-name product-name">Sản phẩm</th>
+                                            <th class="woocommerce-table__product-table product-total">Tổng cộng</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <tr class="woocommerce-table__line-item order_item">
+
+                                            <td class="woocommerce-table__product-name product-name">
+                                                <a href="http://mauweb.monamedia.net/fptshop/san-pham/dien-thoai-iphone-6s-32gb-hang-chinh-hang/">Điện Thoại iPhone 6s 32GB - Hàng Chính Hãng</a> <strong class="product-quantity">&times; 1</strong>	</td>
+
+                                            <td class="woocommerce-table__product-total product-total">
+                                                <span class="woocommerce-Price-amount amount">12,100,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span>	</td>
+
+                                        </tr>
+
+                                        </tbody>
+
+                                        <tfoot>
+                                        <tr>
+                                            <th scope="row">Tổng cộng:</th>
+                                            <td><span class="woocommerce-Price-amount amount">12,100,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Giao nhận hàng:</th>
+                                            <td>Giao hàng miễn phí</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Phương thức thanh toán:</th>
+                                            <td>Kiểm tra thanh toán</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Tổng cộng:</th>
+                                            <td><span class="woocommerce-Price-amount amount">12,100,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></td>
+                                        </tr>
+                                        </tfoot>
+                                    </table>
+
+                                </section>
+
+
+                            </div>
+
+                            <div class="large-5 col">
+                                <div class="is-well col-inner entry-content">
+                                    <p class="success-color woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><strong>Cảm ơn bạn. Đơn hàng của bạn đã được nhận.</strong></p>
+
+                                    <ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
+
+                                        <li class="woocommerce-order-overview__order order">
+                                            Mã đơn hàng:						<strong>637</strong>
+                                        </li>
+
+                                        <li class="woocommerce-order-overview__date date">
+                                            Ngày:							<strong>11 Tháng Một, 2022</strong>
+                                        </li>
+
+
+                                        <li class="woocommerce-order-overview__total total">
+                                            Tổng cộng:						<strong><span class="woocommerce-Price-amount amount">12,100,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></strong>
+                                        </li>
+
+                                        <li class="woocommerce-order-overview__payment-method method">
+                                            Phương thức thanh toán:							<strong>Kiểm tra thanh toán</strong>
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+
+                </div><!-- .col-inner -->
+            </div><!-- .large-12 -->
+        </div><!-- .row -->
+    </div>
+
+
+</div>
+
+</body>
+</html>
