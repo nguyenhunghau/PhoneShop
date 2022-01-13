@@ -20,4 +20,9 @@ public class CategoryService {
         List<CategoryEntity> categoryEntityList = categoryRepository.findAll();
         return new ModelMapper().map(categoryEntityList, new TypeToken<List<Category>>() {}.getType());
     }
+
+    public Category findById(int id) {
+        CategoryEntity categoryEntity = categoryRepository.findById(id).get();
+        return new ModelMapper().map(categoryEntity, Category.class);
+    }
 }
