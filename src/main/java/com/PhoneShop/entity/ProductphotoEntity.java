@@ -5,16 +5,11 @@
  */
 package com.PhoneShop.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -23,13 +18,15 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "productphoto")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "ProductphotoEntity.findAll", query = "SELECT p FROM ProductphotoEntity p")
-    , @NamedQuery(name = "ProductphotoEntity.findById", query = "SELECT p FROM ProductphotoEntity p WHERE p.id = :id")
-    , @NamedQuery(name = "ProductphotoEntity.findByPhoto", query = "SELECT p FROM ProductphotoEntity p WHERE p.photo = :photo")
-    , @NamedQuery(name = "ProductphotoEntity.findByProductId", query = "SELECT p FROM ProductphotoEntity p WHERE p.productId = :productId")
-    , @NamedQuery(name = "ProductphotoEntity.findByIsDefault", query = "SELECT p FROM ProductphotoEntity p WHERE p.isDefault = :isDefault")})
+@Getter
+@Setter
+//@XmlRootElement
+//@NamedQueries({
+//    @NamedQuery(name = "ProductphotoEntity.findAll", query = "SELECT p FROM ProductphotoEntity p")
+//    , @NamedQuery(name = "ProductphotoEntity.findById", query = "SELECT p FROM ProductphotoEntity p WHERE p.id = :id")
+//    , @NamedQuery(name = "ProductphotoEntity.findByPhoto", query = "SELECT p FROM ProductphotoEntity p WHERE p.photo = :photo")
+//    , @NamedQuery(name = "ProductphotoEntity.findByProductId", query = "SELECT p FROM ProductphotoEntity p WHERE p.productId = :productId")
+//    , @NamedQuery(name = "ProductphotoEntity.findByIsDefault", query = "SELECT p FROM ProductphotoEntity p WHERE p.isDefault = :isDefault")})
 public class ProductphotoEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -41,8 +38,11 @@ public class ProductphotoEntity implements Serializable {
     @Basic(optional = false)
     @Column(name = "photo")
     private String photo;
-    @Column(name = "product_id")
-    private Integer productId;
+
+    @ManyToOne
+    @JoinColumn(name = "product_id")
+    private ProductEntity productEntity;
+
     @Column(name = "is_default")
     private Boolean isDefault;
 
@@ -58,61 +58,4 @@ public class ProductphotoEntity implements Serializable {
         this.photo = photo;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(String photo) {
-        this.photo = photo;
-    }
-
-    public Integer getProductId() {
-        return productId;
-    }
-
-    public void setProductId(Integer productId) {
-        this.productId = productId;
-    }
-
-    public Boolean getIsDefault() {
-        return isDefault;
-    }
-
-    public void setIsDefault(Boolean isDefault) {
-        this.isDefault = isDefault;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof ProductphotoEntity)) {
-            return false;
-        }
-        ProductphotoEntity other = (ProductphotoEntity) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "com.PhoneShop.entity.ProductphotoEntity[ id=" + id + " ]";
-    }
-    
 }

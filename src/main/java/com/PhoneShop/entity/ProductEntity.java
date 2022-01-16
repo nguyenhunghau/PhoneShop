@@ -5,17 +5,12 @@
  */
 package com.PhoneShop.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import java.util.List;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -24,16 +19,18 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "product")
+@Getter
+@Setter
 @XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "ProductEntity.findAll", query = "SELECT p FROM ProductEntity p")
-    , @NamedQuery(name = "ProductEntity.findById", query = "SELECT p FROM ProductEntity p WHERE p.id = :id")
-    , @NamedQuery(name = "ProductEntity.findByCode", query = "SELECT p FROM ProductEntity p WHERE p.code = :code")
-    , @NamedQuery(name = "ProductEntity.findByName", query = "SELECT p FROM ProductEntity p WHERE p.name = :name")
-    , @NamedQuery(name = "ProductEntity.findByCategoryDetailId", query = "SELECT p FROM ProductEntity p WHERE p.categoryDetailId = :categoryDetailId")
-    , @NamedQuery(name = "ProductEntity.findByProducerId", query = "SELECT p FROM ProductEntity p WHERE p.producerId = :producerId")
-    , @NamedQuery(name = "ProductEntity.findByPrice", query = "SELECT p FROM ProductEntity p WHERE p.price = :price")
-    , @NamedQuery(name = "ProductEntity.findByIsImportant", query = "SELECT p FROM ProductEntity p WHERE p.isImportant = :isImportant")})
+//@NamedQueries({
+//    @NamedQuery(name = "ProductEntity.findAll", query = "SELECT p FROM ProductEntity p")
+//    , @NamedQuery(name = "ProductEntity.findById", query = "SELECT p FROM ProductEntity p WHERE p.id = :id")
+//    , @NamedQuery(name = "ProductEntity.findByCode", query = "SELECT p FROM ProductEntity p WHERE p.code = :code")
+//    , @NamedQuery(name = "ProductEntity.findByName", query = "SELECT p FROM ProductEntity p WHERE p.name = :name")
+//    , @NamedQuery(name = "ProductEntity.findByCategoryDetailId", query = "SELECT p FROM ProductEntity p WHERE p.categoryDetailId = :categoryDetailId")
+//    , @NamedQuery(name = "ProductEntity.findByProducerId", query = "SELECT p FROM ProductEntity p WHERE p.producerId = :producerId")
+//    , @NamedQuery(name = "ProductEntity.findByPrice", query = "SELECT p FROM ProductEntity p WHERE p.price = :price")
+//    , @NamedQuery(name = "ProductEntity.findByIsImportant", query = "SELECT p FROM ProductEntity p WHERE p.isImportant = :isImportant")})
 public class ProductEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -55,15 +52,22 @@ public class ProductEntity implements Serializable {
     @Lob
     @Column(name = "description")
     private String description;
-    @Column(name = "category_detail_id")
-    private Integer categoryDetailId;
-    @Column(name = "producer_id")
-    private Integer producerId;
-    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
+
+    @ManyToOne
+    @JoinColumn(name = "category_detail_id")
+    private CategorydetailEntity categorydetailEntity;
+
+    @ManyToOne
+    @JoinColumn(name = "producer_id")
+    private ProducerEntity producerEntity;
+
     @Column(name = "price")
     private Double price;
     @Column(name = "is_important")
     private Boolean isImportant;
+
+    @OneToMany(mappedBy="productEntity")
+    private List<ProductphotoEntity> productphotoEntityList;
 
     public ProductEntity() {
     }
@@ -71,110 +75,4 @@ public class ProductEntity implements Serializable {
     public ProductEntity(Integer id) {
         this.id = id;
     }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getParameter() {
-        return parameter;
-    }
-
-    public void setParameter(String parameter) {
-        this.parameter = parameter;
-    }
-
-    public String getDetail() {
-        return detail;
-    }
-
-    public void setDetail(String detail) {
-        this.detail = detail;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Integer getCategoryDetailId() {
-        return categoryDetailId;
-    }
-
-    public void setCategoryDetailId(Integer categoryDetailId) {
-        this.categoryDetailId = categoryDetailId;
-    }
-
-    public Integer getProducerId() {
-        return producerId;
-    }
-
-    public void setProducerId(Integer producerId) {
-        this.producerId = producerId;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public Boolean getIsImportant() {
-        return isImportant;
-    }
-
-    public void setIsImportant(Boolean isImportant) {
-        this.isImportant = isImportant;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof ProductEntity)) {
-            return false;
-        }
-        ProductEntity other = (ProductEntity) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "com.PhoneShop.entity.ProductEntity[ id=" + id + " ]";
-    }
-    
 }

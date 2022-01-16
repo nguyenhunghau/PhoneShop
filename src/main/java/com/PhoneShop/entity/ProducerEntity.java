@@ -23,12 +23,12 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "producer")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "ProducerEntity.findAll", query = "SELECT p FROM ProducerEntity p")
-    , @NamedQuery(name = "ProducerEntity.findById", query = "SELECT p FROM ProducerEntity p WHERE p.id = :id")
-    , @NamedQuery(name = "ProducerEntity.findByName", query = "SELECT p FROM ProducerEntity p WHERE p.name = :name")
-    , @NamedQuery(name = "ProducerEntity.findByPhoto", query = "SELECT p FROM ProducerEntity p WHERE p.photo = :photo")})
+//@XmlRootElement
+//@NamedQueries({
+//    @NamedQuery(name = "ProducerEntity.findAll", query = "SELECT p FROM ProducerEntity p")
+//    , @NamedQuery(name = "ProducerEntity.findById", query = "SELECT p FROM ProducerEntity p WHERE p.id = :id")
+//    , @NamedQuery(name = "ProducerEntity.findByName", query = "SELECT p FROM ProducerEntity p WHERE p.name = :name")
+//    , @NamedQuery(name = "ProducerEntity.findByPhoto", query = "SELECT p FROM ProducerEntity p WHERE p.photo = :photo")})
 public class ProducerEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;

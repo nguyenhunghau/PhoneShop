@@ -24,11 +24,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @Table(name = "categorydetail")
 @XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "CategorydetailEntity.findAll", query = "SELECT c FROM CategorydetailEntity c")
-    , @NamedQuery(name = "CategorydetailEntity.findById", query = "SELECT c FROM CategorydetailEntity c WHERE c.id = :id")
-    , @NamedQuery(name = "CategorydetailEntity.findByName", query = "SELECT c FROM CategorydetailEntity c WHERE c.name = :name")
-    , @NamedQuery(name = "CategorydetailEntity.findByCategoryId", query = "SELECT c FROM CategorydetailEntity c WHERE c.categoryId = :categoryId")})
+//@NamedQueries({
+//    @NamedQuery(name = "CategorydetailEntity.findAll", query = "SELECT c FROM CategorydetailEntity c")
+//    , @NamedQuery(name = "CategorydetailEntity.findById", query = "SELECT c FROM CategorydetailEntity c WHERE c.id = :id")
+//    , @NamedQuery(name = "CategorydetailEntity.findByName", query = "SELECT c FROM CategorydetailEntity c WHERE c.name = :name")
+//    , @NamedQuery(name = "CategorydetailEntity.findByCategoryId", query = "SELECT c FROM CategorydetailEntity c WHERE c.categoryId = :categoryId")})
 public class CategorydetailEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
