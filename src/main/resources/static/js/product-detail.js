@@ -23,11 +23,19 @@ var showPhoto = function(photoList) {
         if(item.default) {
             $("#main_photo").attr("data-thumb", item.photo);
             $("#main_photo a").attr("href", item.photo);
-            $("#main_photo a").attr("data-large_image", item.photo);
-            $("#main_photo a").attr("data-src", item.photo);
-            $("#main_photo a").attr("src", item.photo);
+            $("#main_photo img").attr("data-large_image", item.photo);
+            $("#main_photo img").attr("data-src", item.photo);
+            $("#main_photo img").attr("src", item.photo);
+            $(".is-nav-selected img").attr("src", item.photo);
         } else {
             $("#photo_" + index).attr("src", item.photo);
+            $("#photo_" + index).attr("srcset", item.photo);
+            $("#slide_" + index).attr("data-thumb", item.photo);
+            $("#slide_" + index + " a").attr("href", item.photo);
+            $("#slide_" + index + " img").attr("data-large_image", item.photo);
+             $("#slide_" + index + " img").attr("data-src", item.photo);
+             $("#slide_" + index + " img").attr("src", item.photo);
+             $("#slide_" + index + " img").attr("srcset", item.photo);
             index++;
         }
     }
