@@ -16,10 +16,10 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-//    @RequestMapping(method = RequestMethod.GET)
-//    public ResponseEntity<?> findAll() {
-//        return ok(categoryService.findAll());
-//    }
+    @RequestMapping(method = RequestMethod.GET)
+    public ResponseEntity<?> findByFilter(@RequestParam(name = "category-id") int categoryId) {
+        return ok(productService.findByFilter(categoryId));
+    }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<?> findById(@PathVariable(name = "id") int id) {

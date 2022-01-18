@@ -9,4 +9,5 @@ public class CategoryDetail {
 
     private int id;
     private String name;
+    private Category category;
 }

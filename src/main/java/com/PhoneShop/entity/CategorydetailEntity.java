@@ -5,16 +5,11 @@
  */
 package com.PhoneShop.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -23,6 +18,8 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "categorydetail")
+@Getter
+@Setter
 @XmlRootElement
 //@NamedQueries({
 //    @NamedQuery(name = "CategorydetailEntity.findAll", query = "SELECT c FROM CategorydetailEntity c")
@@ -39,38 +36,16 @@ public class CategorydetailEntity implements Serializable {
     private Integer id;
     @Column(name = "name")
     private String name;
-    @Column(name = "category_id")
-    private Integer categoryId;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private CategoryEntity categoryEntity;
 
     public CategorydetailEntity() {
     }
 
     public CategorydetailEntity(Integer id) {
         this.id = id;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
     }
 
 }

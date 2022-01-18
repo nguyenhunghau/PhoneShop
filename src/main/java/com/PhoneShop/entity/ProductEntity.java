@@ -22,15 +22,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Getter
 @Setter
 @XmlRootElement
-//@NamedQueries({
+@NamedQueries({
 //    @NamedQuery(name = "ProductEntity.findAll", query = "SELECT p FROM ProductEntity p")
 //    , @NamedQuery(name = "ProductEntity.findById", query = "SELECT p FROM ProductEntity p WHERE p.id = :id")
 //    , @NamedQuery(name = "ProductEntity.findByCode", query = "SELECT p FROM ProductEntity p WHERE p.code = :code")
 //    , @NamedQuery(name = "ProductEntity.findByName", query = "SELECT p FROM ProductEntity p WHERE p.name = :name")
-//    , @NamedQuery(name = "ProductEntity.findByCategoryDetailId", query = "SELECT p FROM ProductEntity p WHERE p.categoryDetailId = :categoryDetailId")
+@NamedQuery(name = "ProductEntity.findByCategory", query = "SELECT p FROM ProductEntity p WHERE p.categorydetailEntity.categoryEntity.id = :categoryId")
 //    , @NamedQuery(name = "ProductEntity.findByProducerId", query = "SELECT p FROM ProductEntity p WHERE p.producerId = :producerId")
 //    , @NamedQuery(name = "ProductEntity.findByPrice", query = "SELECT p FROM ProductEntity p WHERE p.price = :price")
-//    , @NamedQuery(name = "ProductEntity.findByIsImportant", query = "SELECT p FROM ProductEntity p WHERE p.isImportant = :isImportant")})
+//    , @NamedQuery(name = "ProductEntity.findByIsImportant", query = "SELECT p FROM ProductEntity p WHERE p.isImportant = :isImportant")
+})
 public class ProductEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;

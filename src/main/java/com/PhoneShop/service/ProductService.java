@@ -24,4 +24,8 @@ public class ProductService {
         return new ModelMapper().map(productEntity, Product.class);
     }
 
+    public List<Product> findByFilter(int categoryId) {
+        List<ProductEntity> categoryEntityList = productRepository.findByCategory(categoryId);
+        return new ModelMapper().map(categoryEntityList, new TypeToken<List<Product>>() {}.getType());
+    }
 }

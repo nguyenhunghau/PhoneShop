@@ -1,323 +1,257 @@
-<head th:fragment="head">
-    <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 
-    <title>fptshop &#8211; Một trang web mới sử dụng WordPress</title>
-    <!--    <script type="text/javascript">-->
-    <!--			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/mauweb.monamedia.net\/fptshop\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.15"}};-->
-    <!--			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);-->
+<header class="header has-sticky sticky-jump" id="header" th:fragment="header">
+    <div class="header-wrapper">
+        <div class="header-main nav-dark" id="masthead">
+            <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
 
-    <!--    </script>-->
-    <style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
+                <!-- Logo -->
+                <div class="flex-col logo" id="logo">
+                    <!-- Header logo -->
+                    <a href="index.html" rel="home" title="fptshop - Một trang web mới sử dụng WordPress">
+                        <img alt="fptshop" class="header_logo header-logo" height="58"
+                             src="wp-content/uploads/2018/01/logo-mona-fpt.png" width="151"/><img alt="fptshop" class="header-logo-dark"
+                                                                                                  height="58"
+                                                                                                  src="wp-content/uploads/2018/01/logo-mona-fpt.png"
+                                                                                                  width="151"/></a>
+                </div>
 
-    </style>
-    <link th:href="@{/wp-includes/css/dashicons.minca80.css?ver=4.9.15}" id='dashicons-css' media='all' rel='stylesheet'
-          type='text/css'/>
-    <link href='wp-content/plugins/ot-flatsome-vertical-menu/libs/menu-icons/css/extra.mincf86.css?ver=0.10.2' id='menu-icons-extra-css'
-          media='all'
-          rel='stylesheet' type='text/css'/>
-    <link href='wp-content/plugins/call-now-icon-animate/css.css' id='hrw-css' media='' rel='stylesheet'
-          type='text/css'/>
-    <link href='wp-content/plugins/contact-form-7/includes/css/styles20fd.css?ver=4.9.2' id='contact-form-7-css'
-          media='all' rel='stylesheet' type='text/css'/>
-    <link href='wp-content/plugins/menu-image/menu-image4963.css?ver=1.1' id='menu-image-css' media='all'
-          rel='stylesheet' type='text/css'/>
-    <link href='wp-content/plugins/ot-flatsome-vertical-menu/assets/css/ot-vertical-menuf488.css?ver=1.1.0' id='ot-vertical-menu-css'
-          media='all'
-          rel='stylesheet' type='text/css'/>
-    <link href='wp-content/themes/flatsome/assets/css/fl-icons6de8.css?ver=3.3' id='flatsome-icons-css' media='all'
-          rel='stylesheet' type='text/css'/>
-    <link href='wp-content/plugins/easy-social-share-buttons3/assets/css/default-retina/easy-social-share-buttons1ac1.css?ver=3.7.3' id='easy-social-share-buttons-css'
-          media='all'
-          rel='stylesheet' type='text/css'/>
-    <link href='wp-content/plugins/easy-social-share-buttons3/lib/modules/click-to-tweet/assets/css/styles1ac1.css?ver=3.7.3' id='essb-cct-style-css'
-          media='all'
-          rel='stylesheet' type='text/css'/>
-    <link href='wp-content/plugins/woocommerce-view/assets/css/woo_viewca80.css?ver=4.9.15' id='grid-list-layout-css'
-          media='all' rel='stylesheet'
-          type='text/css'/>
-    <link href='wp-content/themes/flatsome/assets/css/flatsomeccfb.css?ver=3.4.2' id='flatsome-main-css'
-          media='all' rel='stylesheet' type='text/css'/>
-    <link href='wp-content/themes/flatsome/assets/css/flatsome-shopccfb.css?ver=3.4.2' id='flatsome-shop-css'
-          media='all' rel='stylesheet' type='text/css'/>
-    <link href='wp-content/themes/flatsome-child/styleccfb.css?ver=3.4.2' id='flatsome-style-css' media='all'
-          rel='stylesheet' type='text/css'/>
-    <script src='wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4' type='text/javascript'></script>
-    <script src='wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1' type='text/javascript'></script>
+                <!-- Mobile Left Elements -->
+                <div class="flex-col show-for-medium flex-left">
+                    <ul class="mobile-nav nav nav-left ">
+                        <li class="nav-icon has-icon">
+                            <a aria-controls="main-menu" aria-expanded="false" class="is-small" data-bg="main-menu-overlay"
+                               data-color="" data-open="#main-menu" data-pos="left" href="#">
 
-    <noscript>
-        <style>.woocommerce-product-gallery{ opacity: 1 !important; }</style>
-    </noscript>
-    <style type="text/css">
-        .essb_links_list li.essb_totalcount_item .essb_t_l_big .essb_t_nb:after, .essb_links_list li.essb_totalcount_item .essb_t_r_big .essb_t_nb:after { color: #777777;content: "shares";display: block;font-size: 11px;font-weight: normal;text-align: center;text-transform: uppercase;margin-top: -5px; } .essb_links_list li.essb_totalcount_item .essb_t_l_big, .essb_links_list li.essb_totalcount_item .essb_t_r_big { text-align: center; }.essb_displayed_sidebar .essb_links_list li.essb_totalcount_item .essb_t_l_big .essb_t_nb:after, .essb_displayed_sidebar .essb_links_list li.essb_totalcount_item .essb_t_r_big .essb_t_nb:after { margin-top: 0px; } .essb_displayed_sidebar_right .essb_links_list li.essb_totalcount_item .essb_t_l_big .essb_t_nb:after, .essb_displayed_sidebar_right .essb_links_list li.essb_totalcount_item .essb_t_r_big .essb_t_nb:after { margin-top: 0px; } .essb_totalcount_item_before, .essb_totalcount_item_after { display: block !important; }.essb_totalcount_item_before .essb_totalcount, .essb_totalcount_item_after .essb_totalcount { border: 0px !important; }.essb_counter_insidebeforename { margin-right: 5px; font-weight: bold; }.essb_width_columns_1 li { width: 100%; }.essb_width_columns_1 li a { width: 92%; }.essb_width_columns_2 li { width: 49%; }.essb_width_columns_2 li a { width: 86%; }.essb_width_columns_3 li { width: 32%; }.essb_width_columns_3 li a { width: 80%; }.essb_width_columns_4 li { width: 24%; }.essb_width_columns_4 li a { width: 70%; }.essb_width_columns_5 li { width: 19.5%; }.essb_width_columns_5 li a { width: 60%; }.essb_width_columns_6 li { width: 16%; }.essb_width_columns_6 li a { width: 55%; }.essb_links li.essb_totalcount_item_before, .essb_width_columns_1 li.essb_totalcount_item_after { width: 100%; text-align: left; }.essb_network_align_center a { text-align: center; }.essb_network_align_right .essb_network_name { float: right;}
-    </style>
-    <script type="text/javascript">
-        var essb_settings = {"ajax_url":"http:\/\/mauweb.monamedia.net\/fptshop\/wp-admin\/admin-ajax.php","essb3_nonce":"2bd95cef46","essb3_plugin_url":"http:\/\/mauweb.monamedia.net\/fptshop\/wp-content\/plugins\/easy-social-share-buttons3","essb3_facebook_total":true,"essb3_admin_ajax":false,"essb3_internal_counter":false,"essb3_stats":false,"essb3_ga":false,"essb3_ga_mode":"simple","essb3_counter_button_min":0,"essb3_counter_total_min":0,"blog_url":"http:\/\/mauweb.monamedia.net\/fptshop\/","ajax_type":"wp","essb3_postfloat_stay":false,"essb3_no_counter_mailprint":false,"essb3_single_ajax":false,"twitter_counter":"self","post_id":16};
-    </script>
-    <style id="custom-css" type="text/css">
-        :root {--primary-color: #446084;}/* Site Width */.full-width .ubermenu-nav, .container, .row{max-width: 1200px}.row.row-collapse{max-width: 1170px}.row.row-small{max-width: 1192.5px}.row.row-large{max-width: 1230px}body.framed, body.framed header, body.framed .header-wrapper, body.boxed, body.boxed header, body.boxed .header-wrapper, body.boxed .is-sticky-section{ max-width: 1230px}.header-main{height: 58px}#logo img{max-height: 58px}#logo{width:151px;}.header-bottom{min-height: 41px}.header-top{min-height: 30px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 108px;}.header.show-on-scroll,.stuck .header-main{height:70px!important}.stuck #logo img{max-height: 70px!important}.search-form{ width: 80%;}.header-bg-color, .header-wrapper {background-color: rgba(0,0,0,0.9)}.header-bottom {background-color: #ffffff}.header-main .nav > li > a{line-height: 16px }.header-bottom-nav > li > a{line-height: 16px }@media (max-width: 549px) {.header-main{height: 70px}#logo img{max-height: 70px}}/* Background Color */[data-icon-label]:after, .secondary.is-underline:hover,.secondary.is-outline:hover,.icon-label,.button.secondary:not(.is-outline),.button.alt:not(.is-outline), .badge-inner.on-sale, .button.checkout, .single_add_to_cart_button{ background-color:#d70909; }/* Color */.secondary.is-underline,.secondary.is-link, .secondary.is-outline,.stars a.active, .star-rating:before, .woocommerce-page .star-rating:before,.star-rating span:before, .color-secondary{color: #d70909}/* Color !important */[data-text-color="secondary"]{color: #d70909!important;}/* Border */.secondary.is-outline:hover{border-color:#d70909}body{font-family:"Roboto", sans-serif}body{font-weight: 0}body{color: #1c1c1c}.nav > li > a {font-family:"Roboto", sans-serif;}.nav > li > a {font-weight: 0;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: "Roboto", sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2{font-weight: 0;}h1,h2,h3,h4,h5,h6,.heading-font{color: #1c1c1c;}.alt-font{font-family: "Roboto", sans-serif;}.alt-font{font-weight: 0!important;}.header:not(.transparent) .header-nav.nav > li > a {color: #ffffff;}.header:not(.transparent) .header-bottom-nav.nav > li > a{color: #000000;}.header:not(.transparent) .header-bottom-nav.nav > li > a:hover,.header:not(.transparent) .header-bottom-nav.nav > li.active > a,.header:not(.transparent) .header-bottom-nav.nav > li.current > a,.header:not(.transparent) .header-bottom-nav.nav > li > a.active,.header:not(.transparent) .header-bottom-nav.nav > li > a.current{color: #3399d2;}.header-bottom-nav.nav-line-bottom > li > a:before,.header-bottom-nav.nav-line-grow > li > a:before,.header-bottom-nav.nav-line > li > a:before,.header-bottom-nav.nav-box > li > a:hover,.header-bottom-nav.nav-box > li.active > a,.header-bottom-nav.nav-pills > li > a:hover,.header-bottom-nav.nav-pills > li.active > a{color:#FFF!important;background-color: #3399d2;}a{color: #000000;}a:hover{color: #3399d2;}.tagcloud a:hover{border-color: #3399d2;background-color: #3399d2;}@media screen and (min-width: 550px){.products .box-vertical .box-image{min-width: 300px!important;width: 300px!important;}}.absolute-footer, html{background-color: #f2f2f2}.label-new.menu-item > a:after{content:"New";}.label-hot.menu-item > a:after{content:"Hot";}.label-sale.menu-item > a:after{content:"Sale";}.label-popular.menu-item > a:after{content:"Popular";}
-    </style>
-    <style id="wp-custom-css" type="text/css">
-			/*
-Bạn có thể thêm CSS ở đây.
+                                <i class="icon-menu"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-Nhấp chuột vào biểu tượng trợ giúp phía trên để tìm hiểu thêm.
-*/
+                <!-- Left Elements -->
+                <div class="flex-col hide-for-medium flex-left
+            flex-grow">
+                    <ul class="header-nav header-nav-main nav nav-left ">
+                        <li class="header-search-form search-form html relative has-icon">
+                            <div class="header-search-form-wrapper">
+                                <div class="searchform-wrapper ux-search-box relative form- is-normal">
+                                    <form action="http://mauweb.monamedia.net/fptshop/" class="searchform"
+                                          method="get" role="search">
+                                        <div class="flex-row relative">
+                                            <div class="flex-col flex-grow">
+                                                <input class="search-field mb-0" name="s" placeholder="Nhập tên điện thoại, máy tính, phụ kiện ... cần tìm" type="search"
+                                                       value=""/>
+                                                <input name="post_type" type="hidden" value="product"/>
+                                            </div><!-- .flex-col -->
+                                            <div class="flex-col">
+                                                <button class="ux-search-submit submit-button secondary button icon mb-0"
+                                                        type="submit">
+                                                    <i class="icon-search"></i></button>
+                                            </div><!-- .flex-col -->
+                                        </div><!-- .flex-row -->
+                                        <div class="live-search-results text-left z-top"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
 
-/*-------------global-------------*/
-body, p {
-    line-height: 160%!important;
-}
-/*-----------end global-----------*/
+                <!-- Right Elements -->
+                <div class="flex-col hide-for-medium flex-right">
+                    <ul class="header-nav header-nav-main nav nav-right ">
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category  menu-item-349"
+                            id="menu-item-349"><a
+                                class="menu-image-title-below menu-image-not-hovered nav-top-link"
+                                href="category/tin-tuc/index.html"><img alt=""
+                                                                        class="menu-image menu-image-title-below"
+                                                                        height="24"
+                                                                        src="wp-content/uploads/2017/12/newspaper.png"
+                                                                        width="24"/><span
+                                class="menu-image-title">Tin hay</span></a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-476"
+                            id="menu-item-476"><a
+                                class="menu-image-title-below menu-image-not-hovered nav-top-link"
+                                href="hoi-dap/index.html"><img alt=""
+                                                               class="menu-image menu-image-title-below"
+                                                               height="24"
+                                                               src="wp-content/uploads/2017/12/speech-bubble-with-question-mark.png"
+                                                               width="24"/><span
+                                class="menu-image-title">Hỏi đáp</span></a></li>
+                        <li class="cart-item has-icon
+ has-dropdown">
 
-
-/*-------------header-------------*/
-/*Active category menu*/
-a.menu-image-title-after.menu-image-not-hovered.nav-top-link {
-    font-weight: normal;
-}
-.current-menu-item span.menu-image-title {
-    color: #3399d2;
-}
-
-/*style search form*/
-.header-main button.ux-search-submit.submit-button.secondary.button.icon.mb-0 {
-    width: 50px;
-    height: 39px;
-}
-.header-main input.search-field.mb-0 {
-    height: 38px;
-}
-
-/*style topbar menu*/
-a.menu-image-title-below.menu-image-not-hovered.nav-top-link {
-    display: block;
-    line-height: 5px;
-    padding: 0px;
-}
-
-/*style list danh sách giỏ hàng*/
-.header-main ul.product_list_widget li a:not(.remove) {
-    display: block;
-    margin-bottom: 5px;
-    padding: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 1.3;
-    font-size: 12px;
-}
-
-/*style header bottom*/
-.header-bottom {
-    background-color: #ffffff;
-    border-bottom: 1px solid #eee;
-}
-/*-----------end header-----------*/
+                            <a class="header-cart-link is-small" href="gio-hang/index.html" title="Giỏ hàng">
 
 
-/*-------------content-------------*/
-/*căn đều chiều cao các sản phẩm đều nhau*/
-.has-shadow>.col>.col-inner {
-    background-color: #FFF;
-    height: 100%;
-}
+<span class="header-cart-title">
+   Giỏ hàng   /      <span class="cart-price"><span class="woocommerce-Price-amount amount">0&nbsp;<span
+        class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
+  </span>
 
-/*căn đều sản phẩm trong slider*/
-.sec_mobile .flickity-viewport .col-inner,
-.sec_laptop .flickity-viewport .col-inner,
-.sec_tablet .flickity-viewport .col-inner,
-.sec_phu_kien .flickity-viewport .col-inner {
-    height: 402px !important;
-    background-color: #fff;
-}
-.sec_mobile .flickity-viewport .col-inner:hover,
-.sec_laptop .flickity-viewport .col-inner:hover,
-.sec_tablet .flickity-viewport .col-inner:hover,
-.sec_phu_kien .flickity-viewport .col-inner:hover{
-    -webkit-box-shadow: 1px 2px 7px 0 rgba(0,0,0,.21);
-    -moz-box-shadow: 1px 2px 7px 0 rgba(0,0,0,.21);
-    box-shadow: 1px 2px 7px 0 rgba(0,0,0,.21);
-    border: 1px solid #eee;
-}
+                                <span class="cart-icon image-icon">
+    <strong>0</strong>
+  </span>
+                            </a>
 
-.sec_mobile .flickity-viewport,
-.sec_laptop .flickity-viewport,
-.sec_tablet .flickity-viewport,
-.sec_phu_kien .flickity-viewport{
-    height: 404px !important;
-    background-color: #fff;
-}
-
-/*style ẩn trích dãn*/
-.shop-container .box-text ul,
-.sec_mobile .box-text ul,
-.sec_laptop .box-text ul,
-.sec_tablet .box-text ul,
-.sec_phu_kien .box-text ul,
-.row_khuyen_mai .box-text ul{
-    display: none;
-}
-.shop-container .box-text table,
-.sec_tablet .box-text table,
-.row_khuyen_mai .box-text table{
-    display: none;
-}
-.shop-container p.box-excerpt.is-small,
-.sec_phu_kien p.box-excerpt.is-small,
-.row_khuyen_mai p.box-excerpt.is-small {
-    display: none;
-}
-/*ẩn đánh giá*/
-.shop-container .star-rating,
-.sec_mobile .star-rating,
-.sec_laptop .star-rating,
-.sec_tablet .star-rating,
-.sec_phu_kien .star-rating,
-.row_khuyen_mai .star-rating{
-    display: none;
-}
-
-/*style vị trí nhãn Sale*/
-.callout.badge.badge-circle {
-    height: 1.8em;}
-
-.badge-inner.secondary.on-sale {
-    border-radius: 0px;
-    font-weight:  normal;
-    padding: 0px 8px;
-		background-color: #ff2842;
-		border: solid 1px #ff677a;
-		border-radius: 3px;
-}
-.badge-container.absolute.left.top.z-1 {
-    float:right;
-    margin: 15px 0 0 0;
-    position: absolute;
-    right: 15px !important;
-    left: auto;
-}
-
-/*style sidebar widget*/
-.widget_nav_menu li{
-    padding: 0px 10px;
-    border-radius: 5px;
-	border: 1px solid #eee;
-}
-ul.product_list_widget {
-    padding: 0px 10px;
-    border-radius: 5px;
-	border: 1px solid #eee;
-}
-.flatsome_recent_posts > ul{
-    padding: 0px 10px;
-    border-radius: 5px;
-	border: 1px solid #eee;
-}
-
-/*style giá sản phẩm tại widget sidebar*/
-.product_list_widget span.woocommerce-Price-amount.amount {
-    font-size: 12px;
-}
-
-/*style product price*/
-span.woocommerce-Price-amount.amount {
-    color: #d0021b;
-}
-.price del {
-    display: none;
-}
-.product-summary .price del {
-    display: inline-block;
-}
-
-/*style span title widget sidebar*/
-/*span.widget-title.shop-sidebar {
-    padding: 15px;
-    color: #fff;
-}
-.is-divider.small {
-    background-color: #f17024;
-    max-width: 100%;
-    height: 40px;
-    border-radius: 5px;
-    margin-top: -33px;
-}*/
-
-/*style box news*/
-.box_news .box-text .is-divider {
-    display: none
-}
-.box_news .box-image {
-        padding: 5px 8px;
-}
-.box_news h5.post-title.is-small {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 1.43;
-    color: #1f1f1f;
-}
-
-/*style sec recent product*/
-.sec_recent_product .box-text.box-text-products {
-    display: none;
-}
-
-/*style mũi tên trong slider*/
-.slider-nav-reveal .flickity-prev-next-button:hover, .slider-nav-reveal .flickity-prev-next-button {
-    display: none;
-}
-
-/*style trang tablet*/
-.page_tablet_list .badge-container.absolute.left.top.z-1 {
-    float: right;
-    margin: 15px 0 0 0;
-    position: absolute;
-    left: 150px !important;
-    right: auto;
-}
-.page_tablet_list span.woocommerce-Price-amount.amount {
-    position: absolute;
-    right: 15px !important;
-    top: 15px !important;
-    left: auto;
-    font-size: 20px;
-}
-.page_tablet_list .box-text.text-left {
-    vertical-align: top;
-}
-
-.page_tablet_list .title-wrapper a{
-    font-size: 18px;
-    font-weight: bold;
-    color: #337ab7;
-    width: 75%;
-}
-
-/*bỏ grid / list woo, xóa plugin nhưng vẫn không hết*/
-.wc_woo_view_wrapper #wc_woo_view_tabs {
-    float: right;
-    line-height: normal;
-    margin: 0;
-    overflow: hidden;
-    display: none;
-}
-/*-----------end content-----------*/
+                            <ul class="nav-dropdown nav-dropdown-default">
+                                <li class="html widget_shopping_cart">
+                                    <div class="widget_shopping_cart_content">
 
 
-/*-------------footer-------------*/
+                                        <p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ
+                                            hàng.</p>
 
-/*-----------end footer-----------*/
-    </style>
-</head>
+
+                                    </div>
+                                </li>
+                            </ul><!-- .nav-dropdown -->
+
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Right Elements -->
+                <div class="flex-col show-for-medium flex-right">
+                    <ul class="mobile-nav nav nav-right ">
+                        <li class="cart-item has-icon">
+
+
+                            <a class="header-cart-link off-canvas-toggle nav-top-link is-small"
+                               data-class="off-canvas-cart"
+                               data-open="#cart-popup" data-pos="right" href="gio-hang/index.html"
+                               title="Giỏ hàng">
+
+    <span class="cart-icon image-icon">
+    <strong>0</strong>
+  </span>
+                            </a>
+
+
+                            <!-- Cart Sidebar Popup -->
+                            <div class="mfp-hide widget_shopping_cart" id="cart-popup">
+                                <div class="cart-popup-inner inner-padding">
+                                    <div class="cart-popup-title text-center">
+                                        <h4 class="uppercase">Giỏ hàng</h4>
+                                        <div class="is-divider"></div>
+                                    </div>
+                                    <div class="widget_shopping_cart_content">
+
+
+                                        <p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ
+                                            hàng.</p>
+
+
+                                    </div>
+                                    <div class="cart-sidebar-content relative"></div>
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </div><!-- .header-inner -->
+
+            <!-- Header divider -->
+            <div class="container">
+                <div class="top-divider full-width"></div>
+            </div>
+        </div><!-- .header-main -->
+        <div class="header-bottom wide-nav flex-has-center hide-for-medium" id="wide-nav">
+            <div class="flex-row container">
+
+
+                <div class="flex-col hide-for-medium flex-center">
+                    <ul class="nav header-nav header-bottom-nav nav-center  nav-size-medium nav-spacing-xlarge nav-uppercase">
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-446"
+                            id="menu-item-446"><a
+                                class="menu-image-title-after menu-image-not-hovered nav-top-link"
+                                href="danh-muc/dien-thoai/index.html"><img alt=""
+                                                                           class="menu-image menu-image-title-after"
+                                                                           height="24"
+                                                                           sizes="(max-width: 24px) 100vw, 24px"
+                                                                           src="wp-content/uploads/2017/12/smartphone-1-24x24.png"
+                                                                           srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/smartphone-1-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/smartphone-1-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/smartphone-1-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/smartphone-1.png 64w"
+                                                                           width="24"/><span
+                                class="menu-image-title">Điện thoại</span></a></li>
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-449"
+                            id="menu-item-449"><a
+                                class="menu-image-title-after menu-image-not-hovered nav-top-link"
+                                href="danh-muc/laptop/index.html"><img alt=""
+                                                                       class="menu-image menu-image-title-after"
+                                                                       height="24"
+                                                                       sizes="(max-width: 24px) 100vw, 24px"
+                                                                       src="wp-content/uploads/2017/12/laptop-2-24x24.png"
+                                                                       srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/laptop-2-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/laptop-2-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/laptop-2-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/laptop-2.png 64w"
+                                                                       width="24"/><span
+                                class="menu-image-title">Laptop</span></a></li>
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-447"
+                            id="menu-item-447"><a
+                                class="menu-image-title-after menu-image-not-hovered nav-top-link"
+                                href="danh-muc/dien-thoai/apple/index.html"><img alt=""
+                                                                                 class="menu-image menu-image-title-after"
+                                                                                 height="24"
+                                                                                 sizes="(max-width: 24px) 100vw, 24px"
+                                                                                 src="wp-content/uploads/2017/12/apple-24x24.png"
+                                                                                 srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/apple-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/apple-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/apple-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/apple.png 64w"
+                                                                                 width="24"/><span
+                                class="menu-image-title">Apple</span></a></li>
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-448"
+                            id="menu-item-448"><a
+                                class="menu-image-title-after menu-image-not-hovered nav-top-link"
+                                href="danh-muc/dien-thoai/samsung/index.html"><img alt=""
+                                                                                   class="menu-image menu-image-title-after"
+                                                                                   height="24"
+                                                                                   sizes="(max-width: 24px) 100vw, 24px"
+                                                                                   src="wp-content/uploads/2017/12/phone-samsung-galaxy-note-popular-model-24x24.png"
+                                                                                   srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/phone-samsung-galaxy-note-popular-model-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/phone-samsung-galaxy-note-popular-model-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/phone-samsung-galaxy-note-popular-model-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/phone-samsung-galaxy-note-popular-model.png 64w"
+                                                                                   width="24"/><span
+                                class="menu-image-title">Samsung</span></a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-592"
+                            id="menu-item-592"><a
+                                class="menu-image-title-after menu-image-not-hovered nav-top-link"
+                                href="tablet/index.html"><img alt=""
+                                                              class="menu-image menu-image-title-after"
+                                                              height="24"
+                                                              sizes="(max-width: 24px) 100vw, 24px"
+                                                              src="wp-content/uploads/2017/12/tablet-outline-in-horizontal-position-1-24x24.png"
+                                                              srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/tablet-outline-in-horizontal-position-1-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/tablet-outline-in-horizontal-position-1-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/tablet-outline-in-horizontal-position-1-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/tablet-outline-in-horizontal-position-1.png 64w"
+                                                              width="24"/><span
+                                class="menu-image-title">Tablet</span></a></li>
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-450"
+                            id="menu-item-450"><a
+                                class="menu-image-title-after menu-image-not-hovered nav-top-link"
+                                href="danh-muc/phu-kien/index.html"><img alt=""
+                                                                         class="menu-image menu-image-title-after"
+                                                                         height="24"
+                                                                         sizes="(max-width: 24px) 100vw, 24px"
+                                                                         src="wp-content/uploads/2017/12/headset-1-24x24.png"
+                                                                         srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/headset-1-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/headset-1-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/headset-1-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/headset-1.png 64w"
+                                                                         width="24"/><span
+                                class="menu-image-title">Phụ kiện</span></a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-504"
+                            id="menu-item-504"><a
+                                class="menu-image-title-after menu-image-not-hovered nav-top-link"
+                                href="khuyen-mai/index.html"><img alt=""
+                                                                  class="menu-image menu-image-title-after"
+                                                                  height="24"
+                                                                  sizes="(max-width: 24px) 100vw, 24px"
+                                                                  src="wp-content/uploads/2017/12/gift-1-24x24.png"
+                                                                  srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/gift-1-24x24.png 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/gift-1-36x36.png 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/gift-1-48x48.png 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/gift-1.png 64w"
+                                                                  width="24"/><span
+                                class="menu-image-title">Khuyến mãi</span></a></li>
+                    </ul>
+                </div><!-- flex-col -->
+
+
+            </div><!-- .flex-row -->
+        </div><!-- .header-bottom -->
+
+        <div class="header-bg-container fill">
+            <div class="header-bg-image fill"></div>
+            <div class="header-bg-color fill"></div>
+        </div><!-- .header-bg-container -->   </div><!-- header-wrapper-->
+</header>

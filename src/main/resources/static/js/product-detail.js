@@ -1,11 +1,15 @@
-var loadData = function (id) {
+var loadData = function () {
+    var params = new URLSearchParams(window.location.search);
+    var id = params.get('id');
     $.ajax({url: "product/" + id, success: function(result){
         console.log(result);
         $("#product_title").text(result.name);
          $("#product_price").text(result.price);
         showParameter(result.parameter);
+        showInfoDetail(result.detail);
         showPhoto(result.productphotoList);
         showDesciption(result.description);
+        showCategoryLink(result);
     }});
 }
 
@@ -16,6 +20,19 @@ var showParameter = function(parameter) {
         html += '<tr><td width="283">' + item + '</td></tr>';
     }
     $("#tbl_parameter tbody").html(html);
+}
+
+var showInfoDetail = function(detail) {
+    var array = detail.split('\n');
+    var html = '';
+    for(var item of array) {
+        if(!item.trim()) {
+            continue;
+        }
+        var itemArray = item.trim().split("\t");
+        html += ' <tr><td>' + itemArray[0] + '</td><td class="last">' + itemArray[1] + '</td></tr>';
+    }
+    $("#tbl_detail tbody").html(html);
 }
 
 var showPhoto = function(photoList) {
@@ -44,4 +61,11 @@ var showPhoto = function(photoList) {
 
 var showDesciption = function(description){
     $("#information-detail").html(description);
+}
+
+var showCategoryLink = function(product) {
+    $("#nav_product a:eq(1)").text(product.categoryDetail.category.name);
+    $("#nav_product a:eq(1)").attr('href', 'category/' + product.categoryDetail.category.id);
+    $("#nav_product a:eq(2)").text(product.categoryDetail.name);
+    $("#nav_product a:eq(2)").attr('href', 'category-detail/' + product.categoryDetail.id);
 }
