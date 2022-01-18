@@ -5,6 +5,7 @@ var loadData = function (id) {
          $("#product_price").text(result.price);
         showParameter(result.parameter);
         showPhoto(result.productphotoList);
+        showDesciption(result.description);
     }});
 }
 
@@ -39,4 +40,8 @@ var showPhoto = function(photoList) {
             index++;
         }
     }
+}
+
+var showDesciption = function(description){
+    $("#information-detail").html(description);
 }
