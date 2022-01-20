@@ -1,5 +1,5 @@
 var getCategory = function () {
-    $.ajax({url: "category-data", success: function(result){
+    $.ajax({url: "category-data", success: function(result){ // go to category-date to get data from model
         console.log(result);
         showCategory(result);
     }});
@@ -20,3 +20,4 @@ var showCategory = function(categoryList) {
     }
     $('#ul_category').html(html);
 }
+
