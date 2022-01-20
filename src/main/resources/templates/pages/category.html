@@ -8,6 +8,41 @@
 <body>
 
 <div layout:fragment="content">
+
+  <div class="shop-page-title category-page-title page-title ">
+
+    <div class="page-title-inner flex-row  medium-flex-wrap container">
+      <div class="flex-col flex-grow medium-text-center">
+        <div class="is-medium">
+          <nav class="woocommerce-breadcrumb breadcrumbs"><a href="http://mauweb.monamedia.net/fptshop">Trang chủ</a> <span class="divider">&#47;</span> Laptop</nav></div>
+        <div class="category-filtering category-filter-row show-for-medium">
+          <a href="#" data-open="#shop-sidebar" data-visible-after="true" data-pos="left" class="filter-button uppercase plain">
+            <i class="icon-menu"></i>
+            <strong>Lọc</strong>
+          </a>
+          <div class="inline-block">
+          </div>
+        </div>
+      </div><!-- .flex-left -->
+
+      <div class="flex-col medium-text-center">
+        <p class="woocommerce-result-count hide-for-medium">
+          Xem tất cả 10 kết quả</p>
+        <form class="woocommerce-ordering" method="get">
+          <select name="orderby" class="sort_product">
+            <option value="menu_order"  selected='selected'>Thứ tự mặc định</option>
+<!--            <option value="popularity" >Thứ tự theo mức độ phổ biến</option>-->
+<!--            <option value="rating" >Thứ tự theo điểm đánh giá</option>-->
+<!--            <option value="date" >Thứ tự theo sản phẩm mới</option>-->
+            <option value="price" >Thứ tự theo giá: thấp đến cao</option>
+            <option value="price-desc" >Thứ tự theo giá: cao xuống thấp</option>
+          </select>
+        </form>
+      </div><!-- .flex-right -->
+
+    </div><!-- flex-row -->
+  </div><!-- .page-title -->
+
   <div class="row category-page-row">
 
     <div class="col large-3 hide-for-medium ">
@@ -164,20 +199,17 @@
             <ul id="woo_view_nav_ul"><li><a href="#" class="selected" id="list" title="List View"><span class="selected"><em class="list"></em>List View</span></a></li><li><a href="#" class="" id="date" title="Date View"><span class=""><em class="date"></em>Date View</span></a></li><li><a href="#" class="" id="grid" title="Grid View"><span class=""><em class="grid"></em>Grid View</span></a></li><li><a href="#" class="" id="map" title="Map View"><span class=""><em class="map"></em>Map View</span></a></li></ul><input type="hidden" name="view" id="woo_view_view" value="" /></form>
         </div>
       </div>
-      <div class="products row row-small large-columns-4 medium-columns-3 small-columns-2 has-shadow row-box-shadow-1 row-box-shadow-2-hover">
-
-
-
-        <div class="product-small col has-hover post-125 product type-product status-publish has-post-thumbnail product_cat-blackberry product_cat-dien-thoai first instock shipping-taxable purchasable product-type-simple">
+      <div id="div_product" class="products row row-small large-columns-4 medium-columns-3 small-columns-2 has-shadow row-box-shadow-1 row-box-shadow-2-hover">
+        <div style="display:none" class="product-item product-small col has-hover post-125 product type-product status-publish has-post-thumbnail product_cat-blackberry product_cat-dien-thoai first instock shipping-taxable purchasable product-type-simple">
           <div class="col-inner">
-
             <div class="badge-container absolute left top z-1">
             </div>
             <div class="product-small box ">
               <div class="box-image">
                 <div class="image-fade_in_back">
-                  <a href="../../san-pham/dien-thoai-blackberry-keyone-hang-chinh-hang/index.html">
-                    <img width="300" height="300" src="../../wp-content/uploads/2017/12/bb-key-one-01-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" srcset="//mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-01-300x300.jpg 300w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-01-150x150.jpg 150w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-01-180x180.jpg 180w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-01-24x24.jpg 24w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-01-36x36.jpg 36w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-01-48x48.jpg 48w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-01.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /><img width="300" height="300" src="../../wp-content/uploads/2017/12/bb-key-one-04-300x300.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-04-300x300.jpg 300w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-04-150x150.jpg 150w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-04-180x180.jpg 180w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-04-24x24.jpg 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-04-36x36.jpg 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-04-48x48.jpg 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-04.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" />				</a>
+                  <a class="link-product" href="../../san-pham/dien-thoai-blackberry-keyone-hang-chinh-hang/index.html">
+                    <img width="300" height="300" src="../../wp-content/uploads/2017/12/bb-key-one-01-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" srcset="//mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-01-300x300.jpg 300w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-01-150x150.jpg 150w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-01-180x180.jpg 180w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-01-24x24.jpg 24w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-01-36x36.jpg 36w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-01-48x48.jpg 48w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-01.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" />
+                    <img width="300" height="300" src="../../wp-content/uploads/2017/12/bb-key-one-04-300x300.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-04-300x300.jpg 300w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-04-150x150.jpg 150w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-04-180x180.jpg 180w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-04-24x24.jpg 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-04-36x36.jpg 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-04-48x48.jpg 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/bb-key-one-04.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" />				</a>
                 </div>
                 <div class="image-tools is-small top right show-on-hover">
                 </div>
@@ -188,503 +220,22 @@
               </div><!-- box-image -->
 
               <div class="box-text box-text-products">
-                <div class="title-wrapper"><p class="name product-title"><a href="../../san-pham/dien-thoai-blackberry-keyone-hang-chinh-hang/index.html">Điện Thoại BlackBerry KEYone &#8211; Hàng Chính Hãng</a></p></div><div class="price-wrapper">
-                <span class="price"><span class="woocommerce-Price-amount amount">14,990,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
+                <div class="title-wrapper">
+                  <p class="name product-title">
+                    <a class="link-product" href="../../san-pham/dien-thoai-blackberry-keyone-hang-chinh-hang/index.html">
+                      Điện Thoại BlackBerry KEYone &#8211; Hàng Chính Hãng</a>
+                  </p>
+                </div>
+                <div class="price-wrapper">
+                <span class="price">
+                  <span class="woocommerce-Price-amount amount">14,990,000&nbsp;
+                    <span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                  </span></span>
               </div>
-<!--                <p class="box-excerpt is-small">-->
-<!--                <ul>-->
-<!--                  <li>Chính hãng, Nguyên seal, Mới 100%</li>-->
-<!--                  <li>Miễn phí giao hàng toàn quốc</li>-->
-<!--                  <li>Thiết kế: Nguyên khối</li>-->
-<!--                  <li>Màn hình 4.5 inch, độ phân giải 1620x 1080 pixels</li>-->
-<!--                  <li>Camera Trước/Sau: 8MP/12MP</li>-->
-<!--                  <li>CPU: Qualcomm® Snapdragon™ 625 Octa-Core 2.0 GHz</li>-->
-<!--                  <li>Bộ Nhớ 32GB</li>-->
-<!--                  <li>RAM 3GB</li>-->
-<!--                </ul>		</p>-->
               </div><!-- box-text -->
             </div><!-- box -->
           </div><!-- .col-inner -->
         </div><!-- col -->
-
-
-
-        <div class="product-small col has-hover post-48 product type-product status-publish has-post-thumbnail product_cat-apple product_cat-dien-thoai  instock sale shipping-taxable purchasable product-type-simple">
-          <div class="col-inner">
-
-            <div class="badge-container absolute left top z-1">
-              <div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá</span></div></div>
-            </div>
-            <div class="product-small box ">
-              <div class="box-image">
-                <div class="image-fade_in_back">
-                  <a href="../../san-pham/dien-thoai-iphone-6s-32gb-hang-chinh-hang/index.html">
-                    <img width="300" height="300" src="../../wp-content/uploads/2017/12/iphone-6-s-32Gb-01-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" srcset="//mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-01-300x300.jpg 300w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-01-150x150.jpg 150w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-01-180x180.jpg 180w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-01-24x24.jpg 24w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-01-36x36.jpg 36w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-01-48x48.jpg 48w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-01.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /><img width="300" height="300" src="../../wp-content/uploads/2017/12/iphone-6-s-32Gb-02-300x300.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-02-300x300.jpg 300w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-02-150x150.jpg 150w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-02-180x180.jpg 180w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-02-24x24.jpg 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-02-36x36.jpg 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-02-48x48.jpg 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-02.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" />				</a>
-                </div>
-                <div class="image-tools is-small top right show-on-hover">
-                </div>
-                <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                </div>
-                <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                </div>
-              </div><!-- box-image -->
-
-              <div class="box-text box-text-products">
-                <div class="title-wrapper"><p class="name product-title"><a href="../../san-pham/dien-thoai-iphone-6s-32gb-hang-chinh-hang/index.html">Điện Thoại iPhone 6s 32GB &#8211; Hàng Chính Hãng</a></p></div><div class="price-wrapper">
-                <span class="price"><del><span class="woocommerce-Price-amount amount">16,990,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">12,100,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-              </div>
-<!--                <p class="box-excerpt is-small">-->
-<!--                <ul>-->
-<!--                  <li>Chính hãng, nguyên seal, mới 100%, chưa Active</li>-->
-<!--                  <li>Miễn phí giao hàng toàn quốc</li>-->
-<!--                  <li>Thiết kế: Nguyên khối, mặt kính cong 2.5D</li>-->
-<!--                  <li>Màn hình: 4.7 inch, HD (1334 x 750 Pixels)</li>-->
-<!--                  <li>Camera Trước/Sau: 5MP/ 12MP</li>-->
-<!--                  <li>CPU: Apple A9 2 nhân 64-bit</li>-->
-<!--                  <li>Bộ nhớ: 32GB</li>-->
-<!--                  <li>RAM: 2GB</li>-->
-<!--                  <li>Tính năng: Mở khóa bằng vân tay</li>-->
-<!--                </ul>		</p>-->
-              </div><!-- box-text -->
-            </div><!-- box -->
-          </div><!-- .col-inner -->
-        </div><!-- col -->
-
-
-
-        <div class="product-small col has-hover post-61 product type-product status-publish has-post-thumbnail product_cat-apple product_cat-dien-thoai  instock sale shipping-taxable purchasable product-type-variable has-default-attributes has-children">
-          <div class="col-inner">
-
-            <div class="badge-container absolute left top z-1">
-              <div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá</span></div></div>
-            </div>
-            <div class="product-small box ">
-              <div class="box-image">
-                <div class="image-fade_in_back">
-                  <a href="../../san-pham/dien-thoai-iphone-7-32gb-hang-chinh-hang/index.html">
-                    <img width="300" height="300" src="../../wp-content/uploads/2017/12/iphone-7-32Gb-01-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" srcset="//mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-7-32Gb-01-300x300.jpg 300w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-7-32Gb-01-150x150.jpg 150w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-7-32Gb-01-180x180.jpg 180w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-7-32Gb-01-24x24.jpg 24w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-7-32Gb-01-36x36.jpg 36w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-7-32Gb-01-48x48.jpg 48w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-7-32Gb-01.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /><img width="300" height="300" src="../../wp-content/uploads/2017/12/iphone-7-32Gb-02-300x300.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-7-32Gb-02-300x300.jpg 300w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-7-32Gb-02-150x150.jpg 150w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-7-32Gb-02-180x180.jpg 180w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-7-32Gb-02-24x24.jpg 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-7-32Gb-02-36x36.jpg 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-7-32Gb-02-48x48.jpg 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-7-32Gb-02.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" />				</a>
-                </div>
-                <div class="image-tools is-small top right show-on-hover">
-                </div>
-                <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                </div>
-                <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                </div>
-              </div><!-- box-image -->
-
-              <div class="box-text box-text-products">
-                <div class="title-wrapper"><p class="name product-title"><a href="../../san-pham/dien-thoai-iphone-7-32gb-hang-chinh-hang/index.html">Điện Thoại iPhone 7 32GB &#8211; Hàng Chính Hãng</a></p></div><div class="price-wrapper">
-                <span class="price"><del><span class="woocommerce-Price-amount amount">17,990,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">14,300,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-              </div>
-<!--                <p class="box-excerpt is-small">-->
-<!--                <ul>-->
-<!--                  <li>Chính hãng, nguyên seal, mới 100%</li>-->
-<!--                  <li>Miễn phí giao hàng toàn quốc</li>-->
-<!--                  <li>Thiết kế: Nguyên khối, mặt kính cong 2.5D</li>-->
-<!--                  <li>Màn hình: 4.7 inch, HD (1334 x 750 Pixels)</li>-->
-<!--                  <li>Camera Trước/Sau: 7MP/ 12MP</li>-->
-<!--                  <li>CPU: Apple A10 Fusion 4 nhân 64-bit</li>-->
-<!--                  <li>Bộ Nhớ: 32GB</li>-->
-<!--                  <li>RAM: 2GB</li>-->
-<!--                  <li>Chống nước, chống bụi tiêu chuẩn IP67</li>-->
-<!--                </ul>		</p>-->
-              </div><!-- box-text -->
-            </div><!-- box -->
-          </div><!-- .col-inner -->
-        </div><!-- col -->
-
-
-
-        <div class="product-small col has-hover post-44 product type-product status-publish has-post-thumbnail product_cat-apple product_cat-dien-thoai last instock sale shipping-taxable purchasable product-type-simple">
-          <div class="col-inner">
-
-            <div class="badge-container absolute left top z-1">
-              <div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá</span></div></div>
-            </div>
-            <div class="product-small box ">
-              <div class="box-image">
-                <div class="image-fade_in_back">
-                  <a href="../../san-pham/dien-thoai-iphone-8-plus-64gb-chinh-hang/index.html">
-                    <img width="300" height="300" src="../../wp-content/uploads/2017/12/iphone-8-plus-64Gb-03-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" srcset="//mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-8-plus-64Gb-03-300x300.jpg 300w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-8-plus-64Gb-03-150x150.jpg 150w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-8-plus-64Gb-03-180x180.jpg 180w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-8-plus-64Gb-03-24x24.jpg 24w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-8-plus-64Gb-03-36x36.jpg 36w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-8-plus-64Gb-03-48x48.jpg 48w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-8-plus-64Gb-03.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /><img width="300" height="300" src="../../wp-content/uploads/2017/12/iphone-8-plus-64Gb-02-300x300.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-8-plus-64Gb-02-300x300.jpg 300w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-8-plus-64Gb-02-150x150.jpg 150w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-8-plus-64Gb-02-180x180.jpg 180w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-8-plus-64Gb-02-24x24.jpg 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-8-plus-64Gb-02-36x36.jpg 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-8-plus-64Gb-02-48x48.jpg 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-8-plus-64Gb-02.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" />				</a>
-                </div>
-                <div class="image-tools is-small top right show-on-hover">
-                </div>
-                <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                </div>
-                <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                </div>
-              </div><!-- box-image -->
-
-              <div class="box-text box-text-products">
-                <div class="title-wrapper"><p class="name product-title"><a href="../../san-pham/dien-thoai-iphone-8-plus-64gb-chinh-hang/index.html">Điện Thoại iPhone 8 Plus 64GB &#8211; Chính Hãng</a></p></div><div class="price-wrapper">
-                <span class="price"><del><span class="woocommerce-Price-amount amount">22,900,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">21,990,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-              </div>
-<!--                <p class="box-excerpt is-small">-->
-<!--                <ul>-->
-<!--                  <li>Chính hãng, Nguyên seal, Mới 100%, Chưa Active</li>-->
-<!--                  <li>Miễn phí giao hàng toàn quốc</li>-->
-<!--                  <li>Thiết kế: Nguyên khối</li>-->
-<!--                  <li>Màn hình: LED-backlit IPS LCD, 5.5 inch Full HD</li>-->
-<!--                  <li>Camera Trước/Sau: 7MP/ 2 camera 12MP</li>-->
-<!--                  <li>CPU: Apple A11 Bionic 6 nhân</li>-->
-<!--                  <li>Bộ Nhớ: 64GB</li>-->
-<!--                  <li>RAM: 3GB</li>-->
-<!--                  <li>SIM: 1 Nano SIM</li>-->
-<!--                  <li>Tính năng: Chống nước, chống bụi, 3D touch</li>-->
-<!--                </ul>		</p>-->
-              </div><!-- box-text -->
-            </div><!-- box -->
-          </div><!-- .col-inner -->
-        </div><!-- col -->
-
-
-
-        <div class="product-small col has-hover post-53 product type-product status-publish has-post-thumbnail product_cat-apple product_cat-dien-thoai first instock sale shipping-taxable purchasable product-type-variable has-default-attributes has-children">
-          <div class="col-inner">
-
-            <div class="badge-container absolute left top z-1">
-              <div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá</span></div></div>
-            </div>
-            <div class="product-small box ">
-              <div class="box-image">
-                <div class="image-fade_in_back">
-                  <a href="../../san-pham/dien-thoai-iphone-x-64gb/index.html">
-                    <img width="300" height="300" src="../../wp-content/uploads/2017/12/iphone-X-64Gb-01-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" srcset="//mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-X-64Gb-01-300x300.jpg 300w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-X-64Gb-01-150x150.jpg 150w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-X-64Gb-01-180x180.jpg 180w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-X-64Gb-01-24x24.jpg 24w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-X-64Gb-01-36x36.jpg 36w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-X-64Gb-01-48x48.jpg 48w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-X-64Gb-01.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /><img width="300" height="300" src="../../wp-content/uploads/2017/12/iphone-X-64Gb-02-300x300.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-X-64Gb-02-300x300.jpg 300w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-X-64Gb-02-150x150.jpg 150w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-X-64Gb-02-180x180.jpg 180w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-X-64Gb-02-24x24.jpg 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-X-64Gb-02-36x36.jpg 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-X-64Gb-02-48x48.jpg 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-X-64Gb-02.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" />				</a>
-                </div>
-                <div class="image-tools is-small top right show-on-hover">
-                </div>
-                <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                </div>
-                <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                </div>
-              </div><!-- box-image -->
-
-              <div class="box-text box-text-products">
-                <div class="title-wrapper"><p class="name product-title"><a href="../../san-pham/dien-thoai-iphone-x-64gb/index.html">Điện Thoại iPhone X 64GB</a></p></div><div class="price-wrapper">
-                <span class="price"><del><span class="woocommerce-Price-amount amount">31,990,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">29,990,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-              </div>
-<!--                <p class="box-excerpt is-small">-->
-<!--                <ul>-->
-<!--                  <li>Chính hãng, Nguyên seal, Mới 100%, Chưa Active</li>-->
-<!--                  <li>Miễn phí giao hàng toàn quốc</li>-->
-<!--                  <li>Thiết kế: Nguyên khối</li>-->
-<!--                  <li>Màn hình: Super AMOLED capacitive touchscreen, 5.8 inch HD</li>-->
-<!--                  <li>Camera Trước/Sau: 7MP/ 2 camera 12MP</li>-->
-<!--                  <li>CPU: Apple A11 Bionic 6 nhân</li>-->
-<!--                  <li>Bộ Nhớ: 64GB</li>-->
-<!--                  <li>RAM: 3GB</li>-->
-<!--                  <li>SIM: 1 Nano SIM</li>-->
-<!--                  <li>Tính năng: Chống nước, chống bụi, Face ID</li>-->
-<!--                </ul>		</p>-->
-              </div><!-- box-text -->
-            </div><!-- box -->
-          </div><!-- .col-inner -->
-        </div><!-- col -->
-
-
-
-        <div class="product-small col has-hover post-116 product type-product status-publish has-post-thumbnail product_cat-dien-thoai product_cat-motorola  instock sale shipping-taxable purchasable product-type-variable has-default-attributes has-children">
-          <div class="col-inner">
-
-            <div class="badge-container absolute left top z-1">
-              <div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá</span></div></div>
-            </div>
-            <div class="product-small box ">
-              <div class="box-image">
-                <div class="image-fade_in_back">
-                  <a href="../../san-pham/dien-thoai-motorola-moto-g5s-plus-hang-chinh-hang/index.html">
-                    <img width="300" height="300" src="../../wp-content/uploads/2017/12/moto-g5s-plus-01-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" srcset="//mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-g5s-plus-01-300x300.jpg 300w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-g5s-plus-01-150x150.jpg 150w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-g5s-plus-01-180x180.jpg 180w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-g5s-plus-01-24x24.jpg 24w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-g5s-plus-01-36x36.jpg 36w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-g5s-plus-01-48x48.jpg 48w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-g5s-plus-01.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /><img width="300" height="300" src="../../wp-content/uploads/2017/12/moto-g5s-plus-02-300x300.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-g5s-plus-02-300x300.jpg 300w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-g5s-plus-02-150x150.jpg 150w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-g5s-plus-02-180x180.jpg 180w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-g5s-plus-02-24x24.jpg 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-g5s-plus-02-36x36.jpg 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-g5s-plus-02-48x48.jpg 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-g5s-plus-02.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" />				</a>
-                </div>
-                <div class="image-tools is-small top right show-on-hover">
-                </div>
-                <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                </div>
-                <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                </div>
-              </div><!-- box-image -->
-
-              <div class="box-text box-text-products">
-                <div class="title-wrapper"><p class="name product-title"><a href="../../san-pham/dien-thoai-motorola-moto-g5s-plus-hang-chinh-hang/index.html">Điện Thoại Motorola Moto G5S Plus &#8211; Hàng Chính Hãng</a></p></div><div class="price-wrapper">
-                <span class="price"><span class="woocommerce-Price-amount amount">6,280,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> &ndash; <span class="woocommerce-Price-amount amount">6,290,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
-              </div>
-<!--                <p class="box-excerpt is-small">-->
-<!--                <ul>-->
-<!--                  <li>Chính hãng, Nguyên seal, Mới 100%, Chưa Active</li>-->
-<!--                  <li>Miễn phí giao hàng toàn quốc</li>-->
-<!--                  <li>Thiết kế kim loại nguyên khối</li>-->
-<!--                  <li>Màn hình 5.5 inch FullHD</li>-->
-<!--                  <li>Camera Trước/Sau: 8MP/ 13MP x 2</li>-->
-<!--                  <li>CPU: Snapdragon 625 8 nhân 64-bit</li>-->
-<!--                  <li>ROM/RAM: 32GB/4GB</li>-->
-<!--                  <li>Dung lượng Pin: 3000 mAh</li>-->
-<!--                </ul>		</p>-->
-              </div><!-- box-text -->
-            </div><!-- box -->
-          </div><!-- .col-inner -->
-        </div><!-- col -->
-
-
-
-        <div class="product-small col has-hover post-107 product type-product status-publish has-post-thumbnail product_cat-dien-thoai product_cat-motorola  instock sale shipping-taxable purchasable product-type-variable has-default-attributes has-children">
-          <div class="col-inner">
-
-            <div class="badge-container absolute left top z-1">
-              <div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá</span></div></div>
-            </div>
-            <div class="product-small box ">
-              <div class="box-image">
-                <div class="image-fade_in_back">
-                  <a href="../../san-pham/dien-thoai-motorola-moto-z2-play-hang-chinh-hang/index.html">
-                    <img width="300" height="300" src="../../wp-content/uploads/2017/12/moto-z2-play-01-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" srcset="//mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-z2-play-01-300x300.jpg 300w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-z2-play-01-150x150.jpg 150w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-z2-play-01-180x180.jpg 180w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-z2-play-01-24x24.jpg 24w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-z2-play-01-36x36.jpg 36w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-z2-play-01-48x48.jpg 48w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-z2-play-01.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /><img width="300" height="300" src="../../wp-content/uploads/2017/12/moto-z2-play-02-300x300.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-z2-play-02-300x300.jpg 300w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-z2-play-02-150x150.jpg 150w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-z2-play-02-180x180.jpg 180w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-z2-play-02-24x24.jpg 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-z2-play-02-36x36.jpg 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-z2-play-02-48x48.jpg 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/moto-z2-play-02.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" />				</a>
-                </div>
-                <div class="image-tools is-small top right show-on-hover">
-                </div>
-                <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                </div>
-                <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                </div>
-              </div><!-- box-image -->
-
-              <div class="box-text box-text-products">
-                <div class="title-wrapper"><p class="name product-title"><a href="../../san-pham/dien-thoai-motorola-moto-z2-play-hang-chinh-hang/index.html">Điện Thoại Motorola Moto Z2 Play &#8211; Hàng Chính Hãng</a></p></div><div class="price-wrapper">
-                <span class="price"><del><span class="woocommerce-Price-amount amount">10,990,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">9,650,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-              </div>
-<!--                <p class="box-excerpt is-small">-->
-<!--                <ul>-->
-<!--                  <li>Chính hãng, Nguyên seal, Mới 100%, Chưa Active</li>-->
-<!--                  <li>Miễn phí giao hàng toàn quốc</li>-->
-<!--                  <li>Thiết kế: Kim loại nguyên khối</li>-->
-<!--                  <li>Màn hình: Amoled 5.5 inch Full HD 1080p</li>-->
-<!--                  <li>Camera Trước/Sau: 5MP/12MP</li>-->
-<!--                  <li>CPU: Vi xử lý 8 lõi Snapdragon 626 2.2GHz</li>-->
-<!--                  <li>Bộ Nhớ: 64GB</li>-->
-<!--                  <li>RAM: 4GB</li>-->
-<!--                  <li>Tính năng: Chống nước, bụi</li>-->
-<!--                </ul>		</p>-->
-              </div><!-- box-text -->
-            </div><!-- box -->
-          </div><!-- .col-inner -->
-        </div><!-- col -->
-
-
-
-        <div class="product-small col has-hover post-130 product type-product status-publish has-post-thumbnail product_cat-dien-thoai product_cat-nokia last instock sale shipping-taxable purchasable product-type-simple">
-          <div class="col-inner">
-
-            <div class="badge-container absolute left top z-1">
-              <div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá</span></div></div>
-            </div>
-            <div class="product-small box ">
-              <div class="box-image">
-                <div class="image-fade_in_back">
-                  <a href="../../san-pham/dien-thoai-nokia-5-hang-chinh-hang/index.html">
-                    <img width="300" height="300" src="../../wp-content/uploads/2017/12/nokia-5-01-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" srcset="//mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/nokia-5-01-300x300.jpg 300w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/nokia-5-01-150x150.jpg 150w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/nokia-5-01-180x180.jpg 180w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/nokia-5-01-24x24.jpg 24w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/nokia-5-01-36x36.jpg 36w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/nokia-5-01-48x48.jpg 48w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/nokia-5-01.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /><img width="300" height="300" src="../../wp-content/uploads/2017/12/nokia-5-02-300x300.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/nokia-5-02-300x300.jpg 300w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/nokia-5-02-150x150.jpg 150w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/nokia-5-02-180x180.jpg 180w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/nokia-5-02-24x24.jpg 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/nokia-5-02-36x36.jpg 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/nokia-5-02-48x48.jpg 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/nokia-5-02.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" />				</a>
-                </div>
-                <div class="image-tools is-small top right show-on-hover">
-                </div>
-                <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                </div>
-                <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                </div>
-              </div><!-- box-image -->
-
-              <div class="box-text box-text-products">
-                <div class="title-wrapper"><p class="name product-title"><a href="../../san-pham/dien-thoai-nokia-5-hang-chinh-hang/index.html">Điện Thoại Nokia 5 &#8211; Hàng Chính Hãng</a></p></div><div class="price-wrapper">
-                <span class="price"><del><span class="woocommerce-Price-amount amount">4,260,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">3,750,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-              </div>
-<!--                <p class="box-excerpt is-small">-->
-<!--                <ul>-->
-<!--                  <li>Chính hãng, nguyên seal, mới 100%</li>-->
-<!--                  <li>Miễn phí giao hàng toàn quốc</li>-->
-<!--                  <li>Thiết kế: Nguyên khối, mặt kính 2.5D</li>-->
-<!--                  <li>Màn hình: IPS LCD (720 x 1280 pixels)</li>-->
-<!--                  <li>Camera Trước/Sau: 8MP/ 13MP</li>-->
-<!--                  <li>CPU: Qualcomm Snapdragon 430 8 nhân 64 bit</li>-->
-<!--                  <li>Bộ nhớ: 16GB</li>-->
-<!--                  <li>RAM: 2GB</li>-->
-<!--                  <li>2 Nano SIM</li>-->
-<!--                  <li>Tính năng: Mở khóa bằng vân tay</li>-->
-<!--                </ul>		</p>-->
-              </div><!-- box-text -->
-            </div><!-- box -->
-          </div><!-- .col-inner -->
-        </div><!-- col -->
-
-
-
-        <div class="product-small col has-hover post-81 product type-product status-publish has-post-thumbnail product_cat-dien-thoai product_cat-samsung first instock sale shipping-taxable purchasable product-type-variable has-default-attributes has-children">
-          <div class="col-inner">
-
-            <div class="badge-container absolute left top z-1">
-              <div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá</span></div></div>
-            </div>
-            <div class="product-small box ">
-              <div class="box-image">
-                <div class="image-fade_in_back">
-                  <a href="../../san-pham/dien-thoai-samsung-galaxy-j7-pro-hang-chinh-hang/index.html">
-                    <img width="300" height="300" src="../../wp-content/uploads/2017/12/ss-galaxy-j7-pro-01-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" srcset="//mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-j7-pro-01-300x300.jpg 300w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-j7-pro-01-150x150.jpg 150w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-j7-pro-01-180x180.jpg 180w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-j7-pro-01-24x24.jpg 24w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-j7-pro-01-36x36.jpg 36w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-j7-pro-01-48x48.jpg 48w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-j7-pro-01.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /><img width="300" height="300" src="../../wp-content/uploads/2017/12/ss-galaxy-j7-pro-04-300x300.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-j7-pro-04-300x300.jpg 300w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-j7-pro-04-150x150.jpg 150w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-j7-pro-04-180x180.jpg 180w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-j7-pro-04-24x24.jpg 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-j7-pro-04-36x36.jpg 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-j7-pro-04-48x48.jpg 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-j7-pro-04.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" />				</a>
-                </div>
-                <div class="image-tools is-small top right show-on-hover">
-                </div>
-                <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                </div>
-                <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                </div>
-              </div><!-- box-image -->
-
-              <div class="box-text box-text-products">
-                <div class="title-wrapper"><p class="name product-title"><a href="../../san-pham/dien-thoai-samsung-galaxy-j7-pro-hang-chinh-hang/index.html">Điện Thoại Samsung Galaxy J7 Pro &#8211; Hàng Chính Hãng</a></p></div><div class="price-wrapper">
-                <span class="price"><span class="woocommerce-Price-amount amount">5,860,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> &ndash; <span class="woocommerce-Price-amount amount">6,050,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
-              </div>
-<!--                <p class="box-excerpt is-small">-->
-<!--                <ul>-->
-<!--                  <li>Chính hãng, nguyên seal, mới 100%, chưa Active</li>-->
-<!--                  <li>Miễn phí giao hàng toàn quốc</li>-->
-<!--                  <li>Thiết kế: Kim loại nguyên khối, kính Gorrila cong 2.5D</li>-->
-<!--                  <li>Màn hình: 5.5", Full HD, Super AMOLED</li>-->
-<!--                  <li>Camera Trước/Sau: 13MP/ 13MP</li>-->
-<!--                  <li>CPU: Exynos 7870, 8 nhân, 1.6GHz</li>-->
-<!--                  <li>Bộ Nhớ: 32GB</li>-->
-<!--                  <li>RAM: 3GB</li>-->
-<!--                  <li>SIM tương thích: Nano</li>-->
-<!--                  <li>Bảo mật vân tay một chạm</li>-->
-<!--                </ul>		</p>-->
-              </div><!-- box-text -->
-            </div><!-- box -->
-          </div><!-- .col-inner -->
-        </div><!-- col -->
-
-
-
-        <div class="product-small col has-hover post-100 product type-product status-publish has-post-thumbnail product_cat-dien-thoai product_cat-samsung  instock sale shipping-taxable purchasable product-type-variable has-default-attributes has-children">
-          <div class="col-inner">
-
-            <div class="badge-container absolute left top z-1">
-              <div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá</span></div></div>
-            </div>
-            <div class="product-small box ">
-              <div class="box-image">
-                <div class="image-fade_in_back">
-                  <a href="../../san-pham/dien-thoai-samsung-galaxy-note-8-hang-chinh-hang/index.html">
-                    <img width="300" height="300" src="../../wp-content/uploads/2017/12/ss-galaxy-note-8-01-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" srcset="//mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-8-01-300x300.jpg 300w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-8-01-150x150.jpg 150w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-8-01-180x180.jpg 180w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-8-01-24x24.jpg 24w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-8-01-36x36.jpg 36w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-8-01-48x48.jpg 48w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-8-01.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /><img width="300" height="300" src="../../wp-content/uploads/2017/12/ss-galaxy-note-8-02-300x300.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-8-02-300x300.jpg 300w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-8-02-150x150.jpg 150w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-8-02-180x180.jpg 180w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-8-02-24x24.jpg 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-8-02-36x36.jpg 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-8-02-48x48.jpg 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-8-02.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" />				</a>
-                </div>
-                <div class="image-tools is-small top right show-on-hover">
-                </div>
-                <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                </div>
-                <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                </div>
-              </div><!-- box-image -->
-
-              <div class="box-text box-text-products">
-                <div class="title-wrapper"><p class="name product-title"><a href="../../san-pham/dien-thoai-samsung-galaxy-note-8-hang-chinh-hang/index.html">Điện Thoại Samsung Galaxy Note 8 &#8211; Hàng Chính Hãng</a></p></div><div class="price-wrapper">
-                <span class="price"><del><span class="woocommerce-Price-amount amount">22,490,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">19,990,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-              </div>
-<!--                <p class="box-excerpt is-small">-->
-<!--                <ul>-->
-<!--                  <li>Chính hãng, Nguyên seal, Mới 100%, Chưa Active</li>-->
-<!--                  <li>Miễn phí giao hàng toàn quốc</li>-->
-<!--                  <li>Thiết kế: Nguyên khối, màn hình vô cực không viền</li>-->
-<!--                  <li>Màn hình: 6.3 inches (1440 x 2960 pixels)</li>-->
-<!--                  <li>Camera Trước/Sau: 8MP/12MP</li>-->
-<!--                  <li>CPU: Lõi Tám (lõi Tứ 2.3GHz + lõi Tứ 1.7GHz), 64 bit</li>-->
-<!--                  <li>Bộ Nhớ: 64 GB</li>-->
-<!--                  <li>RAM: 6GB</li>-->
-<!--                  <li>SIM tương thích: Nano SIM</li>-->
-<!--                  <li>Tính năng: Chống nước, chống bụi đạt chuẩn IP68</li>-->
-<!--                </ul>		</p>-->
-              </div><!-- box-text -->
-            </div><!-- box -->
-          </div><!-- .col-inner -->
-        </div><!-- col -->
-
-
-
-        <div class="product-small col has-hover post-91 product type-product status-publish has-post-thumbnail product_cat-dien-thoai product_cat-samsung  instock shipping-taxable purchasable product-type-variable has-default-attributes has-children">
-          <div class="col-inner">
-
-            <div class="badge-container absolute left top z-1">
-            </div>
-            <div class="product-small box ">
-              <div class="box-image">
-                <div class="image-fade_in_back">
-                  <a href="../../san-pham/dien-thoai-samsung-galaxy-note-fe-hang-chinh-hang/index.html">
-                    <img width="300" height="300" src="../../wp-content/uploads/2017/12/ss-galaxy-note-fe-01-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" srcset="//mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-fe-01-300x300.jpg 300w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-fe-01-150x150.jpg 150w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-fe-01-180x180.jpg 180w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-fe-01-24x24.jpg 24w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-fe-01-36x36.jpg 36w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-fe-01-48x48.jpg 48w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-fe-01.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /><img width="300" height="300" src="../../wp-content/uploads/2017/12/ss-galaxy-note-fe-03-300x300.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-fe-03-300x300.jpg 300w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-fe-03-150x150.jpg 150w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-fe-03-180x180.jpg 180w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-fe-03-24x24.jpg 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-fe-03-36x36.jpg 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-fe-03-48x48.jpg 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-note-fe-03.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" />				</a>
-                </div>
-                <div class="image-tools is-small top right show-on-hover">
-                </div>
-                <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                </div>
-                <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                </div>
-              </div><!-- box-image -->
-
-              <div class="box-text box-text-products">
-                <div class="title-wrapper"><p class="name product-title"><a href="../../san-pham/dien-thoai-samsung-galaxy-note-fe-hang-chinh-hang/index.html">Điện Thoại Samsung Galaxy Note FE &#8211; Hàng Chính Hãng</a></p></div><div class="price-wrapper">
-                <span class="price"><span class="woocommerce-Price-amount amount">13,990,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></span>
-              </div>
-<!--                <p class="box-excerpt is-small">-->
-<!--                <ul>-->
-<!--                  <li>Nguyên seal, mới 100%, chưa active</li>-->
-<!--                  <li>Miễn phí giao hàng toàn quốc</li>-->
-<!--                  <li>Thiết kế: cong tràn hai cạnh</li>-->
-<!--                  <li>Màn hình: Super AMOLED 5.7 inch, độ phân giải 1440 x 2560 pixels</li>-->
-<!--                  <li>Camera Trước/Sau: 5 MP/ 12 MP, f/1.7</li>-->
-<!--                  <li>CPU: Exynos 8890 Quad-core 2.3 GHz + quad-core 1.6 GHz</li>-->
-<!--                  <li>Bộ Nhớ: 64 GB</li>-->
-<!--                  <li>RAM: 4 GB</li>-->
-<!--                  <li>SIM tương thích: 2 Nano SIM</li>-->
-<!--                  <li>Tính năng: Bảo mật mống mắt, bảo mật vân tay, kháng nước và bụi IP68, bút S-Pen</li>-->
-<!--                </ul>		</p>-->
-              </div><!-- box-text -->
-            </div><!-- box -->
-          </div><!-- .col-inner -->
-        </div><!-- col -->
-
-
-
-        <div class="product-small col has-hover post-70 product type-product status-publish has-post-thumbnail product_cat-dien-thoai product_cat-samsung last instock sale shipping-taxable purchasable product-type-variable has-default-attributes has-children">
-          <div class="col-inner">
-
-            <div class="badge-container absolute left top z-1">
-              <div class="callout badge badge-circle"><div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá</span></div></div>
-            </div>
-            <div class="product-small box ">
-              <div class="box-image">
-                <div class="image-fade_in_back">
-                  <a href="../../san-pham/dien-thoai-samsung-galaxy-s8-hang-chinh-hang/index.html">
-                    <img width="300" height="300" src="../../wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-01-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" srcset="//mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-01-300x300.jpg 300w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-01-150x150.jpg 150w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-01-180x180.jpg 180w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-01-24x24.jpg 24w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-01-36x36.jpg 36w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-01-48x48.jpg 48w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-01.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" /><img width="300" height="300" src="../../wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-02-300x300.jpg" class="show-on-hover absolute fill hide-for-small back-image" alt="" srcset="http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-02-300x300.jpg 300w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-02-150x150.jpg 150w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-02-180x180.jpg 180w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-02-24x24.jpg 24w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-02-36x36.jpg 36w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-02-48x48.jpg 48w, http://mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/ss-galaxy-s8-64Gb-02.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" />				</a>
-                </div>
-                <div class="image-tools is-small top right show-on-hover">
-                </div>
-                <div class="image-tools is-small hide-for-small bottom left show-on-hover">
-                </div>
-                <div class="image-tools grid-tools text-center hide-for-small bottom hover-slide-in show-on-hover">
-                </div>
-              </div><!-- box-image -->
-
-              <div class="box-text box-text-products">
-                <div class="title-wrapper"><p class="name product-title"><a href="../../san-pham/dien-thoai-samsung-galaxy-s8-hang-chinh-hang/index.html">Điện Thoại Samsung Galaxy S8 &#8211; Hàng Chính Hãng</a></p></div><div class="price-wrapper">
-                <span class="price"><del><span class="woocommerce-Price-amount amount">18,490,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></del> <ins><span class="woocommerce-Price-amount amount">15,990,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins></span>
-              </div>
-<!--                <p class="box-excerpt is-small">-->
-<!--                <ul>-->
-<!--                  <li>Chính hãng, nguyên seal, mới 100%, chưa Active</li>-->
-<!--                  <li>Miễn phí giao hàng toàn quốc</li>-->
-<!--                  <li>Thiết kế: Nguyên khối</li>-->
-<!--                  <li>Màn hình: Super AMOLED, 2K (1440 x 2960 Pixels)</li>-->
-<!--                  <li>Camera trước/sau: 8MP/ 12MP</li>-->
-<!--                  <li>CPU: Exynos 8895 8 nhân 64-bit</li>-->
-<!--                  <li>Bộ nhớ: 64GB</li>-->
-<!--                  <li>RAM: 4GB</li>-->
-<!--                  <li>Nano SIM &amp; Micro SIM (SIM 2 chung khe thẻ nhớ)</li>-->
-<!--                  <li>Tính năng: Mở khóa bằng vân tay, Quét mống mắt</li>-->
-<!--                </ul>		</p>-->
-              </div><!-- box-text -->
-            </div><!-- box -->
-          </div><!-- .col-inner -->
-        </div><!-- col -->
-
 
       </div><!-- row -->
 
@@ -693,6 +244,14 @@
   </div>
 </div>
 
+  <script>
+    jQuery(document).ready(function () {
+            getProductByCategory();
+            $('.sort_product').change(function() {
+              getProductByCategory($('.sort_product').val());
+            })
+        });
+  </script>
 </div>
 
 </body>

@@ -17,14 +17,14 @@ public class ProductController {
     private ProductService productService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<?> findByFilter(@RequestParam(name = "category-id") int categoryId) {
-        return ok(productService.findByFilter(categoryId));
+    public ResponseEntity<?> findByFilter(@RequestParam(name = "category-id") int categoryId, 
+                                          @RequestParam(name = "sort", required = false) String sort) {
+        return ok(productService.findByFilter(categoryId, sort));
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<?> findById(@PathVariable(name = "id") int id) {
         return ok(productService.findById(id));
     }
-
 
 }

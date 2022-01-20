@@ -27,8 +27,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 //    , @NamedQuery(name = "ProductEntity.findById", query = "SELECT p FROM ProductEntity p WHERE p.id = :id")
 //    , @NamedQuery(name = "ProductEntity.findByCode", query = "SELECT p FROM ProductEntity p WHERE p.code = :code")
 //    , @NamedQuery(name = "ProductEntity.findByName", query = "SELECT p FROM ProductEntity p WHERE p.name = :name")
-@NamedQuery(name = "ProductEntity.findByCategory", query = "SELECT p FROM ProductEntity p WHERE p.categorydetailEntity.categoryEntity.id = :categoryId")
-//    , @NamedQuery(name = "ProductEntity.findByProducerId", query = "SELECT p FROM ProductEntity p WHERE p.producerId = :producerId")
+@NamedQuery(name = "ProductEntity.findByCategory", query = "SELECT p FROM ProductEntity p WHERE p.categorydetailEntity.categoryEntity.id = :categoryId"),
+@NamedQuery(name = "ProductEntity.findByCategoryWithSortASC", query = "SELECT p FROM ProductEntity p WHERE p.categorydetailEntity.categoryEntity.id = :categoryId order by p.price"),
+@NamedQuery(name = "ProductEntity.findByCategoryWithSortDESC", query = "SELECT p FROM ProductEntity p WHERE p.categorydetailEntity.categoryEntity.id = :categoryId order by p.price desc")
+//    , @NamedQuery(name = "ProductEntitydesc.findByProducerId", query = "SELECT p FROM ProductEntity p WHERE p.producerId = :producerId")
 //    , @NamedQuery(name = "ProductEntity.findByPrice", query = "SELECT p FROM ProductEntity p WHERE p.price = :price")
 //    , @NamedQuery(name = "ProductEntity.findByIsImportant", query = "SELECT p FROM ProductEntity p WHERE p.isImportant = :isImportant")
 })
