@@ -1,0 +1,250 @@
+
+/*-------------global-------------*/
+body, p {
+    line-height: 160%!important;
+}
+/*-----------end global-----------*/
+
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+
+/*-------------header-------------*/
+/*Active category menu*/
+a.menu-image-title-after.menu-image-not-hovered.nav-top-link {
+    font-weight: normal;
+}
+.current-menu-item span.menu-image-title {
+    color: #3399d2;
+}
+
+/*style search form*/
+.header-main button.ux-search-submit.submit-button.secondary.button.icon.mb-0 {
+    width: 50px;
+    height: 39px;
+}
+.header-main input.search-field.mb-0 {
+    height: 38px;
+}
+
+/*style topbar menu*/
+a.menu-image-title-below.menu-image-not-hovered.nav-top-link {
+    display: block;
+    line-height: 5px;
+    padding: 0px;
+}
+
+/*style list danh sách giỏ hàng*/
+.header-main ul.product_list_widget li a:not(.remove) {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+    font-size: 12px;
+}
+
+/*style header bottom*/
+.header-bottom {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+/*-----------end header-----------*/
+
+
+/*-------------content-------------*/
+/*căn đều chiều cao các sản phẩm đều nhau*/
+.has-shadow>.col>.col-inner {
+    background-color: #FFF;
+    height: 100%;
+}
+
+/*căn đều sản phẩm trong slider*/
+.sec_mobile .flickity-viewport .col-inner,
+.sec_laptop .flickity-viewport .col-inner,
+.sec_tablet .flickity-viewport .col-inner,
+.sec_phu_kien .flickity-viewport .col-inner {
+    height: 402px !important;
+    background-color: #fff;
+}
+.sec_mobile .flickity-viewport .col-inner:hover,
+.sec_laptop .flickity-viewport .col-inner:hover,
+.sec_tablet .flickity-viewport .col-inner:hover,
+.sec_phu_kien .flickity-viewport .col-inner:hover{
+    -webkit-box-shadow: 1px 2px 7px 0 rgba(0,0,0,.21);
+    -moz-box-shadow: 1px 2px 7px 0 rgba(0,0,0,.21);
+    box-shadow: 1px 2px 7px 0 rgba(0,0,0,.21);
+    border: 1px solid #eee;
+}
+
+.sec_mobile .flickity-viewport,
+.sec_laptop .flickity-viewport,
+.sec_tablet .flickity-viewport,
+.sec_phu_kien .flickity-viewport{
+    height: 404px !important;
+    background-color: #fff;
+}
+
+/*style ẩn trích dãn*/
+.shop-container .box-text ul,
+.sec_mobile .box-text ul,
+.sec_laptop .box-text ul,
+.sec_tablet .box-text ul,
+.sec_phu_kien .box-text ul,
+.row_khuyen_mai .box-text ul{
+    display: none;
+}
+.shop-container .box-text table,
+.sec_tablet .box-text table,
+.row_khuyen_mai .box-text table{
+    display: none;
+}
+.shop-container p.box-excerpt.is-small,
+.sec_phu_kien p.box-excerpt.is-small,
+.row_khuyen_mai p.box-excerpt.is-small {
+    display: none;
+}
+/*ẩn đánh giá*/
+.shop-container .star-rating,
+.sec_mobile .star-rating,
+.sec_laptop .star-rating,
+.sec_tablet .star-rating,
+.sec_phu_kien .star-rating,
+.row_khuyen_mai .star-rating{
+    display: none;
+}
+
+/*style vị trí nhãn Sale*/
+.callout.badge.badge-circle {
+    height: 1.8em;}
+
+.badge-inner.secondary.on-sale {
+    border-radius: 0px;
+    font-weight:  normal;
+    padding: 0px 8px;
+		background-color: #ff2842;
+		border: solid 1px #ff677a;
+		border-radius: 3px;
+}
+.badge-container.absolute.left.top.z-1 {
+    float:right;
+    margin: 15px 0 0 0;
+    position: absolute;
+    right: 15px !important;
+    left: auto;
+}
+
+/*style sidebar widget*/
+.widget_nav_menu li{
+    padding: 0px 10px;
+    border-radius: 5px;
+	border: 1px solid #eee;
+}
+ul.product_list_widget {
+    padding: 0px 10px;
+    border-radius: 5px;
+	border: 1px solid #eee;
+}
+.flatsome_recent_posts > ul{
+    padding: 0px 10px;
+    border-radius: 5px;
+	border: 1px solid #eee;
+}
+
+/*style giá sản phẩm tại widget sidebar*/
+.product_list_widget span.woocommerce-Price-amount.amount {
+    font-size: 12px;
+}
+
+/*style product price*/
+span.woocommerce-Price-amount.amount {
+    color: #d0021b;
+}
+.price del {
+    display: none;
+}
+.product-summary .price del {
+    display: inline-block;
+}
+
+/*style span title widget sidebar*/
+/*span.widget-title.shop-sidebar {
+    padding: 15px;
+    color: #fff;
+}
+.is-divider.small {
+    background-color: #f17024;
+    max-width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: -33px;
+}*/
+
+/*style box news*/
+.box_news .box-text .is-divider {
+    display: none
+}
+.box_news .box-image {
+        padding: 5px 8px;
+}
+.box_news h5.post-title.is-small {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #1f1f1f;
+}
+
+/*style sec recent product*/
+.sec_recent_product .box-text.box-text-products {
+    display: none;
+}
+
+/*style mũi tên trong slider*/
+.slider-nav-reveal .flickity-prev-next-button:hover, .slider-nav-reveal .flickity-prev-next-button {
+    display: none;
+}
+
+/*style trang tablet*/
+.page_tablet_list .badge-container.absolute.left.top.z-1 {
+    float: right;
+    margin: 15px 0 0 0;
+    position: absolute;
+    left: 150px !important;
+    right: auto;
+}
+.page_tablet_list span.woocommerce-Price-amount.amount {
+    position: absolute;
+    right: 15px !important;
+    top: 15px !important;
+    left: auto;
+    font-size: 20px;
+}
+.page_tablet_list .box-text.text-left {
+    vertical-align: top;
+}
+
+.page_tablet_list .title-wrapper a{
+    font-size: 18px;
+    font-weight: bold;
+    color: #337ab7;
+    width: 75%;
+}
+
+/*bỏ grid / list woo, xóa plugin nhưng vẫn không hết*/
+.wc_woo_view_wrapper #wc_woo_view_tabs {
+    float: right;
+    line-height: normal;
+    margin: 0;
+    overflow: hidden;
+    display: none;
+}
