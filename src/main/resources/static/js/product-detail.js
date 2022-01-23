@@ -1,13 +1,13 @@
 var loadData = function () {
     var params = new URLSearchParams(window.location.search);
     var id = params.get('id');
-    $.ajax({url: "product/" + id, success: function(result){
+    $.ajax({url: "product/" + id, success: function(result){// use id to return a object
         console.log(result);
         $("#product_title").text(result.name);
          $("#product_price").text(result.price);
         showParameter(result.parameter);
         showInfoDetail(result.detail);
-        showPhoto(result.productphotoList);
+         showPhoto(result.productphotoList);
         showDesciption(result.description);
         showCategoryLink(result);
     }});
@@ -26,10 +26,10 @@ var showInfoDetail = function(detail) {
     var array = detail.split('\n');
     var html = '';
     for(var item of array) {
-        if(!item.trim()) {
+        if(!item.trim()) {// if item don't have whitespace
             continue;
         }
-        var itemArray = item.trim().split("\t");
+        var itemArray = item.trim().split("\t");// item delete whitespace and  split to array by tab
         html += ' <tr><td>' + itemArray[0] + '</td><td class="last">' + itemArray[1] + '</td></tr>';
     }
     $("#tbl_detail tbody").html(html);
@@ -37,8 +37,8 @@ var showInfoDetail = function(detail) {
 
 var showPhoto = function(photoList) {
     var index = 1;
-    for(var item of photoList) {
-        if(item.default) {
+    for(var item of photoList) {// browse all photo of a a product
+        if(item.default) {// if item is a default photo is add that picture to attributes has nominated id
             $("#main_photo").attr("data-thumb", item.photo);
             $("#main_photo a").attr("href", item.photo);
             $("#main_photo img").attr("data-large_image", item.photo);
