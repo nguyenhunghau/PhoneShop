@@ -7,8 +7,10 @@ package com.PhoneShop.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -29,7 +31,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 //    , @NamedQuery(name = "ProductEntity.findByName", query = "SELECT p FROM ProductEntity p WHERE p.name = :name")
 @NamedQuery(name = "ProductEntity.findByCategory", query = "SELECT p FROM ProductEntity p WHERE p.categorydetailEntity.categoryEntity.id = :categoryId"),
 @NamedQuery(name = "ProductEntity.findByCategoryWithSortASC", query = "SELECT p FROM ProductEntity p WHERE p.categorydetailEntity.categoryEntity.id = :categoryId order by p.price"),
-@NamedQuery(name = "ProductEntity.findByCategoryWithSortDESC", query = "SELECT p FROM ProductEntity p WHERE p.categorydetailEntity.categoryEntity.id = :categoryId order by p.price desc")
+@NamedQuery(name = "ProductEntity.findByCategoryWithSortDESC", query = "SELECT p FROM ProductEntity p WHERE p.categorydetailEntity.categoryEntity.id = :categoryId order by p.price desc"),
+@NamedQuery(name = "ProductEntity.findByCategoryWithSortByDateDESC", query = "SELECT p FROM ProductEntity p WHERE p.categorydetailEntity.categoryEntity.id = :categoryId order by p.productLaunchDate desc"),
 //    , @NamedQuery(name = "ProductEntitydesc.findByProducerId", query = "SELECT p FROM ProductEntity p WHERE p.producerId = :producerId")
 //    , @NamedQuery(name = "ProductEntity.findByPrice", query = "SELECT p FROM ProductEntity p WHERE p.price = :price")
 //    , @NamedQuery(name = "ProductEntity.findByIsImportant", query = "SELECT p FROM ProductEntity p WHERE p.isImportant = :isImportant")
@@ -55,6 +58,12 @@ public class ProductEntity implements Serializable {
     @Lob
     @Column(name = "description")
     private String description;
+    @Lob
+    @Temporal(TemporalType.DATE)
+    @Column(name = "product_launch_date")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date productLaunchDate;
+
 
     @ManyToOne
     @JoinColumn(name = "category_detail_id")

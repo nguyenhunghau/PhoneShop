@@ -2,6 +2,8 @@ package com.PhoneShop.model;
 
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -14,6 +16,7 @@ public class Product {
     private String parameter;
     private String detail;
     private String description;
+    private Date productLaunchDate;
 
     private CategoryDetail categoryDetail;
 

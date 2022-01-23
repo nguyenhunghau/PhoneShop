@@ -30,7 +30,10 @@ public class ProductService {
             categoryEntityList = productRepository.findByCategoryWithSortASC(categoryId);
         } else if("price-desc".equals(sort)) {
             categoryEntityList = productRepository.findByCategoryWithSortDESC(categoryId);
+        }else if("date".equals(sort)){
+            categoryEntityList = productRepository.findByCategoryWithSortByDateDESC(categoryId);
         }
         return new ModelMapper().map(categoryEntityList, new TypeToken<List<Product>>() {}.getType());
     }
+
 }
