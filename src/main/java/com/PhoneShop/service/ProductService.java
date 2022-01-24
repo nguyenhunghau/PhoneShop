@@ -32,11 +32,11 @@ public class ProductService {
     public List<Product> findByFilter(int categoryId, String sort) {
         List<ProductEntity> categoryEntityList = productRepository.findByCategory(categoryId);
         if("price".equals(sort)) {
-            categoryEntityList = productRepository.findByCategoryWithSortASC(categoryId);
+            categoryEntityList = productRepository.findByCategorydetailEntity_CategoryEntity_IdOrderByPriceAsc(categoryId);
         } else if("price-desc".equals(sort)) {
-            categoryEntityList = productRepository.findByCategoryWithSortDESC(categoryId);
+            categoryEntityList = productRepository.findByCategorydetailEntity_CategoryEntity_IdOrderByPriceDesc(categoryId);
         }else if("date".equals(sort)){
-            categoryEntityList = productRepository.findByCategoryWithSortByDateDESC(categoryId);
+            categoryEntityList = productRepository.findByCategorydetailEntity_CategoryEntity_IdOrderByProductLaunchDateDesc(categoryId);
         }
         return new ModelMapper().map(categoryEntityList, new TypeToken<List<Product>>() {}.getType());
     }
