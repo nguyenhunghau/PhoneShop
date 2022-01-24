@@ -30,6 +30,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 //    , @NamedQuery(name = "ProductEntity.findByCode", query = "SELECT p FROM ProductEntity p WHERE p.code = :code")
 //    , @NamedQuery(name = "ProductEntity.findByName", query = "SELECT p FROM ProductEntity p WHERE p.name = :name")
 @NamedQuery(name = "ProductEntity.findByCategory", query = "SELECT p FROM ProductEntity p WHERE p.categorydetailEntity.categoryEntity.id = :categoryId"),
+@NamedQuery(name = "ProductEntity.findImportantsByCategory", query = "SELECT p FROM ProductEntity p WHERE p.categorydetailEntity.categoryEntity.id = :categoryId and p.isImportant=true"),
 @NamedQuery(name = "ProductEntity.findByCategoryWithSortASC", query = "SELECT p FROM ProductEntity p WHERE p.categorydetailEntity.categoryEntity.id = :categoryId order by p.price"),
 @NamedQuery(name = "ProductEntity.findByCategoryWithSortDESC", query = "SELECT p FROM ProductEntity p WHERE p.categorydetailEntity.categoryEntity.id = :categoryId order by p.price desc"),
 @NamedQuery(name = "ProductEntity.findByCategoryWithSortByDateDESC", query = "SELECT p FROM ProductEntity p WHERE p.categorydetailEntity.categoryEntity.id = :categoryId order by p.productLaunchDate desc"),

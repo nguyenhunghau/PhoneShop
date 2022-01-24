@@ -22,6 +22,11 @@ public class ProductController {
         return ok(productService.findByFilter(categoryId, sort));
     }
 
+    @RequestMapping(value = "/important", method = RequestMethod.GET)
+    public ResponseEntity<?> findImportantProducts() {
+        return ok(productService.findImportantProducts());
+    }
+
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<?> findById(@PathVariable(name = "id") int id) {
         return ok(productService.findById(id));

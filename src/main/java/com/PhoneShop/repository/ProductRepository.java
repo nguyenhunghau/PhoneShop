@@ -12,6 +12,8 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Integer>
 
     public List<ProductEntity> findByCategory(@Param("categoryId") int categoryId);
 
+    public List<ProductEntity> findImportantsByCategory(@Param("categoryId") int categoryId);
+
     public List<ProductEntity> findByCategoryWithSortASC(@Param("categoryId") int categoryId);
 
     public List<ProductEntity> findByCategoryWithSortDESC(@Param("categoryId") int categoryId);
