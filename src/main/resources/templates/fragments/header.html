@@ -11,7 +11,8 @@
                     <!-- Header logo -->
                     <a href="index.html" rel="home" title="fptshop - Một trang web mới sử dụng WordPress">
                         <img alt="fptshop" class="header_logo header-logo" height="58"
-                             src="wp-content/uploads/2018/01/logo-mona-fpt.png" width="151"/><img alt="fptshop" class="header-logo-dark"
+                             src="wp-content/uploads/2018/01/logo-mona-fpt.png" width="151"/><img alt="fptshop"
+                                                                                                  class="header-logo-dark"
                                                                                                   height="58"
                                                                                                   src="wp-content/uploads/2018/01/logo-mona-fpt.png"
                                                                                                   width="151"/></a>
@@ -21,7 +22,8 @@
                 <div class="flex-col show-for-medium flex-left">
                     <ul class="mobile-nav nav nav-left ">
                         <li class="nav-icon has-icon">
-                            <a aria-controls="main-menu" aria-expanded="false" class="is-small" data-bg="main-menu-overlay"
+                            <a aria-controls="main-menu" aria-expanded="false" class="is-small"
+                               data-bg="main-menu-overlay"
                                data-color="" data-open="#main-menu" data-pos="left" href="#">
 
                                 <i class="icon-menu"></i>
@@ -41,7 +43,9 @@
                                           method="get" role="search">
                                         <div class="flex-row relative">
                                             <div class="flex-col flex-grow">
-                                                <input class="search-field mb-0" name="s" placeholder="Nhập tên điện thoại, máy tính, phụ kiện ... cần tìm" type="search"
+                                                <input class="search-field mb-0" name="s"
+                                                       placeholder="Nhập tên điện thoại, máy tính, phụ kiện ... cần tìm"
+                                                       type="search"
                                                        value=""/>
                                                 <input name="post_type" type="hidden" value="product"/>
                                             </div><!-- .flex-col -->
@@ -80,9 +84,7 @@
                                                                src="wp-content/uploads/2017/12/speech-bubble-with-question-mark.png"
                                                                width="24"/><span
                                 class="menu-image-title">Hỏi đáp</span></a></li>
-                        <li class="cart-item has-icon
- has-dropdown">
-
+                        <li class="cart-item has-icon has-dropdown">
                             <a class="header-cart-link is-small" href="gio-hang/index.html" title="Giỏ hàng">
 
 
@@ -98,14 +100,26 @@
 
                             <ul class="nav-dropdown nav-dropdown-default">
                                 <li class="html widget_shopping_cart">
+                                <li class="html widget_shopping_cart">
                                     <div class="widget_shopping_cart_content">
-
-
-                                        <p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ
-                                            hàng.</p>
-
-
+                                        <ul id="cart_List" class="woocommerce-mini-cart cart_list product_list_widget mini-cart">
+<!--                                            <li class="woocommerce-mini-cart-item mini_cart_item">-->
+<!--                                                <a href="" class="remove remove_from_cart_button" aria-label="Xóa sản phẩm này">×</a>-->
+<!--                                                <a href="http://mauweb.monamedia.net/fptshop/san-pham/dien-thoai-iphone-7-32gb-hang-chinh-hang/?attribute_mau=V%C3%A0ng+h%E1%BB%93ng">-->
+<!--                                                    <img width="180" height="180" src="" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="" sizes="(max-width: 180px) 100vw, 180px">Điện Thoại iPhone 7 32GB - Hàng Chính Hãng - Vàng hồng&nbsp;-->
+<!--                                                </a>-->
+<!--                                                <span class="quantity">3 × <span class="woocommerce-Price-amount amount">14,300,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></span>-->
+<!--                                            </li>-->
+                                        </ul>
+                                        <p class="woocommerce-mini-cart__total total mini-cart"><strong>Tổng cộng:</strong> <span class="woocommerce-Price-amount amount">42,900,000&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></p>
+                                        <p class="woocommerce-mini-cart__buttons buttons mini-cart"><a href="cart" class="button wc-forward">Xem giỏ hàng</a><a href="http://mauweb.monamedia.net/fptshop/thanh-toan/" class="button checkout wc-forward">Thanh toán</a></p>
+                                        <p class="woocommerce-mini-cart__empty-message mini-cart-empty">Chưa có sản phẩm trong giỏ hàng.</p>
                                     </div>
+                                </li>
+<!--                                    <div class="widget_shopping_cart_content">-->
+<!--                                        <p class="woocommerce-mini-cart__empty-message">Chưa có sản phẩm trong giỏ hàng.</p>-->
+<!--                                    </div>-->
+
                                 </li>
                             </ul><!-- .nav-dropdown -->
 
@@ -165,7 +179,8 @@
 
 
                 <div class="flex-col hide-for-medium flex-center">
-                    <ul id="ul_category" class="nav header-nav header-bottom-nav nav-center  nav-size-medium nav-spacing-xlarge nav-uppercase">
+                    <ul class="nav header-nav header-bottom-nav nav-center  nav-size-medium nav-spacing-xlarge nav-uppercase"
+                        id="ul_category">
                         <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat  menu-item-446"
                             id="menu-item-446"><a
                                 class="menu-image-title-after menu-image-not-hovered nav-top-link"

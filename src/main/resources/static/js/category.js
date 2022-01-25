@@ -50,7 +50,7 @@ var showProduct = function(productList) {
         $productItem.find('.link-product img:eq(1)').attr('src', hoverPhoto);
         $productItem.find('.link-product img:eq(0)').attr('srcset', '');
         $productItem.find('.link-product img:eq(1)').attr('srcset', '');
-        $productItem.find('.woocommerce-Price-amount').html(item.price + '&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span>');
+        $productItem.find('.woocommerce-Price-amount').html(formatNumber(item.price) + '&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span>');
         $productItem.find('.woocommerce-Price-amount').data('price', item.price);
         $productItem.find('.link-product:eq(1)').text(item.name);
         if(index == 0) {
@@ -111,3 +111,11 @@ var filterPrice = function() {
         }
     })
 }
+
+$('.header-nav .cart-item').hover(
+  function() {
+    $(this).addClass('current-dropdown');
+  }, function() {
+    $(this).removeClass('current-dropdown');
+  }
+);
