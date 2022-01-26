@@ -1,4 +1,4 @@
-var productCart = [];
+
 var currentProduct = {};
 
 var loadData = function () {
@@ -86,70 +86,6 @@ $('#minus_button').click(function() {
     }
 })
 
-var addToCart = function () {
-    if(localStorage['productCart']) {
-        productCart = $.parseJSON(localStorage['productCart']);
-    }
-    var productInCart = productCart.filter(item => item.id == currentProduct.id);
-    if(productInCart) {
-        return;
-    }
-    currentProduct.quantity = parseInt($('#product_quantity').val());
-    productCart.push(currentProduct);
-    localStorage['productCart'] = JSON.stringify(productCart);
-}
-
-var showProductInCart = function() {
-    if(productCart.length == 0) {
-        $('.mini-cart').hide();
-        $('.mini-cart-empty').show();
-        return;
-    }
-    $('.mini-cart').show();
-    $('.mini-cart-empty').hide();
-    html = '<li class="woocommerce-mini-cart-item mini_cart_item">'
-                 + '<a href="" onclick="removeProductInCart(' + currentProduct.id + ')" class="remove remove_from_cart_button" aria-label="Xóa sản phẩm này">×</a>'
-                 + '<a href="product-detail?id=' + currentProduct.id + '">'
-                 + '    <img width="180" height="180" src="' + getMainPhoto(currentProduct)
-                 + '" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="" sizes="(max-width: 180px) 100vw, 180px">' + currentProduct.name + '&nbsp;'
-                 + '</a>'
-                 + '<span class="quantity">' + currentProduct.quantity + ' × <span class="woocommerce-Price-amount amount">' + formatNumber(currentProduct.price) + '&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></span>'
-             + '</li>';
-     $('#cart_List').append(html);
-     $('.woocommerce-mini-cart__total').html('<strong>Tổng cộng:</strong> <span class="woocommerce-Price-amount amount">' + formatNumber(getTotalMoney()) + '&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span>');
-}
-
-var removeProductInCart = function(productId) {
-    if(localStorage['productCart']) {
-        productCart = $.parseJSON(localStorage['productCart']);
-    }
-    for(var index in productCart) {
-        if(productCart[index].id == productId) {
-            productCart.splice(index, 1);
-            showProductInCart();
-            return;
-        }
-    }
-}
-
-var getTotalMoney = function() {
-    var total = 0;
-    for(var item of productCart) {
-        total += item.quantity * item.price;
-    }
-    return total;
-}
-
-var getMainPhoto = function(product) {
-    for(var item of product.productphotoList) {
-        if(item.default) {
-            return item.photo;
-        }
-    }
-    return '';
-}
-
 $('#add_cart').click(function() {
     addToCart();
-    showProductInCart();
 })
