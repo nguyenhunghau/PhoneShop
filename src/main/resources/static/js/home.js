@@ -13,7 +13,7 @@ var loadCompanyPhoto = function(){
         var index = 0;
         for(var item of result){
             if(item.photo != null){
-                var $imageItem = $(".company-picture-item").clone();
+                var $imageItem = $(".company-picture-item:eq(0)").clone();
                  $imageItem.find('.link-product img:eq(0)').attr('src', item.photo);
                  $imageItem.find('.link-product img:eq(0)').attr('srcset', '');
                   $imageItem.show();
