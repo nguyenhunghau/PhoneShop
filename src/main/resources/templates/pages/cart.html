@@ -13,9 +13,6 @@
         <div class="row row-main">
             <div class="large-12 col">
                 <div class="col-inner">
-
-
-
                     <div class="woocommerce"><div class="woocommerce row row-large row-divided">
                         <div class="col large-7 pb-0 ">
 
@@ -24,7 +21,7 @@
                                 <div class="cart-wrapper sm-touch-scroll">
 
 
-                                    <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+                                    <table id="tbl_cart" class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
                                         <thead>
                                         <tr>
                                             <th class="product-name" colspan="3">Sản phẩm</th>
@@ -35,19 +32,17 @@
                                         </thead>
                                         <tbody>
 
-                                        <tr class="woocommerce-cart-form__cart-item cart_item">
-
+                                        <tr class="woocommerce-cart-form__cart-item cart_item cart-item-data" style="display:none">
                                             <td class="product-remove">
-                                                <a href="http://mauweb.monamedia.net/fptshop/gio-hang/?remove_item=642e92efb79421734881b53e1e1b18b6&#038;_wpnonce=eb857f3810" class="remove" aria-label="Xóa sản phẩm này" data-product_id="48" data-product_sku="iOS-6s-32Gb">&times;</a>          </td>
-
+                                                <a href="" class="remove" aria-label="Xóa sản phẩm này" >&times;</a>
+                                            </td>
                                             <td class="product-thumbnail">
-                                                <a href="http://mauweb.monamedia.net/fptshop/san-pham/dien-thoai-iphone-6s-32gb-hang-chinh-hang/"><img width="180" height="180" src="//mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-01-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="//mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-01-180x180.jpg 180w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-01-150x150.jpg 150w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-01-300x300.jpg 300w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-01-24x24.jpg 24w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-01-36x36.jpg 36w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-01-48x48.jpg 48w, //mauweb.monamedia.net/fptshop/wp-content/uploads/2017/12/iphone-6-s-32Gb-01.jpg 550w" sizes="(max-width: 180px) 100vw, 180px" /></a>          </td>
-
+                                                <a class="link-product" href=""><img width="180" height="180" src="" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="" sizes="(max-width: 180px) 100vw, 180px" /></a>          </td>
                                             <td class="product-name" data-title="Sản phẩm">
-                                                <a href="http://mauweb.monamedia.net/fptshop/san-pham/dien-thoai-iphone-6s-32gb-hang-chinh-hang/">Điện Thoại iPhone 6s 32GB - Hàng Chính Hãng</a>          </td>
+                                                <a class="link-product" href="">Điện Thoại iPhone 6s 32GB - Hàng Chính Hãng</a>          </td>
 
                                             <td class="product-price" data-title="Giá">
-                                                <span class="woocommerce-Price-amount amount">12,100,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span>          </td>
+                                                <span class="woocommerce-Price-amount amount cart-item-price">12,100,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span>          </td>
 
                                             <td class="product-quantity" data-title="Số lượng">
                                                 <div class="quantity buttons_added">
@@ -57,7 +52,7 @@
                                             </td>
 
                                             <td class="product-subtotal" data-title="Tổng cộng">
-                                                <span class="woocommerce-Price-amount amount">12,100,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span>            </td>
+                                                <span class="woocommerce-Price-amount amount total-price">12,100,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span>            </td>
                                         </tr>
                                         <tr>
                                             <td colspan="6" class="actions clear">
@@ -96,7 +91,7 @@
 
                                         <tr class="cart-subtotal">
                                             <th>Tổng cộng</th>
-                                            <td data-title="Tổng cộng"><span class="woocommerce-Price-amount amount">12,100,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></td>
+                                            <td data-title="Tổng cộng"><span class="woocommerce-Price-amount amount cart-price">12,100,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></td>
                                         </tr>
 
 
@@ -145,7 +140,7 @@
 
                                         <tr class="order-total">
                                             <th>Tổng cộng</th>
-                                            <td data-title="Tổng cộng"><strong><span class="woocommerce-Price-amount amount">12,100,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></strong> </td>
+                                            <td data-title="Tổng cộng"><strong><span class="woocommerce-Price-amount amount cart-price">12,100,000&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></strong> </td>
                                         </tr>
 
 

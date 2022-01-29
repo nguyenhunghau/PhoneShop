@@ -1,10 +1,14 @@
+
+var currentProduct = {};
+
 var loadData = function () {
     var params = new URLSearchParams(window.location.search);
     var id = params.get('id');
     $.ajax({url: "product/" + id, success: function(result){// use id to return a object
         console.log(result);
+        currentProduct = result;
         $("#product_title").text(result.name);
-         $("#product_price").text(result.price);
+         $("#product_price").text(formatNumber(result.price));
         showParameter(result.parameter);
         showInfoDetail(result.detail);
          showPhoto(result.productphotoList);
@@ -69,3 +73,19 @@ var showCategoryLink = function(product) {
     $("#nav_product a:eq(2)").text(product.categoryDetail.name);
     $("#nav_product a:eq(2)").attr('href', 'category-detail/' + product.categoryDetail.id);
 }
+
+$('#plus_button').click(function() {
+    var currentQuantity = parseInt($('#product_quantity').val());
+    $('#product_quantity').val(currentQuantity + 1);
+})
+
+$('#minus_button').click(function() {
+    var currentQuantity = parseInt($('#product_quantity').val());
+    if(currentQuantity > 1) {
+        $('#product_quantity').val(currentQuantity - 1);
+    }
+})
+
+$('#add_cart').click(function() {
+    addToCart();
+})
