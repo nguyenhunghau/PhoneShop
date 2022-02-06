@@ -5,16 +5,11 @@
  */
 package com.PhoneShop.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -23,14 +18,16 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "order_detail")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "OrderDetailEntity.findAll", query = "SELECT o FROM OrderDetailEntity o")
-    , @NamedQuery(name = "OrderDetailEntity.findById", query = "SELECT o FROM OrderDetailEntity o WHERE o.id = :id")
-    , @NamedQuery(name = "OrderDetailEntity.findByOrderId", query = "SELECT o FROM OrderDetailEntity o WHERE o.orderId = :orderId")
-    , @NamedQuery(name = "OrderDetailEntity.findByProductId", query = "SELECT o FROM OrderDetailEntity o WHERE o.productId = :productId")
-    , @NamedQuery(name = "OrderDetailEntity.findByVariantId", query = "SELECT o FROM OrderDetailEntity o WHERE o.variantId = :variantId")
-    , @NamedQuery(name = "OrderDetailEntity.findByQuantity", query = "SELECT o FROM OrderDetailEntity o WHERE o.quantity = :quantity")})
+@Getter
+@Setter
+//@XmlRootElement
+//@NamedQueries({
+//    @NamedQuery(name = "OrderDetailEntity.findAll", query = "SELECT o FROM OrderDetailEntity o")
+//    , @NamedQuery(name = "OrderDetailEntity.findById", query = "SELECT o FROM OrderDetailEntity o WHERE o.id = :id")
+//    , @NamedQuery(name = "OrderDetailEntity.findByOrderId", query = "SELECT o FROM OrderDetailEntity o WHERE o.orderId = :orderId")
+//    , @NamedQuery(name = "OrderDetailEntity.findByProductId", query = "SELECT o FROM OrderDetailEntity o WHERE o.productId = :productId")
+//    , @NamedQuery(name = "OrderDetailEntity.findByVariantId", query = "SELECT o FROM OrderDetailEntity o WHERE o.variantId = :variantId")
+//    , @NamedQuery(name = "OrderDetailEntity.findByQuantity", query = "SELECT o FROM OrderDetailEntity o WHERE o.quantity = :quantity")})
 public class OrderDetailEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -40,8 +37,13 @@ public class OrderDetailEntity implements Serializable {
     @Column(name = "id")
     private Integer id;
     @Basic(optional = false)
+
+//    @ManyToOne
+//    @JoinColumn(name = "order_id")
+//    private OrdersEntity ordersEntity;
     @Column(name = "order_id")
-    private int orderId;
+    private Integer orderId;
+
     @Column(name = "product_id")
     private Integer productId;
     @Column(name = "variant_id")
@@ -56,74 +58,4 @@ public class OrderDetailEntity implements Serializable {
         this.id = id;
     }
 
-    public OrderDetailEntity(Integer id, int orderId) {
-        this.id = id;
-        this.orderId = orderId;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public int getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
-    }
-
-    public Integer getProductId() {
-        return productId;
-    }
-
-    public void setProductId(Integer productId) {
-        this.productId = productId;
-    }
-
-    public Integer getVariantId() {
-        return variantId;
-    }
-
-    public void setVariantId(Integer variantId) {
-        this.variantId = variantId;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof OrderDetailEntity)) {
-            return false;
-        }
-        OrderDetailEntity other = (OrderDetailEntity) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "com.PhoneShop.entity.OrderDetailEntity[ id=" + id + " ]";
-    }
-    
 }
