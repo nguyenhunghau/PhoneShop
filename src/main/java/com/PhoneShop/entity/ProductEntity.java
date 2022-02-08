@@ -82,6 +82,9 @@ public class ProductEntity implements Serializable {
     @OneToMany(mappedBy="productEntity")
     private List<ProductphotoEntity> productphotoEntityList;
 
+    @OneToMany(mappedBy="productEntity")
+    private List<VariantEntity> variantEntityList;
+
     public ProductEntity() {
     }
 

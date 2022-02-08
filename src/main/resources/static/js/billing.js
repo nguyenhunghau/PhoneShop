@@ -7,7 +7,7 @@ var showCartList = function()  {
     for(var item of productList) {
         html += '<tr class="cart_item">'
                      + '<td class="product-name">'
-                     + item.name + '&nbsp;<strong class="product-quantity">&times; ' + item.quantity + '</strong></td>'
+                     + item.name + ' - ' + (item.variantName || '') + '&nbsp;<strong class="product-quantity">&times; ' + item.quantity + '</strong></td>'
                      + '<td class="product-total">'
                      + '    <span class="woocommerce-Price-amount amount">' + formatNumber(item.quantity * item.price) + '&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span></td>'
                  + '</tr>';
@@ -54,7 +54,11 @@ var createOrderDetailList = function() {
         productList = $.parseJSON(localStorage['productCart']);
     }
     for(var item of productList) {
-        orderDetailList.push({productId: item.id, quantity: item.quantity});
+        var orderDetail = {productId: item.id, quantity: item.quantity};
+        if(item.variantId) {
+            orderDetail['variantId'] = item.variantId;
+        }
+        orderDetailList.push(orderDetail);
     }
     return orderDetailList;
 }

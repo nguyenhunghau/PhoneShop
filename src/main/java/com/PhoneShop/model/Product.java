@@ -2,6 +2,7 @@ package com.PhoneShop.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.aspectj.weaver.ast.Var;
 
 import java.util.Date;
 import java.util.List;
@@ -25,4 +26,5 @@ public class Product {
     private Double price;
 
     private List<Productphoto> productphotoList;
+    private List<Variant> variantList;
 }
