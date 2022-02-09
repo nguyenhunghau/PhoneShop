@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>RegistrationForm_v1 by Colorlib</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="wrapper" style="background-image: url('images/bg-registration-form-1.jpg');">
+    <div class="inner">
+        <div class="image-holder">
+            <img src="images/registration-form-1.jpg" alt="">
+        </div>
+        <div class="form">
+            <h3>Registration Form</h3>
+            <div class="form-group">
+                <input type="text" placeholder="First Name" id="txt_firstname" class="form-control">
+                <input type="text" placeholder="Last Name" id="txt_lastname" class="form-control">
+            </div>
+            <div class="form-wrapper">
+                <input type="text" placeholder="Username" id="txt_username" class="form-control">
+                <i class="zmdi zmdi-account"></i>
+            </div>
+            <div class="form-wrapper">
+                <input type="text" placeholder="Email Address" id="txt_email" class="form-control">
+                <i class="zmdi zmdi-email"></i>
+            </div>
+            <div class="form-wrapper">
+                <select id="cbo_gender" name="" class="form-control">
+                    <option value="" disabled selected>Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+            </div>
+            <div class="form-wrapper">
+                <input type="password" id="txt_password" placeholder="Password" class="form-control">
+                <i class="zmdi zmdi-lock"></i>
+            </div>
+            <div class="form-wrapper">
+                <input type="password" id="txt_password_confirm" placeholder="Confirm Password" class="form-control">
+                <i class="zmdi zmdi-lock"></i>
+            </div>
+            <button id="btn_register">Register
+                <i class="zmdi zmdi-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/register.js"></script>
+</div>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

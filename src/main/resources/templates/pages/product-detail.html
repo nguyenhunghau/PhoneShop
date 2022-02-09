@@ -265,7 +265,21 @@
                                     </tbody>
                                 </table>
                             </div>
-
+                            <form class="variations_form cart" method="post" enctype='multipart/form-data'>
+                                <table class="variations" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="label"><label for="cbo_variant">Màu</label></td>
+                                            <td class="value">
+                                                <select id="cbo_variant" name="attribute_mau" data-attribute_name="attribute_mau" data-show_option_none="yes">
+                                                    <option value="">Chọn một tùy chọn</option>
+                                                    <option value="Vàng" >Vàng</option>
+                                                </select>
+                                                <a class="reset_variations" href="#">Xóa</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
 
                             <form class="cart" enctype='multipart/form-data' method="post">
                                 <div class="quantity buttons_added">

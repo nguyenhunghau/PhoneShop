@@ -4,11 +4,17 @@ var addToCart = function () {
     if(localStorage['productCart']) {
         productCart = $.parseJSON(localStorage['productCart']);
     }
-    var productInCart = productCart.filter(item => item.id == currentProduct.id);
+    var variantId = $('#cbo_variant').val();
+    var productInCart = productCart.filter(item => item.id == currentProduct.id && item.variantId == variantId);
     if(productInCart.length > 0) {
         updateProductInCart(productInCart[0]);
     } else {
         currentProduct.quantity = parseInt($('#product_quantity').val());
+        if(variantId) {
+            currentProduct.variantId = variantId;
+            currentProduct.variantName = $('#cbo_variant option:selected').text();
+            currentProduct.price = parseFloat($('#cbo_variant option:selected').data('price'));
+        }
         productCart.push(currentProduct);
     }
     localStorage['productCart'] = JSON.stringify(productCart);
@@ -32,10 +38,10 @@ var showProductInCart = function() {
     var totalQuantity = 0;
     for(var item of productCart) {
         html += '<li class="woocommerce-mini-cart-item mini_cart_item">'
-                     + '<a href="#" onclick="removeProductInCart(' + item.id + ')" class="remove remove_from_cart_button" aria-label="Xóa sản phẩm này">×</a>'
+                     + '<a href="#" onclick="removeProductInCart(' + item.id + ',' + item.variantId + ')" class="remove remove_from_cart_button" aria-label="Xóa sản phẩm này">×</a>'
                      + '<a href="product-detail?id=' + item.id + '">'
                      + '    <img width="180" height="180" src="' + getMainPhoto(item)
-                     + '" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="" sizes="(max-width: 180px) 100vw, 180px">' + item.name + '&nbsp;'
+                     + '" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" srcset="" sizes="(max-width: 180px) 100vw, 180px">' + item.name + ' - ' + (item.variantName || '') + '&nbsp;'
                      + '</a>'
                      + '<span class="quantity">' + item.quantity + ' × <span class="woocommerce-Price-amount amount">' + formatNumber(item.price) + '&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span></span>'
                  + '</li>';
@@ -45,21 +51,23 @@ var showProductInCart = function() {
      $('.cart-icon.image-icon strong').text(totalQuantity);
      $('#total_price').text(formatNumber(getTotalMoney()));
      $('.woocommerce-mini-cart__total').html('<strong>Tổng cộng:</strong> <span class="woocommerce-Price-amount amount">' + formatNumber(getTotalMoney()) + '&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span>');
+     $('.cart-price').html(formatNumber(getTotalMoney()) + '&nbsp;<span class="woocommerce-Price-currencySymbol">₫</span></span>');
 }
 
 var updateProductInCart = function(product) {
     product.quantity += parseInt($('#product_quantity').val());
 }
 
-var removeProductInCart = function(productId) {
+var removeProductInCart = function(productId, variantId) {
     if(localStorage['productCart']) {
         productCart = $.parseJSON(localStorage['productCart']);
     }
     for(var index in productCart) {
-        if(productCart[index].id == productId) {
+        if(productCart[index].id == productId && (!variantId || productCart[index].variantId == variantId)) {
             productCart.splice(index, 1);// delete
             localStorage['productCart'] = JSON.stringify(productCart);
             showProductInCart();
+            showCartList();
             return;
         }
     }
@@ -98,15 +106,23 @@ var showCartList = function()  {
         $productItem.find('.link-product img:eq(0)').attr('srcset', '');
         //$productItem.find('.link-product img:eq(1)').attr('srcset', '');
         $productItem.find('.cart-item-price').html(formatNumber(item.price) + '&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span>');
-        $productItem.find('.link-product:eq(1)').text(item.name);
+        $productItem.find('.link-product:eq(1)').text(item.name + ' - ' + (item.variantName || ''));
         $productItem.find('.qty').val(item.quantity);
         $productItem.find('.total-price').html(formatNumber(item.quantity * item.price) + '&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span>');
+        $productItem.data('productId', item.id);
+        $productItem.data('variantId', item.variantId);
         if(index == 0) {
             $('#tbl_cart tbody').html('');
         }
         $productItem.show();
         $('#tbl_cart tbody').append($productItem);
+        $productItem.find('.remove').click(function() {
+            removeProductInCart(parseFloat($productItem.data('productId')), parseFloat($productItem.data('variantId')));
+        })
         index++;
+    }
+    if(productList.length == 0) {
+        $('#tbl_cart tbody').html('');
     }
     $('.cart-price').html(formatNumber(getTotalMoney()) + '&nbsp;<span class="woocommerce-Price-currencySymbol">&#8363;</span></span>');
 

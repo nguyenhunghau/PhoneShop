@@ -50,4 +50,9 @@ public class PagesController {
     public String login() {
         return "pages/login.html";
     }
+
+    @GetMapping("/register")
+    public String register() {
+        return "pages/register.html";
+    }
 }

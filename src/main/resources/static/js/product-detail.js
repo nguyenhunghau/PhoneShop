@@ -11,9 +11,10 @@ var loadData = function () {
          $("#product_price").text(formatNumber(result.price));
         showParameter(result.parameter);
         showInfoDetail(result.detail);
-         showPhoto(result.productphotoList);
+        showPhoto(result.productphotoList);
         showDesciption(result.description);
         showCategoryLink(result);
+        handleForVariants(result.variantList);
     }});
 }
 
@@ -74,6 +75,31 @@ var showCategoryLink = function(product) {
     $("#nav_product a:eq(2)").attr('href', 'category-detail/' + product.categoryDetail.id);
 }
 
+var handleForVariants = function(variantList) {
+    if(variantList.length == 0) {
+        $('.variations_form').remove();
+        return;
+    }
+    var html = '<option value="">Chọn một tùy chọn</option>';
+    for(var item of variantList) {
+        html += '<option value="' + item.id + '" data-price="'  + item.price + '">' + item.name + '</option>';
+    }
+    $('#cbo_variant').html(html);
+    $('#add_cart').addClass('disabled');
+    $('#cbo_variant').change(function() {
+        changeVariant($(this).val(), $(this).find('option:selected').data('price'));
+    })
+}
+
+var changeVariant = function(variantId, price) {
+    if(variantId) {
+        $('#add_cart').removeClass('disabled');
+        $('#product_price').text(formatNumber(parseFloat(price)));
+    } else {
+        $('#add_cart').addClass('disabled');
+    }
+}
+
 $('#plus_button').click(function() {
     var currentQuantity = parseInt($('#product_quantity').val());
     $('#product_quantity').val(currentQuantity + 1);
@@ -87,5 +113,9 @@ $('#minus_button').click(function() {
 })
 
 $('#add_cart').click(function() {
-    addToCart();
+    if($(this).hasClass('disabled')) {
+        alert('Hãy chọn 1 màu tương ứng');
+    } else {
+        addToCart();
+    }
 })

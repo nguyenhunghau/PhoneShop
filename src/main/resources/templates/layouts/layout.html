@@ -419,8 +419,10 @@ var wc_password_strength_meter_params = {"min_password_strength":"3","i18n_passw
 <script src='js/category.js' type='text/javascript'></script>
 <script src='js/categoryDetail.js' type='text/javascript'></script>
 <script src="js/cart.js"></script>
+<script src="js/login.js"></script>
 <script>
         jQuery(document).ready(function () {
+            checkUserLogin();
             getCategory();
             getCategoryDetail();
         });
