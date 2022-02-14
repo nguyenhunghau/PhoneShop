@@ -13,8 +13,8 @@ var addToCart = function () {
         if(variantId) {
             currentProduct.variantId = variantId;
             currentProduct.variantName = $('#cbo_variant option:selected').text();
-            currentProduct.price = parseFloat($('#cbo_variant option:selected').data('price'));
         }
+        currentProduct.price = $('#real_price').data('price');
         productCart.push(currentProduct);
     }
     localStorage['productCart'] = JSON.stringify(productCart);

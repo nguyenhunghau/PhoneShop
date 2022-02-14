@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -37,9 +38,11 @@ public class VariantEntity implements Serializable {
 
     @Column(name = "category")
     private String category;
-    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "price")
     private Double price;
+
+    @OneToMany(mappedBy="variantEntity")
+    private List<PromotionEntity> promotionEntityList;
 
     public VariantEntity() {
     }

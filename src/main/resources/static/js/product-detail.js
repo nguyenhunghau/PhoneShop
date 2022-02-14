@@ -8,14 +8,30 @@ var loadData = function () {
         console.log(result);
         currentProduct = result;
         $("#product_title").text(result.name);
-         $("#product_price").text(formatNumber(result.price));
+        showPrice(result);
         showParameter(result.parameter);
         showInfoDetail(result.detail);
         showPhoto(result.productphotoList);
         showDesciption(result.description);
         showCategoryLink(result);
         handleForVariants(result.variantList);
+        getReviewList(id);
     }});
+}
+
+var showPrice = function(product) {
+    if(product.promotion) {
+        $('#promotion_label').show();
+        $("#product_price").show();
+        $("#product_price").text(formatNumber(product.price));
+        $("#real_price").text(formatNumber(product.promotion.price));
+        $("#real_price").data('price', product.promotion.price);
+    } else {
+        $('#promotion_label').hide();
+        $("#product_price").hide();
+        $("#real_price").text(formatNumber(product.price));
+        $("#real_price").data('price', product.price);
+    }
 }
 
 var showParameter = function(parameter) {
@@ -64,7 +80,7 @@ var showPhoto = function(photoList) {
     }
 }
 
-var showDesciption = function(description){
+var showDesciption = function(description) {
     $("#information-detail").html(description);
 }
 
@@ -95,9 +111,56 @@ var changeVariant = function(variantId, price) {
     if(variantId) {
         $('#add_cart').removeClass('disabled');
         $('#product_price').text(formatNumber(parseFloat(price)));
+        var currentVariant = currentProduct.variantList.filter(item => item.id == variantId)[0];
+        showPrice(currentVariant);
     } else {
         $('#add_cart').addClass('disabled');
     }
+}
+
+var getReviewList = function(productId) {
+     $.ajax({url: "review/" + productId, success: function(result){
+        showReviewList(result);
+     }});
+}
+
+var showReviewList = function(reviewList) {
+    var index = 0;
+    for(var item of reviewList) {
+        var $reviewItem = $('.review-item:eq(0)').clone();
+        $reviewItem.find('.woocommerce-review__author').text(item.name);
+        $reviewItem.find('.woocommerce-review__published-date').text(item.createdDate.substring(0, 10));
+        $reviewItem.find('.description').text(item.description);
+         $reviewItem.find('.score-rating').attr('style', 'width:' + item.score*20 + '%');
+        if(index == 0) {
+            $('.commentlist').html('');
+        }
+        $reviewItem.show();
+        $('.commentlist').append($reviewItem);
+        index++;
+    }
+    $("#comments h3").html(reviewList.length + ' đánh giá cho <span>' + currentProduct.name + '</span>');
+}
+
+var addReview = function() {
+    if(!$('#rating').val() || !$('#txt_description').val() || !$('#txt_author').val() || !$('#txt_email').val()) {
+        alert('Moi ban nhap day du thong tin');
+        return;
+    }
+
+    var review = {
+        "score": $('#rating').val(),
+        "description": $('#txt_description').val(),
+        "name": $('#txt_author').val(),
+        "email": $('#txt_email').val(),
+        "productId": currentProduct.id
+    }
+    $.ajax({url: "review", type: "POST", contentType: 'application/json', data: JSON.stringify(review), success: function(result){
+        if(result) {
+            alert('Thêm nhận xét thành công');
+            getReviewList(currentProduct.id);
+        }
+    }});
 }
 
 $('#plus_button').click(function() {
@@ -118,4 +181,8 @@ $('#add_cart').click(function() {
     } else {
         addToCart();
     }
+})
+
+$('#send_comment').click(function () {
+    addReview();
 })
