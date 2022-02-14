@@ -5,6 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Product Detail</title>
+    <style id="custom-css" type="text/css">
+    :root {--primary-color: #446084;}/* Site Width */.full-width .ubermenu-nav, .container, .row{max-width: 1200px}.row.row-collapse{max-width: 1170px}.row.row-small{max-width: 1192.5px}.row.row-large{max-width: 1230px}body.framed, body.framed header, body.framed .header-wrapper, body.boxed, body.boxed header, body.boxed .header-wrapper, body.boxed .is-sticky-section{ max-width: 1230px}.header-main{height: 58px}#logo img{max-height: 58px}#logo{width:151px;}.header-bottom{min-height: 41px}.header-top{min-height: 30px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 108px;}.header.show-on-scroll,.stuck .header-main{height:70px!important}.stuck #logo img{max-height: 70px!important}.search-form{ width: 80%;}.header-bg-color, .header-wrapper {background-color: rgba(0,0,0,0.9)}.header-bottom {background-color: #ffffff}.header-main .nav > li > a{line-height: 16px }.header-bottom-nav > li > a{line-height: 16px }@media (max-width: 549px) {.header-main{height: 70px}#logo img{max-height: 70px}}/* Background Color */[data-icon-label]:after, .secondary.is-underline:hover,.secondary.is-outline:hover,.icon-label,.button.secondary:not(.is-outline),.button.alt:not(.is-outline), .badge-inner.on-sale, .button.checkout, .single_add_to_cart_button{ background-color:#d70909; }/* Color */.secondary.is-underline,.secondary.is-link, .secondary.is-outline,.stars a.active, .star-rating:before, .woocommerce-page .star-rating:before,.star-rating span:before, .color-secondary{color: #d70909}/* Color !important */[data-text-color="secondary"]{color: #d70909!important;}/* Border */.secondary.is-outline:hover{border-color:#d70909}body{font-family:"Roboto", sans-serif}body{font-weight: 0}body{color: #1c1c1c}.nav > li > a {font-family:"Roboto", sans-serif;}.nav > li > a {font-weight: 0;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: "Roboto", sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2{font-weight: 0;}h1,h2,h3,h4,h5,h6,.heading-font{color: #1c1c1c;}.alt-font{font-family: "Roboto", sans-serif;}.alt-font{font-weight: 0!important;}.header:not(.transparent) .header-nav.nav > li > a {color: #ffffff;}.header:not(.transparent) .header-bottom-nav.nav > li > a{color: #000000;}.header:not(.transparent) .header-bottom-nav.nav > li > a:hover,.header:not(.transparent) .header-bottom-nav.nav > li.active > a,.header:not(.transparent) .header-bottom-nav.nav > li.current > a,.header:not(.transparent) .header-bottom-nav.nav > li > a.active,.header:not(.transparent) .header-bottom-nav.nav > li > a.current{color: #3399d2;}.header-bottom-nav.nav-line-bottom > li > a:before,.header-bottom-nav.nav-line-grow > li > a:before,.header-bottom-nav.nav-line > li > a:before,.header-bottom-nav.nav-box > li > a:hover,.header-bottom-nav.nav-box > li.active > a,.header-bottom-nav.nav-pills > li > a:hover,.header-bottom-nav.nav-pills > li.active > a{color:#FFF!important;background-color: #3399d2;}a{color: #000000;}a:hover{color: #3399d2;}.tagcloud a:hover{border-color: #3399d2;background-color: #3399d2;}.shop-page-title.featured-title .title-bg{ background-image: url(../../wp-content/uploads/2017/12/macbook-air-2017-01.jpg)!important;}@media screen and (min-width: 550px){.products .box-vertical .box-image{min-width: 300px!important;width: 300px!important;}}.absolute-footer, html{background-color: #f2f2f2}.label-new.menu-item > a:after{content:"New";}.label-hot.menu-item > a:after{content:"Hot";}.label-sale.menu-item > a:after{content:"Sale";}.label-popular.menu-item > a:after{content:"Popular";}</style>
 </head>
 <body>
 <div layout:fragment="content">
@@ -21,7 +23,7 @@
                             <div class="product-images relative mb-half has-hover woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images"
                                  data-columns="4">
 
-                                <div class="badge-container is-larger absolute left top z-1">
+                                <div class="badge-container is-larger absolute left top z-1" id="promotion_label">
                                     <div class="callout badge badge-circle">
                                         <div class="badge-inner secondary on-sale"><span class="onsale">Giảm giá</span>
                                         </div>
@@ -250,9 +252,9 @@
 
                             <div class="price-wrapper">
                                 <p class="price product-page-price price-on-sale">
-<!--                                    <del><span class="woocommerce-Price-amount amount">5,500,000&nbsp;<span-->
-<!--                                            class="woocommerce-Price-currencySymbol">&#8363;</span></span></del>-->
-                                    <ins><span class="woocommerce-Price-amount amount" id="product_price">{price}<span
+                                    <del><span class="woocommerce-Price-amount amount" id="product_price">{price}<span
+                                            class="woocommerce-Price-currencySymbol">&#8363;</span></span></del>
+                                    <ins><span class="woocommerce-Price-amount amount" id="real_price">{price}<span
                                             class="woocommerce-Price-currencySymbol">&#8363;</span></span></ins>
                                 </p>
                             </div>
@@ -730,14 +732,11 @@
                                                 <div class="col large-12" id="comments">
                                                     <h3 class="normal">1 đánh giá cho <span>Máy Tính Bảng Beneve M1022H &#8211; Hàng Chính Hãng</span>
                                                     </h3>
-
-
                                                     <ol class="commentlist">
-                                                        <li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1"
-                                                            id="li-comment-3">
+                                                        <li class="review-item comment byuser comment-author-admin bypostauthor even thread-even depth-1"
+                                                            id="li-comment-3" style="display: none">
                                                             <div class="comment_container review-item flex-row align-top"
                                                                  id="comment-3">
-
                                                                 <div class="flex-col">
                                                                     <img alt=''
                                                                          class='avatar avatar-60 photo'
@@ -747,8 +746,10 @@
 
                                                                 <div class="comment-text flex-col flex-grow">
 
-                                                                    <div class="star-rating"><span style="width:80%">Được xếp hạng <strong
-                                                                            class="rating">4</strong> 5 sao</span></div>
+                                                                    <div class="star-rating" style="display: block">
+                                                                        <span class="score-rating" style="width:80%">Được xếp hạng <strong
+                                                                            class="rating">4</strong> 5 sao</span>
+                                                                    </div>
                                                                     <p class="meta">
                                                                         <strong class="woocommerce-review__author">Admin</strong>
                                                                         <span class="woocommerce-review__dash">&ndash;</span>
@@ -764,8 +765,6 @@
                                                             </div>
                                                         </li><!-- #comment-## -->
                                                     </ol>
-
-
                                                 </div>
 
 
@@ -779,9 +778,9 @@
                                                                                        rel="nofollow"
                                                                                        style="display:none;">Hủy</a></small>
                                                                 </h3>
-                                                                <form action="http://mauweb.monamedia.net/fptshop/wp-comments-post.php"
-                                                                      class="comment-form" id="commentform"
-                                                                      method="post" novalidate>
+<!--                                                                <form action="http://mauweb.monamedia.net/fptshop/wp-comments-post.php"-->
+<!--                                                                      class="comment-form" id="commentform"-->
+<!--                                                                      method="post" novalidate>-->
                                                                     <div class="comment-form-rating"><label
                                                                             for="rating">Đánh giá của bạn</label><select
                                                                             aria-required="true" id="rating"
@@ -794,23 +793,23 @@
                                                                         <option value="1">Rất tệ</option>
                                                                     </select></div>
                                                                     <p class="comment-form-comment"><label
-                                                                            for="comment">Nhận xét của bạn <span
+                                                                            for="txt_description">Nhận xét của bạn <span
                                                                             class="required">*</span></label><textarea
-                                                                            aria-required="true" cols="45" id="comment"
+                                                                            aria-required="true" cols="45" id="txt_description"
                                                                             name="comment" required
                                                                             rows="8"></textarea></p>
-                                                                    <p class="comment-form-author"><label for="author">Tên
+                                                                    <p class="comment-form-author"><label for="txt_author">Tên
                                                                         <span class="required">*</span></label> <input
-                                                                            aria-required="true" id="author" name="author"
+                                                                            aria-required="true" id="txt_author" name="author"
                                                                             required size="30" type="text"
                                                                             value=""/></p>
-                                                                    <p class="comment-form-email"><label for="email">Email
+                                                                    <p class="comment-form-email"><label for="txt_email">Email
                                                                         <span class="required">*</span></label> <input
-                                                                            aria-required="true" id="email" name="email"
+                                                                            aria-required="true" id="txt_email" name="email"
                                                                             required size="30" type="email"
                                                                             value=""/></p>
-                                                                    <p class="form-submit"><input class="submit"
-                                                                                                  id="submit"
+                                                                    <p class="form-submit"><input class="button"
+                                                                                                  id="send_comment"
                                                                                                   name="submit"
                                                                                                   type="submit"
                                                                                                   value="Gửi đi"/>
@@ -818,7 +817,8 @@
                                                                                type='hidden' value='180'/>
                                                                         <input id='comment_parent' name='comment_parent'
                                                                                type='hidden' value='0'/>
-                                                                    </p></form>
+                                                                    </p>
+<!--                                                                </form>-->
                                                             </div><!-- #respond -->
                                                         </div>
                                                     </div>
@@ -967,7 +967,7 @@
                                                         <td width="282">CPU: Apple A9 2 nhân 64-bit</td>
                                                     </tr>
                                                     <tr>
-                                                        <td width="283">Miễn phí giao hàng toàn quốc</td>
+                                                        <td width="283">Miễn phístar-rating giao hàng toàn quốc</td>
                                                         <td width="282">Bộ Nhớ: 128GB</td>
                                                     </tr>
                                                     <tr>

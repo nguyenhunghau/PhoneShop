@@ -7,16 +7,7 @@ package com.PhoneShop.entity;
 
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -25,20 +16,21 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @Entity
 @Table(name = "reviews")
-@XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "ReviewsEntity.findAll", query = "SELECT r FROM ReviewsEntity r")
-    , @NamedQuery(name = "ReviewsEntity.findById", query = "SELECT r FROM ReviewsEntity r WHERE r.id = :id")
-    , @NamedQuery(name = "ReviewsEntity.findByScore", query = "SELECT r FROM ReviewsEntity r WHERE r.score = :score")
-    , @NamedQuery(name = "ReviewsEntity.findByName", query = "SELECT r FROM ReviewsEntity r WHERE r.name = :name")
-    , @NamedQuery(name = "ReviewsEntity.findByEmail", query = "SELECT r FROM ReviewsEntity r WHERE r.email = :email")
-    , @NamedQuery(name = "ReviewsEntity.findByProductId", query = "SELECT r FROM ReviewsEntity r WHERE r.productId = :productId")
-    , @NamedQuery(name = "ReviewsEntity.findByNewsId", query = "SELECT r FROM ReviewsEntity r WHERE r.newsId = :newsId")
-    , @NamedQuery(name = "ReviewsEntity.findByCreatedDate", query = "SELECT r FROM ReviewsEntity r WHERE r.createdDate = :createdDate")})
+//@XmlRootElement
+//@NamedQueries({
+//    @NamedQuery(name = "ReviewsEntity.findAll", query = "SELECT r FROM ReviewsEntity r")
+//    , @NamedQuery(name = "ReviewsEntity.findById", query = "SELECT r FROM ReviewsEntity r WHERE r.id = :id")
+//    , @NamedQuery(name = "ReviewsEntity.findByScore", query = "SELECT r FROM ReviewsEntity r WHERE r.score = :score")
+//    , @NamedQuery(name = "ReviewsEntity.findByName", query = "SELECT r FROM ReviewsEntity r WHERE r.name = :name")
+//    , @NamedQuery(name = "ReviewsEntity.findByEmail", query = "SELECT r FROM ReviewsEntity r WHERE r.email = :email")
+//    , @NamedQuery(name = "ReviewsEntity.findByProductId", query = "SELECT r FROM ReviewsEntity r WHERE r.productId = :productId")
+//    , @NamedQuery(name = "ReviewsEntity.findByNewsId", query = "SELECT r FROM ReviewsEntity r WHERE r.newsId = :newsId")
+//    , @NamedQuery(name = "ReviewsEntity.findByCreatedDate", query = "SELECT r FROM ReviewsEntity r WHERE r.createdDate = :createdDate")})
 public class ReviewsEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;

@@ -2,14 +2,14 @@ package com.PhoneShop.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import java.util.List;
+
+import java.util.Date;
 
 @Getter
 @Setter
-public class Variant {
+public class Promotion {
     private Integer id;
-    private String name;
-    private String category;
     private Double price;
-    private Promotion promotion;
+    private Date startDate;
+    private Date endDate;
 }

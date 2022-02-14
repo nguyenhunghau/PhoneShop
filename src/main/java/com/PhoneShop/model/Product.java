@@ -27,4 +27,5 @@ public class Product {
 
     private List<Productphoto> productphotoList;
     private List<Variant> variantList;
+    private Promotion promotion;
 }
