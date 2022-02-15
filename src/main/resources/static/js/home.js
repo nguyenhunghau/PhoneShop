@@ -148,3 +148,46 @@ var getHoverPhoto = function(product) {
     }
     return '';
 }
+
+var getSlides = function() {
+    $.ajax({url: "product/slides" , success: function(result){
+        showSlides(result);
+    }});
+}
+
+var showSlides = function(showSlides) {
+    var index = 0;
+    for(var item of showSlides) {
+        var $slideItem = $('.slide-item:eq(0)').clone();
+        $slideItem.find('img').attr('src', item.photo);
+        if(index == 0) {
+            $('#slides').html('');
+        }
+        $slideItem.show();
+        $('#slides').append($slideItem);
+        index++;
+    }
+}
+
+var showWatchedProduct = function() {
+    var watchedProduct = [];
+    if(localStorage['watchedProduct']) {
+        watchedProduct = $.parseJSON(localStorage['watchedProduct']);
+    }
+    var index = 0;
+    for(var item of watchedProduct) {
+        var $slideItem = $('.watched-item:eq(0)').clone();
+        $slideItem.find('img:eq(0)').attr('src', item.mainPhoto);
+        $slideItem.find('img:eq(1)').attr('src', item.hoverPhoto);
+        $slideItem.find('.watched-link').attr('href', 'product-detail?id=' + item.id);
+        if(item.promotion) {
+            $slideItem.find('.badge-circle').show();
+        }
+        if(index == 0) {
+            $('#watched_product').html('');
+        }
+        $slideItem.show();
+        $('#watched_product').append($slideItem);
+        index++;
+    }
+}

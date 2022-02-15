@@ -1,11 +1,9 @@
 package com.PhoneShop.service;
 
-import com.PhoneShop.entity.CategoryEntity;
-import com.PhoneShop.entity.ProductEntity;
-import com.PhoneShop.entity.PromotionEntity;
-import com.PhoneShop.entity.VariantEntity;
+import com.PhoneShop.entity.*;
 import com.PhoneShop.model.*;
 import com.PhoneShop.repository.CategoryRepository;
+import com.PhoneShop.repository.ProductPhotoRepository;
 import com.PhoneShop.repository.ProductRepository;
 import org.aspectj.weaver.ast.Var;
 import org.modelmapper.ModelMapper;
@@ -27,6 +25,9 @@ public class ProductService {
 
     @Autowired
     private CategoryRepository categoryRepository;
+
+    @Autowired
+    private ProductPhotoRepository productPhotoRepository;
 
     public Product findById(int id) {
         ProductEntity productEntity = productRepository.findById(id).get();
@@ -90,5 +91,10 @@ public class ProductService {
             importantProductList.add(new ImportantProduct(productList, category));
         }
         return importantProductList;
+    }
+
+    public List<Productphoto> findSlideImageList() {
+        List<ProductphotoEntity> productphotoEntityList = productPhotoRepository.findByproductEntity_Id(null);
+        return new ModelMapper().map(productphotoEntityList, new TypeToken<List<Productphoto>>() {}.getType());
     }
 }

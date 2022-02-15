@@ -32,4 +32,8 @@ public class ProductController {
         return ok(productService.findById(id));
     }
 
+    @RequestMapping(value = "/slides", method = RequestMethod.GET)
+    public ResponseEntity<?> findSlideImageList() {
+        return ok(productService.findSlideImageList());
+    }
 }

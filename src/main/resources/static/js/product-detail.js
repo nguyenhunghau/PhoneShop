@@ -16,6 +16,7 @@ var loadData = function () {
         showCategoryLink(result);
         handleForVariants(result.variantList);
         getReviewList(id);
+        saveWatchedProduct();
     }});
 }
 
@@ -161,6 +162,38 @@ var addReview = function() {
             getReviewList(currentProduct.id);
         }
     }});
+}
+
+var getMainPhoto = function(product) {
+    for(var item of product.productphotoList) {
+        if(item.default) {
+            return item.photo;
+        }
+    }
+    return '';
+}
+
+var getHoverPhoto = function(product) {
+    for(var item of product.productphotoList) {
+        if(!item.default) {
+            return item.photo;
+        }
+    }
+    return '';
+}
+
+var saveWatchedProduct = function() {
+    var watchedProduct = [];
+    if(localStorage['watchedProduct']) {
+        watchedProduct = $.parseJSON(localStorage['watchedProduct']);
+    }
+    var filter = watchedProduct.filter(item => item.id == currentProduct.id);
+    if(filter.length == 0) {
+        var itemProduct = {id: currentProduct.id, name: currentProduct.name,
+        mainPhoto: getMainPhoto(currentProduct),  hoverPhoto: getHoverPhoto(currentProduct), promotion: currentProduct.promotion}
+        watchedProduct.push(itemProduct);
+        localStorage['watchedProduct'] = JSON.stringify(watchedProduct);
+    }
 }
 
 $('#plus_button').click(function() {
