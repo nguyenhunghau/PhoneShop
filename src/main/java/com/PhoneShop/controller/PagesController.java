@@ -55,4 +55,19 @@ public class PagesController {
     public String register() {
         return "pages/register.html";
     }
+
+    @GetMapping("/admin")
+    public String admin() {
+        return "pages/admin/index.html";
+    }
+
+    @GetMapping("/admin-product")
+    public String adminProduct() {
+        return "pages/admin/product.html";
+    }
+
+    @GetMapping("/admin-add-product")
+    public String adminAddProduct() {
+        return "pages/admin/add-product.html";
+    }
 }
