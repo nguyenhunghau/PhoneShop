@@ -2,7 +2,7 @@
 <html lang="en" layout:decorate="~{layouts/admin-layout}"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <title>Admin homepage</title>
+    <title>Admin Add Product</title>
 </head>
     <body>
         <div class="container-fluid" layout:fragment="content">
@@ -19,25 +19,38 @@
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="inputName">Project Name</label>
-                                <input type="text" id="inputName" class="form-control">
+                                <label for="txt_name"> Name</label>
+                                <input type="text" id="txt_name" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="inputDescription">Description</label>
-                                <textarea id="inputDescription" name="description" class="form-control" rows="4"></textarea>
+                                <label for="txt_parameter"> Parameter</label>
+                                <textarea id="txt_parameter" class="form-control" rows="4"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="inputStatus">Status</label>
-                                <select class="form-control custom-select">
-                                    <option selected disabled>Select one</option>
-                                    <option>On Hold</option>
-                                    <option>Canceled</option>
-                                    <option>Success</option>
+                                <label for="txt_detail"> Detail</label>
+                                <textarea id="txt_detail" class="form-control" rows="4"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="txt_price"> Price</label>
+                                <input type="text" id="txt_price" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="txt_variant"> Variant List</label>
+                                <textarea id="txt_variant" class="form-control" rows="4"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="txt_description">Description</label>
+                                <textarea id="txt_description" name="txt_description" class="form-control" rows="4"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="cbo_category">Category Detail</label>
+                                <select class="form-control custom-select" id="cbo_category">
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="inputClientCompany">Client Company</label>
-                                <input type="text" id="inputClientCompany" class="form-control">
+                                <label for="cbo_producer">Producer</label>
+                                <select class="form-control custom-select" id="cbo_producer">
+                                </select>
                             </div>
                             <div class="form-group" style="display: flex">
                                 <span>Main photo</span>
@@ -62,9 +75,14 @@
             <div class="row">
                 <div class="col-12">
                     <a href="#" class="btn btn-secondary">Cancel</a>
-                    <input type="submit" value="Create new Porject" class="btn btn-success float-right">
+                    <input type="button" id="btn_add_product" value="Add new product" class="btn btn-success float-right">
                 </div>
             </div>
+            <script src="plugins/summernote/summernote-bs4.min.js"></script>
+            <script src="js/admin/add-product.js"></script>
+            <script>
+
+            </script>
         </div>
     </body>
 

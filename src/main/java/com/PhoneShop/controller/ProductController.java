@@ -1,6 +1,7 @@
 package com.PhoneShop.controller;
 
 import com.PhoneShop.model.Category;
+import com.PhoneShop.model.Product;
 import com.PhoneShop.service.CategoryService;
 import com.PhoneShop.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,11 @@ public class ProductController {
         return ok(productService.findByFilter(categoryId, sort));
     }
 
+    @RequestMapping(value = "/getAll", method = RequestMethod.GET)
+    public ResponseEntity<?> getAllProducts() {
+        return ok(productService.getAllProducts());
+    }
+
     @RequestMapping(value = "/important", method = RequestMethod.GET)
     public ResponseEntity<?> findImportantProducts() {
         return ok(productService.findImportantProducts());
@@ -35,5 +41,20 @@ public class ProductController {
     @RequestMapping(value = "/slides", method = RequestMethod.GET)
     public ResponseEntity<?> findSlideImageList() {
         return ok(productService.findSlideImageList());
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public ResponseEntity<?> addProduct(@RequestBody Product product) {
+        return ok(productService.addProduct(product));
+    }
+
+    @RequestMapping(method = RequestMethod.PUT)
+    public ResponseEntity<?> updateProduct(@RequestBody Product product) {
+        return ok(productService.updateProduct(product));
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<?> deleteProduct(@PathVariable(value = "id") int id) {
+        return ok(productService.deleteProduct(id));
     }
 }

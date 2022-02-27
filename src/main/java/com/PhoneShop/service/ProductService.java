@@ -2,9 +2,7 @@ package com.PhoneShop.service;
 
 import com.PhoneShop.entity.*;
 import com.PhoneShop.model.*;
-import com.PhoneShop.repository.CategoryRepository;
-import com.PhoneShop.repository.ProductPhotoRepository;
-import com.PhoneShop.repository.ProductRepository;
+import com.PhoneShop.repository.*;
 import org.aspectj.weaver.ast.Var;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
@@ -27,7 +25,16 @@ public class ProductService {
     private CategoryRepository categoryRepository;
 
     @Autowired
+    private CategoryDetailRepository categoryDetailRepository;
+
+    @Autowired
     private ProductPhotoRepository productPhotoRepository;
+
+    @Autowired
+    private ProducerRepository producerRepository;
+
+    @Autowired
+    private VariantRepository variantRepository;
 
     public Product findById(int id) {
         ProductEntity productEntity = productRepository.findById(id).get();
@@ -96,5 +103,82 @@ public class ProductService {
     public List<Productphoto> findSlideImageList() {
         List<ProductphotoEntity> productphotoEntityList = productPhotoRepository.findByproductEntity_Id(null);
         return new ModelMapper().map(productphotoEntityList, new TypeToken<List<Productphoto>>() {}.getType());
+    }
+
+    public List<Product> getAllProducts() {
+        List<ProductEntity> productEntityList = productRepository.findAll();
+        return new ModelMapper().map(productEntityList, new TypeToken<List<Product>>() {}.getType());
+    }
+
+    public Product addProduct(Product product) {
+        ModelMapper modelMapper = new ModelMapper();
+        ProductEntity productEntity = modelMapper.map(product, ProductEntity.class);
+        productEntity.setProductLaunchDate(new Date());
+        productEntity.setCategorydetailEntity(categoryDetailRepository.getById(product.getCategoryDetail().getId()));
+        productEntity.setProducerEntity(producerRepository.getById(product.getProducer().getId()));
+        ProductEntity newProductEntity = productRepository.save(productEntity);
+
+        //Handle for productPhoto
+        List<Productphoto> productphotoList = product.getProductphotoList();
+        for(Productphoto item: productphotoList) {
+            ProductphotoEntity productphotoEntity = modelMapper.map(item, ProductphotoEntity.class);
+            productphotoEntity.setIsDefault(item.getIsDefault());
+            productphotoEntity.setProductEntity(newProductEntity);
+            productPhotoRepository.save(productphotoEntity);
+        }
+
+        //Handle for variantList
+        List<Variant> variantList = product.getVariantList();
+        for(Variant variant: variantList) {
+            VariantEntity variantEntity = modelMapper.map(variant, VariantEntity.class);
+            variantEntity.setProductEntity(newProductEntity);
+            variantRepository.save(variantEntity);
+        }
+        return findById(newProductEntity.getId());
+    }
+
+    public Product updateProduct(Product product) {
+        ModelMapper modelMapper = new ModelMapper();
+        // Get old product
+        ProductEntity productEntity = productRepository.getById(product.getId());
+        productEntity.setName(product.getName());
+        productEntity.setParameter(product.getParameter());
+        productEntity.setDetail(product.getDetail());
+        productEntity.setDescription(product.getDescription());
+        productEntity.setPrice(product.getPrice());
+        productEntity.setProductLaunchDate(new Date());
+        productEntity.setCategorydetailEntity(categoryDetailRepository.getById(product.getCategoryDetail().getId()));
+        productEntity.setProducerEntity(producerRepository.getById(product.getProducer().getId()));
+
+        ProductEntity newProductEntity = productRepository.save(productEntity);
+
+        //Remove the old photos
+        List<ProductphotoEntity> productphotoEntityList = productPhotoRepository.findByproductEntity_Id(product.getId());
+        productPhotoRepository.deleteAll(productphotoEntityList);
+        //Add the new photo
+        List<Productphoto> productphotoList = product.getProductphotoList();
+        for(Productphoto item: productphotoList) {
+            ProductphotoEntity productphotoEntity = modelMapper.map(item, ProductphotoEntity.class);
+            productphotoEntity.setIsDefault(item.getIsDefault());
+            productphotoEntity.setProductEntity(newProductEntity);
+            productPhotoRepository.save(productphotoEntity);
+        }
+
+        //Handle for variantList
+        //Remove the old photos
+        List<VariantEntity> variantEntityList = variantRepository.findByproductEntity_Id(product.getId());
+        variantRepository.deleteAll(variantEntityList);
+        List<Variant> variantList = product.getVariantList();
+        for(Variant variant: variantList) {
+            VariantEntity variantEntity = modelMapper.map(variant, VariantEntity.class);
+            variantEntity.setProductEntity(newProductEntity);
+            variantRepository.save(variantEntity);
+        }
+        return findById(newProductEntity.getId());
+    }
+
+    public boolean deleteProduct(int id) {
+        productRepository.deleteById(id);
+        return true;
     }
 }

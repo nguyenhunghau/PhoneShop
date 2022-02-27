@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+
 <html lang="en" layout:decorate="~{layouts/admin-layout}"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <title>Admin homepage</title>
+    <title>Admin product page</title>
+
 </head>
     <body>
         <div class="container-fluid" layout:fragment="content">
@@ -24,45 +25,21 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body table-responsive p-0">
-                            <table class="table table-hover text-nowrap">
+                            <table class="table table-striped" id="tbl_product">
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>User</th>
+                                    <th>Name</th>
+                                    <th>Parameter</th>
+                                    <th>Category Detail</th>
+                                    <th>Producer</th>
+                                    <th>Price</th>
                                     <th>Date</th>
-                                    <th>Status</th>
-                                    <th>Reason</th>
+                                    <th>Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>183</td>
-                                    <td>John Doe</td>
-                                    <td>11-7-2014</td>
-                                    <td><span class="tag tag-success">Approved</span></td>
-                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                </tr>
-                                <tr>
-                                    <td>219</td>
-                                    <td>Alexander Pierce</td>
-                                    <td>11-7-2014</td>
-                                    <td><span class="tag tag-warning">Pending</span></td>
-                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                </tr>
-                                <tr>
-                                    <td>657</td>
-                                    <td>Bob Doe</td>
-                                    <td>11-7-2014</td>
-                                    <td><span class="tag tag-primary">Approved</span></td>
-                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                </tr>
-                                <tr>
-                                    <td>175</td>
-                                    <td>Mike Doe</td>
-                                    <td>11-7-2014</td>
-                                    <td><span class="tag tag-danger">Denied</span></td>
-                                    <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                                </tr>
+
                                 </tbody>
                             </table>
                         </div>
@@ -71,7 +48,11 @@
                     <!-- /.card -->
                 </div>
             </div>
-            <!-- /.row -->
+
+            <script src='js/admin/product.js' type='text/javascript'></script>
+            <script>
+            loadData();
+        </script>
         </div>
     </body>
 </html>
