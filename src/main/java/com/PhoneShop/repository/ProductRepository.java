@@ -19,4 +19,8 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Integer>
     public List<ProductEntity> findByCategoryWithSortDESC(@Param("categoryId") int categoryId);
 
     public  List<ProductEntity> findByCategoryWithSortByDateDESC(@Param("categoryId") int categoryId);
+
+    public  List<ProductEntity> findByCategorydetailEntity_CategoryEntity_IdOrderByPriceAsc(int categoryId);
+    public  List<ProductEntity> findByCategorydetailEntity_CategoryEntity_IdOrderByPriceDesc(int categoryId);
+    public  List<ProductEntity> findByCategorydetailEntity_CategoryEntity_IdOrderByProductLaunchDateDesc(int categoryId);
 }
